@@ -32,7 +32,8 @@ const Car = new Schema (
     doors: { type: String, required: false },
     transmission: { type: String, required: true },
     owner: { type: Schema.Types.ObjectId, ref: 'User' }
-  }
+  },
+  {timestamps: true}
 )
 
 ```
