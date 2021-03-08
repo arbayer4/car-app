@@ -45,7 +45,7 @@ const Car = new Schema (
 [View Our Component Heirarchy](https://whimsical.com/sunday-drivers-FFbtYjfqVSFwRN7yiLmyeS)
 
 ## MVP
-[Team Expectaions] (https://docs.google.com/document/d/1VPXGLWwFamYNK0Q5F6n829gybiaFZiUmm2Mh0GRq1Xo/edit)
+[Team Expectaions](https://docs.google.com/document/d/1VPXGLWwFamYNK0Q5F6n829gybiaFZiUmm2Mh0GRq1Xo/edit)
 ### MVP
 * Full CRUD front-end and back-end
 * 
