@@ -1,7 +1,7 @@
 # car-app
 
 ## Overview
-An antique car shopping site! A seller can sign up/in and add a listing of their own antique cars. A seller can edit and delete their posted car listings. Anyone vistins the site can look through listings and grab a sellers contact info(email or phone- up to the seller to choose which is listed at sign up). Post MVP: users who choose to sign up can favorite listings. 
+Sunday Drivers gives vintage car enthusiasts the ability to buy and sell vehicles from one another. Sellers can list their vehicle(s) for sale through a simple signup process, then providing a vehicle’s details such as the make, model, year, price, image, etc. Car shoppers have the ability to view selling vehicles and contact the seller via email or phone. 
 
 ## Schema
 
