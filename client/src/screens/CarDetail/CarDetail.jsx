@@ -35,15 +35,17 @@ const carDetail (props) {
                         <div className='year'>{car.year}</div>
                         <div className='make'>{car.make}</div>
                         <div className='model'>{car.model}</div>
+                    </div>
                     <div className='car-detail-description'>{car.description}</div>
                     <div className='car-detail-price'>{car.price}</div>
                     <div className='button-container'>
-                        <div className='contact-button'></div>
+                        <div className='contact-button'>
                         <button onclick="alertPopup()">Contact</button>
                             <script>function alertPopup() {
-                            alert(`Contact this seller at ${user.email} or phone ${user.phone}`);
+                            alert(`Contact this seller at email: ${user.email} , or phone: ${user.phone}`);
                             }
                             </script>
+                        </div>
                     </div>
                 </div>
             </div>
