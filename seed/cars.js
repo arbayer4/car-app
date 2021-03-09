@@ -1,72 +1,43 @@
-const Car = require("../models/car");
 const db = require("../db/connection");
+const Car = require("../models/car");
 
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
-const getCars = async (req, res) => {
-  try {
-    const cars = await Car.find();
-    res.json(cars);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
+const main = async () => {
+  const cars = [
+    {
+      imgURL: [
+        "https://images.unsplash.com/photo-1521462627888-de71aacd558b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=80",
+        "https://images.unsplash.com/photo-1521657215744-34dc4f384a17?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2722&q=80",
+        "https://images.unsplash.com/photo-1521657286746-db1bebb1900a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80",
+        "https://images.unsplash.com/photo-1521657249896-063c0c611fe5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+      ],
+      year: "1957",
+      make: "Cheverlot",
+      model: "Bel Air",
+      description:
+        " A two-door hard top sedan version of the 1957 Chevrolet. The 1957 Chevrolet is a car that was introduced by Chevrolet in September 1956 for the 1957 model year. It was available in three series models: the upscale Bel Air, the mid-range Two-Ten, and the One-Fifty. A two-door station wagon, the Nomad, was produced as a Bel Air model.",
+      price: "120,000",
+      vin: "--",
+      mileage: "110,000",
+      engine: "",
+      "zip-code": "37201",
+      "exterior color": "baby blue",
+      "interior color": "baby blue and creme",
+      doors: "two-door",
+      transmission: "3-speed manual",
+    },
+    {},
+    {},
+    {},
+    {},
+  ];
+  await Car.insertMany(cars);
+  console.log("Created Cars!");
+};
+const run = async () => {
+  await main();
+  db.close();
 };
 
-const getCar = async (req, res) => {
-  try {
-    const { id } = req.params;
-    const car = await Product.findById(id);
-    if (car) {
-      return res.json(car);
-    }
-    res.status(404).json({ message: "Product not found!" });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-};
-
-const createCar = async (req, res) => {
-  try {
-    const car = await new Car(req.body);
-    await car.save();
-    res.status(201).json(car);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ error: error.message });
-  }
-};
-
-const updateCar = async (req, res) => {
-  const { id } = req.params;
-  await Car.findByIdAndUpdate(id, req.body, { new: true }, (error, car) => {
-    if (error) {
-      return res.status(500).json({ error: error.message });
-    }
-    if (!car) {
-      return res.status(404).json({ message: "Car not found!" });
-    }
-    res.status(200).json(car);
-  });
-};
-
-const deleteCar = async (req, res) => {
-  try {
-    const { id } = req.params;
-    const deleted = await Product.findByIdAndDelete(id);
-    if (deleted) {
-      return res.status(200).send("Car Listing deleted");
-    }
-    throw new Error("Car not found");
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-};
-
-module.exports = {
-  createCar,
-  getCars,
-  getCar,
-  updateCar,
-  deleteCar,
-};
-//exporting all functions here so we can import in to our routes. and within each express route.
+run();
