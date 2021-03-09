@@ -27,10 +27,10 @@ const main = async () => {
       doors: "two-door",
       transmission: "3-speed manual",
     },
-    {},
-    {},
-    {},
-    {},
+    // {},
+    // {},
+    // {},
+    // {},
   ];
   await Car.insertMany(cars);
   console.log("Created Cars!");
