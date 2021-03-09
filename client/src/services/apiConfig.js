@@ -8,10 +8,16 @@ const getToken = () => {
 
 const api = axios.create({
     baseURL: process.env.NODE_ENV === 'production'
-    ? 'https://sei-products-api.herokuapp.com/api'
+    ? 'https://sunday-drivers.herokuapp.com/api'
     : 'http://localhost:3000/api'
 })
 
-
+api.interceptors.request.use(async function (options) {
+    options.headers['Authorization'] = await getToken()
+    return options
+}, function (error) {
+    console.log('Request error: ', error)
+    return Promise.reject(error)
+});
 
 export default api
