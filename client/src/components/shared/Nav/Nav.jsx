@@ -30,10 +30,10 @@ const Nav = ({ user }) => {
         <NavLink className="logo" to="/">
           Sunday Driver
         </NavLink>
-      </div>
-      <div className="links">
-        {alwaysOptions}
-        {user ? authenticatedOptions : unauthenticatedOptions}
+        <div className="links">
+          {alwaysOptions}
+          {user ? authenticatedOptions : unauthenticatedOptions}
+        </div>
       </div>
     </nav>
   );
