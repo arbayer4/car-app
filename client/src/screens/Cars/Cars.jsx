@@ -3,9 +3,10 @@ import "./Cars.css";
 import Car from "../../components/Car/Car";
 import Search from "../../components/Search/Search";
 // import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/sort'
-// import Sort from "../../components/Sort/Sort";
+import Sort from "../../components/Sort/Sort";
 import Layout from "../../components/shared/Layout/Layout";
 import { getCars } from "../../services/cars";
+// import { PromiseProvider } from "mongoose";
 
 const Cars = (props) => {
   const [allCars, setAllCars] = useState([]);
@@ -46,13 +47,12 @@ const Cars = (props) => {
       model={car.model}
       price={car.price}
       zipcode={car.zipcode}
-      key={index}
     />
   ));
 
   return (
     <Layout user={props.user}>
-      <Search onSubmit={handleSubmit} onChange={handleSearch} />
+      {/* <Search onSubmit={handleSubmit} onChange={handleSearch} /> */}
       {/* sort is still missing  */}
       <div>{carsJSX}</div>
     </Layout>
