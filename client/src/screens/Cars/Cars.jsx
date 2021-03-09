@@ -52,7 +52,7 @@ const Cars = (props) => {
 
   return (
     <Layout user={props.user}>
-      <Search onSubmit={handleSubmit} onChange={handleSearch} />
+      {/* <Search onSubmit={handleSubmit} onChange={handleSearch} /> */}
       {/* sort is still missing  */}
       <div>{carsJSX}</div>
     </Layout>
