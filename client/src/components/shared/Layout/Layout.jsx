@@ -5,7 +5,7 @@ import "./Layout.css";
 function Layout(props) {
   return (
     <div className="layout">
-      <Nav user={props.user} />
+      <Nav />
       <div className="layout-children">{props.children}</div>
       <Footer />
     </div>
