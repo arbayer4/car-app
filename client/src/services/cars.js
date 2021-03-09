@@ -11,8 +11,7 @@ export const getCars = async () => {
 
 export const getCar = async (id) => {
   try {
-    const response = await api.get(`/cars
-      /${id}`);
+    const response = await api.get(`/cars/${id}`);
     return response.data;
   } catch (error) {
     throw error;
