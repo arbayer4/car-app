@@ -27,15 +27,15 @@ const Cars = (props) => {
   //   }
   // }
 
-  const handleSearch = (event) => {
-    const newQueriedCars = allCars.filter((car) =>
-      car.make.toLowerCase().includes(event.target.value.toLowerCase())
-    );
-    setQueriedCars(newQueriedCars);
-    // left out handleSort for now
-  };
+  // const handleSearch = (event) => {
+  //   const newQueriedCars = allCars.filter((car) =>
+  //     car.make.toLowerCase().includes(event.target.value.toLowerCase())
+  //   );
+  //   setQueriedCars(newQueriedCars);
+  //   // left out handleSort for now
+  // };
 
-  const handleSubmit = (event) => event.preventDefault();
+  // const handleSubmit = (event) => event.preventDefault();
 
   const carsJSX = queriedCars.map((car, index) => (
     <Car
@@ -52,8 +52,6 @@ const Cars = (props) => {
 
   return (
     <Layout user={props.user}>
-      {/* <Search onSubmit={handleSubmit} onChange={handleSearch} /> */}
-      {/* sort is still missing  */}
       <div>{carsJSX}</div>
     </Layout>
   );
