@@ -1,6 +1,5 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-import "./App.css";
 import Home from "./screens/Home/Home";
 import CarCreate from "./screens/CarCreate/CarCreate";
 import CarDetail from "./screens/CarDetail/CarDetail";
