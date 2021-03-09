@@ -1,10 +1,9 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const Car = new Schema (
+const Car = new Schema(
   {
-
-    imgURL: [{ type: String, required: true }], 
+    imgURL: [{ type: String, required: true }],
     year: { type: String, required: true },
     make: { type: String, required: true },
     model: { type: String, required: true },
@@ -13,12 +12,12 @@ const Car = new Schema (
     mileage: { type: String, required: false },
     engine: { type: String, required: false },
     zipcode: { type: String, required: false },
-    exterior color: { type: String, required: false },
-    interior color: { type: String, required: false },
+    exteriorColor: { type: String, required: false },
+    interiorColor: { type: String, required: false },
     doors: { type: String, required: false },
     transmission: { type: String, required: true },
   },
-  {timestamps: true}
-)
+  { timestamps: true }
+);
 
-module.exports=mongoose.model('cars', Car)
+module.exports = mongoose.model("cars", Car);
