@@ -6,7 +6,7 @@ import Search from "../../components/Search/Search";
 import Sort from "../../components/Sort/Sort";
 import Layout from "../../components/shared/Layout/Layout";
 import { getCars } from "../../services/cars";
-// import { PromiseProvider } from "mongoose";
+import { PromiseProvider } from "mongoose";
 
 const Cars = (props) => {
   const [allCars, setAllCars] = useState([]);
