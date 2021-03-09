@@ -39,7 +39,7 @@ const App = () => {
         <Route path="/sign-out">
           <SignOut setUser={setUser} clearUser={clearUser} />
         </Route>
-        <Route exact path="/cars/">
+        <Route exact path="/cars">
           <Cars user={user} />
         </Route>
         <Route path="/create-car">
