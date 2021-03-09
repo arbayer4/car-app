@@ -16,7 +16,7 @@ const Car = new Schema(
     exteriorColor: { type: String, required: false },
     interiorColor: { type: String, required: false },
     doors: { type: String, required: false },
-    transmission: { type: String, required: true },
+    transmission: { type: String, required: false },
   },
   { timestamps: true }
 );
