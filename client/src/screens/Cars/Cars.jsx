@@ -1,13 +1,11 @@
-
 import React, { useState, useEffect } from "react";
 import "./Cars.css";
 import Car from "../../components/Car/Car";
 import Search from "../../components/Search/Search";
 // import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/sort'
-import Sort from "../../components/Sort/Sort";
+// import Sort from "../../components/Sort/Sort";
 import Layout from "../../components/shared/Layout/Layout";
 import { getCars } from "../../services/cars";
-// import { PromiseProvider } from "mongoose";
 
 const Cars = (props) => {
   const [allCars, setAllCars] = useState([]);
@@ -48,6 +46,7 @@ const Cars = (props) => {
       model={car.model}
       price={car.price}
       zipcode={car.zipcode}
+      key={index}
     />
   ));
 
@@ -61,4 +60,3 @@ const Cars = (props) => {
 };
 
 export default Cars;
-
