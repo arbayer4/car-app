@@ -8,6 +8,7 @@ const Car = new Schema(
     make: { type: String, required: true },
     model: { type: String, required: true },
     description: { type: String, required: true },
+    price: { type: String, required: true },
     vin: { type: String, required: false },
     mileage: { type: String, required: false },
     engine: { type: String, required: false },
