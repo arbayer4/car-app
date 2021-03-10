@@ -21,6 +21,7 @@ const Car = (props) => {
           <div className="car-interior-color">{props.interiorColor}</div>
           <div className="car-doors">{props.doors}</div>
           <div className="car-transmission">{props.transmission}</div>
+          <Link to={`/cars/${props._id}`}>Veiw More</Link>
         </div>
       </Link>
     </>
