@@ -4,7 +4,7 @@ import "./Footer.css";
 
 function Footer(props) {
   return (
-    <div className="footer">
+    <footer>
       <NavLink className="footer-logo" to="/">
         Sunday Driver
       </NavLink>
@@ -15,7 +15,7 @@ function Footer(props) {
       {/* <NavLink to="/sign-in">
         <p className="footer-login-link">Account</p>
       </NavLink> */}
-    </div>
+    </footer>
   );
 }
 
