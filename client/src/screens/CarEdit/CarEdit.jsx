@@ -43,9 +43,9 @@ const CarEdit = (props) => {
   };
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    let { id } = props.match.params;
-    const updated = await updateCar(id, car);
+    event.preventDefault()
+    let { id } = props.match.params
+    const updated = await updateCar(id, car)
     setUpdated({ updated });
   };
 
