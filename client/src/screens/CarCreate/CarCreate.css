@@ -2,28 +2,53 @@
   display: flex;
   flex-flow: column nowrap;
   box-sizing: border-box;
-  width: 100vw;
-  margin: 20px;
+  align-items: center;
+  padding: 20px;
+  margin: 30px;
+  background-color: #f77f00;
 }
 .top {
+  box-sizing: border-box;
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
 }
 .left-details,
 .right-details {
-  width: 35vw;
+  box-sizing: border-box;
+  width: 45%;
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
+  justify-content: space-between;
 }
-.left-details > input {
-  width: 50px;
+.label-input {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+.label-input input {
+  width: 80%;
+  height: 30px;
+}
+.label-input label {
+  font-size: 20px;
 }
 
 .bottom-details {
+  box-sizing: border-box;
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
+}
+.bottom-details > textarea,
+.bottom-details > input {
+  width: 80vw;
+}
+.bottom-details > textarea {
+  resize: vertical;
 }
 .create-button,
 .photo-button {
