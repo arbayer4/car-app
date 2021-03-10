@@ -68,6 +68,7 @@ const SignIn = (props) => {
         <h3>Sign In</h3>
         <form className="signin-form" onSubmit={onSignIn}>
           <input
+            className="signin-input"
             required
             type="text"
             name="username"
@@ -76,6 +77,7 @@ const SignIn = (props) => {
             onChange={handleChange}
           />
           <input
+            className="signin-input"
             required
             name="password"
             value={password}

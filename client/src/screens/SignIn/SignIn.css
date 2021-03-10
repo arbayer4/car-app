@@ -14,11 +14,13 @@ h3 {
   background-image: url("https://i.imgur.com/QFLHCRv.jpg");
   background-size: cover;
 }
-input {
+.signin-input {
   padding: 15px;
   border: none;
   margin: 10px;
   border-radius: 10px;
+  outline: none;
+  box-shadow: #3233338c 2px 2px 3px;
 }
 .signin-btn {
   padding: 7px;
