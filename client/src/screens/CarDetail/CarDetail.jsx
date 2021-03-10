@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 // import './CarDetail.css'
 import Layout from "../../components/shared/Layout/Layout";
-import { getCar } from "../../services/cars";
+import { getCar, deleteCar } from "../../services/cars";
 import { useParams, Link } from "react-router-dom";
 
 const CarDetail = (props) => {
@@ -43,11 +43,8 @@ const CarDetail = (props) => {
           <div className="car-detail-price">{car.price}</div>
           <div className="button-container">
             <div className="detail-buttons">
-              <button className="edit-button">
-                <Link className="edit-link" to={`/cars/${car._id}/edit`}>
-                  Edit
-                </Link>
-              </button>
+              <button className="edit-button"><Link className="edit-link" to={`/cars/${car._id}/edit`}>Edit</Link></button>
+              <button className="delete-button" onClick={() => deleteCar(car._id)}>Delete</button>
             </div>
           </div>
         </div>
