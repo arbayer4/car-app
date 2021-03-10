@@ -10,17 +10,38 @@ nav {
   width: 100%;
   height: 80px;
   padding: 0px 20px;
-  border-bottom: 5px solid black;
+  border-bottom: 3px solid #003049;
 }
 .logo {
   font-family: "Akaya Telivigala", cursive;
   font-size: 50px;
-  color: black;
+  color: #003049;
   text-decoration: none;
 }
 
-.link {
+.login-link {
   margin: 20px;
   text-decoration: none;
-  color: black;
+  background-color: #d62828;
+  color: white;
+  height: 45px;
+  width: 120px;
+  font-size: 24px;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+}
+
+.login-link:hover {
+  background-color: #f77f00;
+}
+
+.cars-link {
+  color: #003049;
+  display: inline;
+  font-size: 24px;
+  margin: 20px;
+}
+a {
+  text-decoration: none;
 }
