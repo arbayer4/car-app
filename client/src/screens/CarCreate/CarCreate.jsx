@@ -6,7 +6,7 @@ import { createCar } from "../../services/cars";
 
 const CarCreate = (props) => {
   const [car, setCar] = useState({
-    imgURL: "",
+    imgURL: [],
     year: "",
     make: "",
     model: "",
@@ -21,6 +21,7 @@ const CarCreate = (props) => {
     doors: "--",
     transmission: "--",
   });
+  const [img, setImg] = useState("");
 
   const [isCreated, setCreated] = useState(false);
 
@@ -30,6 +31,14 @@ const CarCreate = (props) => {
       ...car,
       [name]: value,
     });
+  };
+  const handleImage = (event) => {
+    event.preventDefault();
+    setCar({
+      ...car,
+      ["imgURL"]: [...car.imgURL, img],
+    });
+    setImg("");
   };
 
   const handleSubmit = async (event) => {
@@ -41,6 +50,10 @@ const CarCreate = (props) => {
   if (isCreated) {
     return <Redirect to={`/cars`} />;
   }
+
+  const imgJSX = car.imgURL.map((image, index) => (
+    <img className="preview-image" src={image} alt={`car ${index + 1}`} />
+  ));
 
   return (
     <Layout user={props.user}>
@@ -162,15 +175,18 @@ const CarCreate = (props) => {
             value={car.description}
             onChange={handleChange}
           />
-          <label htmlFor="images">Images</label>
+          <div className="preview-images">{imgJSX}</div>
+          <label htmlFor="images">Image URL:</label>
           <input
             type="url"
             name="imgURL"
             id="images"
-            value={car.imgURL}
-            required
-            onChange={handleChange}
+            value={img}
+            onChange={(e) => setImg(e.target.value)}
           />
+          <button className="photo-button" type="button" onClick={handleImage}>
+            Add Image
+          </button>
         </div>
         <button className="create-button" type="submit">
           Submit

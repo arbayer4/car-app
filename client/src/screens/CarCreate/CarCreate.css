@@ -22,7 +22,18 @@
   display: flex;
   flex-flow: column nowrap;
 }
-.create-button {
+.create-button,
+.photo-button {
   width: 80px;
+  height: auto;
+}
+.preview-images {
+  display: flex;
+  flex-flow: row wrap;
+  box-sizing: border-box;
+  width: 100%;
+}
+.preview-image {
+  width: 100px;
   height: auto;
 }
