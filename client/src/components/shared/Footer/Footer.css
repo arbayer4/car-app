@@ -3,11 +3,9 @@ footer {
   flex-direction: column;
   background-color: #003049;
   color: white;
-  height: 100px;
   justify-content: space-between;
   clear: both;
   position: relative;
-  min-height: 50px;
   margin-top: auto;
 }
 .footer-logo {
@@ -21,6 +19,7 @@ footer {
 
 .created-by {
   align-self: center;
+  padding-top: 40px;
   padding-bottom: 10px;
 }
 /* 
