@@ -28,7 +28,12 @@
     "mongoose": "^5.11.19",
     "morgan": "^1.10.0",
     "react-router-dom": "^5.2.0",
+<<<<<<< HEAD
     "react-slideshow-image": "^3.4.3"
+=======
+    "react-slideshow-image": "^3.4.3",
+    "yarn": "^1.22.10"
+>>>>>>> 4e9d369c2fba8433d9d5e10f491dde2d468857c7
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
