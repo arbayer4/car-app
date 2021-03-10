@@ -14,7 +14,10 @@
 .right-details {
   width: 35vw;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
+}
+.left-details > input {
+  width: 50px;
 }
 
 .bottom-details {
