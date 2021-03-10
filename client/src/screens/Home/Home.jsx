@@ -47,12 +47,12 @@ const Home = (props) => {
               <span>Slide 3</span>
             </div>
           </div>
-          <div>
-            <span className="dot"></span>
-            <span className="dot"></span>
-            <span className="dot"></span>
-          </div>
         </Slide>
+        <div className="dots-class">
+          <span className="dot"></span>
+          <span className="dot"></span>
+          <span className="dot"></span>
+        </div>
       </div>
     </Layout>
   );

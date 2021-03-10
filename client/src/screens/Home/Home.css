@@ -5,6 +5,7 @@
   width: 1500px;
 }
 .dot {
+  justify-content: center;
   cursor: pointer;
   height: 15px;
   width: 15px;
