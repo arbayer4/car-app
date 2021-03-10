@@ -65,7 +65,7 @@ const SignIn = (props) => {
   return (
     <Layout user={props.user}>
       <div className="signin">
-        <h3>Sign In</h3>
+        <h3 className="sign-in">Sign In</h3>
         <form className="signin-form" onSubmit={onSignIn}>
           <input
             className="signin-input"
