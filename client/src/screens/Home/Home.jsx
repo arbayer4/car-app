@@ -7,8 +7,8 @@ import "./Home.css";
 const Home = (props) => {
   const slideImages = [
     "https://i.imgur.com/vmVVnxS.jpeg",
-    "https://imgur.com/nKskSK8",
-    "https://imgur.com/qeTwVVm",
+    "https://imgur.com/nKskSK8.jpeg",
+    "https://imgur.com/qeTwVVm.jpeg",
   ];
 
   return (
