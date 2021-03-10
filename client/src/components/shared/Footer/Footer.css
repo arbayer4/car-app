@@ -5,6 +5,9 @@
   color: white;
   height: 100px;
   justify-content: space-between;
+  clear: both;
+  position: relative;
+  margin-top: auto;
 }
 .footer-logo {
   font-family: "Akaya Telivigala", cursive;
