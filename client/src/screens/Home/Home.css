@@ -27,9 +27,28 @@ button.nav.default-nav {
   -webkit-transform: rotate(135deg);
   background-color: none;
 }
-button {
-  appearance: unset;
-  background-color: teal;
+.each-slide > div {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 450px;
+}
+.home-header {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-us {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-us-blurb {
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 /* changes */

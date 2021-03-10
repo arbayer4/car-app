@@ -13,14 +13,13 @@ const Home = (props) => {
 
   return (
     <Layout user={props.user}>
-      <div className="home"></div>
+      <h2 className="home-header">Editors Choice</h2>
       <div className="slide-container">
         <Slide>
           <div className="each-slide">
             <div
               style={{
                 backgroundImage: `url(${slideImages[0]})`,
-                height: "456px",
               }}
             >
               <span>Slide 1</span>
@@ -31,7 +30,6 @@ const Home = (props) => {
               className="slide-background"
               style={{
                 backgroundImage: `url(${slideImages[1]})`,
-                height: "456px",
               }}
             >
               <span>Slide 2</span>
@@ -41,7 +39,6 @@ const Home = (props) => {
             <div
               style={{
                 backgroundImage: `url(${slideImages[2]})`,
-                height: "456px",
               }}
             >
               <span>Slide 3</span>
@@ -53,6 +50,17 @@ const Home = (props) => {
           <span className="dot"></span>
           <span className="dot"></span>
         </div> */}
+      </div>
+      <div className="about-us">
+        <h2 className="about-us">About Sunday Driver</h2>
+        <p className="about-us-blurb">
+          Sunday Drivers gives vintage car enthusiasts the ability to buy and
+          sell vehicles from one another. Sellers can list their vehicle(s) for
+          sale through a simple signup process, then providing a vehicle’s
+          details such as the make, model, year, price, image, etc. Car shoppers
+          have the ability to view selling vehicles and contact the seller via
+          email or phone.
+        </p>
       </div>
     </Layout>
   );
