@@ -1,0 +1,35 @@
+.car-details {
+    display: flex;
+    flex-direction: row;
+    padding-top: 75px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.car-image-main {
+    width: 65vh;
+}
+
+.car-image-thumbnail {
+    width: 150px;
+    padding-top: 10px;
+}
+
+.car-detail-container {
+    background-color:rgb(255, 146, 14);
+    color: white;
+    width: 65vh;
+}
+
+.car-detail-title {
+    display: flex;
+    flex-direction: row;
+    font-weight: bolder;
+    font-size: 25px;
+    justify-content: center;
+}
