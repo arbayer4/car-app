@@ -1,1 +1,26 @@
-/* empty  */
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #003049;
+  color: white;
+  height: 100px;
+  justify-content: space-between;
+}
+.footer-logo {
+  font-family: "Akaya Telivigala", cursive;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  background-color: #003049;
+  align-self: center;
+}
+
+.created-by {
+  align-self: center;
+  padding-bottom: 10px;
+}
+/* 
+.footer-login-link {
+  color: white;
+  align-self: flex-end;
+} */
