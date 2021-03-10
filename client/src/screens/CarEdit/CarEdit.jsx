@@ -2,7 +2,7 @@ import Layout from "../../components/shared/Layout/Layout";
 import { Redirect, useHistory, useParams } from "react-router-dom";
 import { getCar, updateCar } from "../../services/cars";
 import { useState, useEffect } from "react";
-// import "./CarEdit.css";
+import "./CarEdit.css";
 
 const CarEdit = (props) => {
   const [car, setCar] = useState({
@@ -183,7 +183,7 @@ const CarEdit = (props) => {
             onChange={handleChange}
           />
         </div>
-        <button className="create-button" type="submit">
+        <button className="save-button" type="submit">
           Save
         </button>
       </form>

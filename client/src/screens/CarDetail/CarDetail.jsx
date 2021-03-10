@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-// import './CarDetail.css'
 import Layout from "../../components/shared/Layout/Layout";
-import { getCar, deleteCar } from "../../services/cars";
+import { getCar } from "../../services/cars";
 import { useParams, Link } from "react-router-dom";
+import './CarDetail.css'
 
 const CarDetail = (props) => {
   const [car, setCar] = useState(null);
@@ -35,16 +35,15 @@ const CarDetail = (props) => {
         </div>
         <div className="car-detail-container">
           <div className="car-detail-title">
-            <div className="year">{car.year}</div>
-            <div className="make">{car.make}</div>
-            <div className="model">{car.model}</div>
+            <div className="year">{car.year} </div>
+            <div className="make"> {car.make} </div>
+            <div className="model"> {car.model} </div>
           </div>
           <div className="car-detail-description">{car.description}</div>
           <div className="car-detail-price">{car.price}</div>
           <div className="button-container">
             <div className="detail-buttons">
               <button className="edit-button"><Link className="edit-link" to={`/cars/${car._id}/edit`}>Edit</Link></button>
-              <button className="delete-button" onClick={() => deleteCar(car._id)}>Delete</button>
             </div>
           </div>
         </div>

@@ -1,8 +1,10 @@
 .create-form {
   display: flex;
+  min-height: 80vh;
   flex-flow: column nowrap;
   box-sizing: border-box;
   align-items: center;
+  justify-content: space-between;
   padding: 20px;
   margin: 30px;
   background-color: #f77f00;
@@ -18,6 +20,7 @@
 .right-details {
   box-sizing: border-box;
   width: 45%;
+  height: 40vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -30,11 +33,11 @@
   padding-right: 10px;
 }
 .label-input input {
-  width: 80%;
+  width: 300px;
   height: 30px;
 }
 .label-input label {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .bottom-details {
@@ -42,6 +45,7 @@
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
+  align-items: center;
 }
 .bottom-details > textarea,
 .bottom-details > input {
@@ -49,6 +53,9 @@
 }
 .bottom-details > textarea {
   resize: vertical;
+}
+.bottom-details > label {
+  /* align-self: flex-start; */
 }
 .create-button,
 .photo-button {

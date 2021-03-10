@@ -43,10 +43,10 @@ const Cars = (props) => {
       _id={car._id}
       imgURL={car.imgURL}
       year={car.year}
+      description={car.description}
       make={car.make}
       model={car.model}
       price={car.price}
-      zipcode={car.zipcode}
     />
   ));
 
