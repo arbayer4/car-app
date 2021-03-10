@@ -17,20 +17,33 @@ const Home = (props) => {
       <div className="slide-container">
         <Slide>
           <div className="each-slide">
-            <div style={{ backgroundImage: `url(${slideImages[0]})` }}>
+            <div
+              style={{
+                backgroundImage: `url(${slideImages[0]})`,
+                height: "456px",
+              }}
+            >
               <span>Slide 1</span>
             </div>
           </div>
           <div className="each-slide">
             <div
               className="slide-background"
-              style={{ backgroundImage: `url(${slideImages[1]})` }}
+              style={{
+                backgroundImage: `url(${slideImages[1]})`,
+                height: "456px",
+              }}
             >
               <span>Slide 2</span>
             </div>
           </div>
           <div className="each-slide">
-            <div style={{ backgroundImage: `url(${slideImages[2]})` }}>
+            <div
+              style={{
+                backgroundImage: `url(${slideImages[2]})`,
+                height: "456px",
+              }}
+            >
               <span>Slide 3</span>
             </div>
           </div>
