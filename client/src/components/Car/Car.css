@@ -1,1 +1,56 @@
-/* empty  */
+a.car {
+  text-decoration: none;
+  border: none;
+  color: white;
+}
+.car a:visited {
+  text-decoration: none;
+  color: white;
+}
+.car {
+  display: flex;
+  flex-direction: row;
+  margin: 5vh;
+  justify-content: center;
+}
+.car-image {
+  height: 45vh;
+  justify-self: center;
+  box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.774);
+  z-index: 1;
+  margin-bottom: 30vh;
+  margin-top: 12.5vh;
+}
+.car-details-fp {
+  display: grid;
+  width: 50vw;
+  grid-template-areas:
+    "mk" "md" "yr"
+    "ds" "ds" "ds"
+    "ds" "ds" "ds"
+    "pr" "none" "none";
+  background-color: #f77f00;
+  color: white;
+  height: 50vh;
+  padding: 15px;
+  margin-top: 10vh;
+}
+.car-make {
+  font-size: 20px;
+  grid-area: mk;
+}
+.car-description {
+  padding: 10px;
+  margin-top: 10px;
+  grid-area: ds;
+  overflow: scroll;
+  margin: 10px;
+  padding: 10px;
+}
+.car-year {
+  grid-area: yr;
+}
+.car-model {
+  grid-area: md;
+  font-size: 18px;
+}
