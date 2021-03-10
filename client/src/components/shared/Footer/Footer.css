@@ -1,4 +1,4 @@
-.footer {
+footer {
   display: flex;
   flex-direction: column;
   background-color: #003049;
@@ -7,6 +7,7 @@
   justify-content: space-between;
   clear: both;
   position: relative;
+  min-height: 50px;
   margin-top: auto;
 }
 .footer-logo {
