@@ -26,6 +26,7 @@ button.nav.default-nav:hover {
   padding: 3px;
   background-color: rgba(0, 0, 0, 0);
 }
+
 .last-of-type {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
@@ -38,6 +39,7 @@ button.nav.default-nav:hover {
   -webkit-transform: rotate(135deg);
   background-color: none;
 }
+
 .each-slide > div {
   background-size: cover;
   background-repeat: no-repeat;
