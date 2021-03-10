@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./SignUp.css";
 import { signIn, signUp } from "../../services/users";
 import { useHistory } from "react-router-dom";
+import Layout from "../../components/shared/Layout/Layout";
 
 const SignUp = (props) => {
   const history = useHistory();
@@ -51,63 +52,69 @@ const SignUp = (props) => {
         </button>
       );
     } else {
-      return <button type="submit">Sign Up</button>;
+      return (
+        <button className="signup-btn" type="submit">
+          Sign Up
+        </button>
+      );
     }
   };
 
   const { email, username, password, passwordConfirmation, phone } = form;
 
   return (
-    <div className="signup-form">
-      <h3>Sign Up</h3>
-      <form onSubmit={onSignUp}>
-        <label>Username</label>
-        <input
-          required
-          type="text"
-          name="username"
-          value={username}
-          placeholder="Enter username"
-          onChange={handleChange}
-        />
-        <label>Email address</label>
-        <input
-          required
-          type="email"
-          name="email"
-          value={email}
-          placeholder="Enter email"
-          onChange={handleChange}
-        />
-        <label>Phone Number</label>
-        <input
-          type="phone"
-          name="phone"
-          value={phone}
-          placeholder="Enter Phone Number"
-          onChange={handleChange}
-        />
-        <label>Password</label>
-        <input
-          required
-          name="password"
-          value={password}
-          type="password"
-          placeholder="Password"
-          onChange={handleChange}
-        />
-        <label>Password Confirmation</label>
-        <input
-          required
-          name="passwordConfirmation"
-          value={passwordConfirmation}
-          type="password"
-          placeholder="Confirm Password"
-          onChange={handleChange}
-        />
-        {renderError()}
-      </form>
-    </div>
+    <Layout>
+      <div className="signup">
+        <form className="signup-form" onSubmit={onSignUp}>
+          <h3>Sign Up</h3>
+
+          <input
+            required
+            type="text"
+            name="username"
+            value={username}
+            placeholder="Username:"
+            onChange={handleChange}
+          />
+
+          <input
+            required
+            type="email"
+            name="email"
+            value={email}
+            placeholder="Email:"
+            onChange={handleChange}
+          />
+
+          <input
+            type="phone"
+            name="phone"
+            value={phone}
+            placeholder="Phone Number:"
+            onChange={handleChange}
+          />
+
+          <input
+            required
+            name="password"
+            value={password}
+            type="password"
+            placeholder="Password:"
+            onChange={handleChange}
+          />
+
+          <input
+            required
+            name="passwordConfirmation"
+            value={passwordConfirmation}
+            type="password"
+            placeholder="Confirm Password:"
+            onChange={handleChange}
+          />
+          {renderError()}
+        </form>
+      </div>
+    </Layout>
   );
 };
 
