@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./SignUp.css";
 import { signIn, signUp } from "../../services/users";
-
 import { useHistory } from "react-router-dom";
 
 const SignUp = (props) => {
@@ -24,7 +23,7 @@ const SignUp = (props) => {
     });
 
   const onSignUp = (event) => {
-    event.PreventDefauly();
+    event.preventDefault();
     const { setUser } = props;
 
     signUp(form)
