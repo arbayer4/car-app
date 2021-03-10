@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const authenticatedOptions = (
   <>
-    <NavLink className="link" to="/add-car">
+    <NavLink className="link" to="/create-car">
       Add Listing
     </NavLink>
     <NavLink className="link" to="/sign-out">
