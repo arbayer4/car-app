@@ -1,0 +1,27 @@
+.edit-form {
+    display: flex;
+    flex-flow: column nowrap;
+    box-sizing: border-box;
+    width: 100vw;
+    margin: 20px;
+  }
+  .top {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .left-details,
+  .right-details {
+    width: 35vw;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .bottom-details {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+  .save-button {
+    width: 80px;
+    height: auto;
+  }
