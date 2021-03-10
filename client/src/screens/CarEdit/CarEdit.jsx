@@ -1,5 +1,5 @@
 import Layout from "../../components/shared/Layout/Layout";
-import { Redirect, useParams } from "react-router-dom";
+import { Redirect, useHistory, useParams } from "react-router-dom";
 import { getCar, updateCar } from "../../services/cars";
 import { useState, useEffect } from "react";
 // import "./CarEdit.css";
@@ -23,8 +23,8 @@ const CarEdit = (props) => {
   });
 
   const [isUpdated, setUpdated] = useState(false);
-  let { id } = useParams()
-//   console.log(id);
+  let { id } = useParams();
+  //   console.log(id);
 
   useEffect(() => {
     const fetchCar = async () => {
@@ -44,13 +44,13 @@ const CarEdit = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    let { id } = props.match.params;
+    // let { id } = props.match.params;
     const updated = await updateCar(id, car);
     setUpdated({ updated });
   };
 
   if (isUpdated) {
-    return <Redirect to={`/cars/${props.match.params.id}`} />;
+    return <Redirect to={`/cars/${id}`} />;
   }
 
   return (
