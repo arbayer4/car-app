@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 // import './CarDetail.css'
 import Layout from "../../components/shared/Layout/Layout";
 import { getCar } from "../../services/cars";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 
 const CarDetail = (props) => {
   const [car, setCar] = useState(null);
@@ -42,12 +42,12 @@ const CarDetail = (props) => {
           <div className="car-detail-description">{car.description}</div>
           <div className="car-detail-price">{car.price}</div>
           <div className="button-container">
-            <div className="contact-button">
-              <button onclick="alertPopup()">Contact</button>
-              {/* <script>function alertPopup() {
-                            alert(`Contact this seller at email: ${user.email} , or phone: ${user.phone}`);
-                            }
-                            </script> */}
+            <div className="detail-buttons">
+            <button className="edit-button">
+              <Link className="edit-link" to={`/cars/${car._id}/edit`}>
+                Edit
+              </Link>
+              </button>
             </div>
           </div>
         </div>
