@@ -126,54 +126,66 @@ const CarCreate = (props) => {
             </div>
           </div>
           <div className="right-details">
-            <label htmlFor="mileage">Mileage:</label>
-            <input
-              type="text"
-              name="mileage"
-              id="mileage"
-              value={car.mileage}
-              onChange={handleChange}
-            />
-            <label htmlFor="transmission">Transmission:</label>
-            <input
-              type="text"
-              name="transmission"
-              id="transmission"
-              value={car.transmission}
-              onChange={handleChange}
-            />{" "}
-            <label htmlFor="engine">Engine:</label>
-            <input
-              type="text"
-              name="engine"
-              id="engine"
-              value={car.engine}
-              onChange={handleChange}
-            />{" "}
-            <label htmlFor="vin">VIN:</label>
-            <input
-              type="text"
-              name="vin"
-              id="vin"
-              value={car.vin}
-              onChange={handleChange}
-            />{" "}
-            <label htmlFor="interior-color">Interior Color:</label>
-            <input
-              type="text"
-              name="interiorColor"
-              id="interior-color"
-              value={car.interiorColor}
-              onChange={handleChange}
-            />
-            <label htmlFor="price">Price:</label>
-            <input
-              type="text"
-              name="price"
-              id="price"
-              value={car.price}
-              onChange={handleChange}
-            />
+            <div className="label-input">
+              <label htmlFor="mileage">Mileage:</label>
+              <input
+                type="text"
+                name="mileage"
+                id="mileage"
+                value={car.mileage}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="label-input">
+              <label htmlFor="transmission">Transmission:</label>
+              <input
+                type="text"
+                name="transmission"
+                id="transmission"
+                value={car.transmission}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="label-input">
+              <label htmlFor="engine">Engine:</label>
+              <input
+                type="text"
+                name="engine"
+                id="engine"
+                value={car.engine}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="label-input">
+              <label htmlFor="vin">VIN:</label>
+              <input
+                type="text"
+                name="vin"
+                id="vin"
+                value={car.vin}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="label-input">
+              <label htmlFor="interior-color">Interior Color:</label>
+              <input
+                type="text"
+                name="interiorColor"
+                id="interior-color"
+                value={car.interiorColor}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="label-input">
+              <label htmlFor="price">Price:</label>
+              <input
+                type="text"
+                name="price"
+                id="price"
+                value={car.price}
+                onChange={handleChange}
+              />
+            </div>
           </div>
         </div>
         <div className="bottom-details">
