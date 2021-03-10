@@ -1,4 +1,5 @@
 .layout {
+  box-sizing: border-box;
   display: flex;
   flex-flow: column nowrap;
 }
