@@ -6,6 +6,7 @@ export const signUp = async (credentials) => {
     const resp = await api.post("/sign-up", credentials);
     localStorage.setItem("token", resp.data.token);
     const user = jwtDecode(resp.data.token);
+    console.log(user);
     return user;
   } catch (error) {
     throw error;
