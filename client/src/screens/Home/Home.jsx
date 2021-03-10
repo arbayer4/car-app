@@ -48,11 +48,11 @@ const Home = (props) => {
             </div>
           </div>
         </Slide>
-        <div className="dots-class">
+        {/* <div className="dots-class">
           <span className="dot"></span>
           <span className="dot"></span>
           <span className="dot"></span>
-        </div>
+        </div> */}
       </div>
     </Layout>
   );
