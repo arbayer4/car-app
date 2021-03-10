@@ -27,9 +27,15 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.19",
     "morgan": "^1.10.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "react-slideshow-image": "^3.4.3",
+    "yarn": "^1.22.10"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
-  }
+  },
+  "typeRoots": [
+    "./types",
+    "./node_modules/@types"
+  ]
 }
