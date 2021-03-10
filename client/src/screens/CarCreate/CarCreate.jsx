@@ -60,58 +60,70 @@ const CarCreate = (props) => {
       <form className="create-form" onSubmit={handleSubmit}>
         <div className="top">
           <div className="left-details">
-            <label htmlFor="make">Make:</label>
-            <input
-              type="text"
-              name="make"
-              id="make"
-              value={car.make}
-              required
-              autoFocus
-              onChange={handleChange}
-            />
-            <label htmlFor="model">Model:</label>
-            <input
-              type="text"
-              name="model"
-              id="model"
-              value={car.model}
-              required
-              onChange={handleChange}
-            />{" "}
-            <label htmlFor="year">Year:</label>
-            <input
-              type="text"
-              name="year"
-              id="year"
-              value={car.year}
-              required
-              onChange={handleChange}
-            />{" "}
-            <label htmlFor="zipcode">Zip Code:</label>
-            <input
-              type="text"
-              name="zipcode"
-              id="zipcode"
-              value={car.zipcode}
-              onChange={handleChange}
-            />{" "}
-            <label htmlFor="exterior-color">Exterior Color</label>
-            <input
-              type="text"
-              name="exteriorColor"
-              id="exterior-color"
-              value={car.exteriorColor}
-              onChange={handleChange}
-            />{" "}
-            <label htmlFor="doors">Doors:</label>
-            <input
-              type="text"
-              name="doors"
-              id="doors"
-              value={car.doors}
-              onChange={handleChange}
-            />
+            <div className="label-input">
+              <label htmlFor="make">Make:</label>
+              <input
+                type="text"
+                name="make"
+                id="make"
+                value={car.make}
+                required
+                autoFocus
+                onChange={handleChange}
+              />
+            </div>
+            <div className="label-input">
+              <label htmlFor="model">Model:</label>
+              <input
+                type="text"
+                name="model"
+                id="model"
+                value={car.model}
+                required
+                onChange={handleChange}
+              />
+            </div>
+            <div className="label-input">
+              <label htmlFor="year">Year:</label>
+              <input
+                type="text"
+                name="year"
+                id="year"
+                value={car.year}
+                required
+                onChange={handleChange}
+              />
+            </div>
+            <div className="label-input">
+              <label htmlFor="zipcode">Zip Code:</label>
+              <input
+                type="text"
+                name="zipcode"
+                id="zipcode"
+                value={car.zipcode}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="label-input">
+              <label htmlFor="exterior-color">Exterior Color</label>
+              <input
+                type="text"
+                name="exteriorColor"
+                id="exterior-color"
+                value={car.exteriorColor}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="label-input">
+              <label htmlFor="doors">Doors:</label>
+              <input
+                type="text"
+                name="doors"
+                id="doors"
+                value={car.doors}
+                onChange={handleChange}
+              />
+            </div>
           </div>
           <div className="right-details">
             <label htmlFor="mileage">Mileage:</label>
