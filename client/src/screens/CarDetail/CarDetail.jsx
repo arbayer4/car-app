@@ -23,7 +23,7 @@ const CarDetail = (props) => {
   }
 
   return (
-    <Layout>
+    <Layout user={props.user}>
       <div className="car-details">
         <div className="car-image-container">
           <img className="car-image-main" src={car.imgURL[0]} alt={car.make} />
@@ -43,10 +43,10 @@ const CarDetail = (props) => {
           <div className="car-detail-price">{car.price}</div>
           <div className="button-container">
             <div className="detail-buttons">
-            <button className="edit-button">
-              <Link className="edit-link" to={`/cars/${car._id}/edit`}>
-                Edit
-              </Link>
+              <button className="edit-button">
+                <Link className="edit-link" to={`/cars/${car._id}/edit`}>
+                  Edit
+                </Link>
               </button>
             </div>
           </div>
