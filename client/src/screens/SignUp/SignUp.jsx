@@ -69,6 +69,7 @@ const SignUp = (props) => {
           <h3>Sign Up</h3>
 
           <input
+            className="signin-input"
             required
             type="text"
             name="username"
@@ -78,6 +79,7 @@ const SignUp = (props) => {
           />
 
           <input
+            className="signin-input"
             required
             type="email"
             name="email"
@@ -87,6 +89,7 @@ const SignUp = (props) => {
           />
 
           <input
+            className="signin-input"
             type="phone"
             name="phone"
             value={phone}
@@ -95,6 +98,7 @@ const SignUp = (props) => {
           />
 
           <input
+            className="signin-input"
             required
             name="password"
             value={password}
@@ -104,6 +108,7 @@ const SignUp = (props) => {
           />
 
           <input
+            className="signin-input"
             required
             name="passwordConfirmation"
             value={passwordConfirmation}
