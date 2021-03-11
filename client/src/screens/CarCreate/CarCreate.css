@@ -59,8 +59,19 @@
 }
 .create-button,
 .photo-button {
-  width: 80px;
-  height: auto;
+  padding: 10px 35px;
+  text-align: center;
+  color: white;
+  background-color: #ffb81f;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.photo-container {
+  display: flex;
+  flex-direction: column nowrap;
+  height: 100px;
 }
 .preview-images {
   display: flex;

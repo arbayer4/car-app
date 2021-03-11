@@ -46,13 +46,22 @@ const CarCreate = (props) => {
     const created = await createCar(car);
     setCreated({ created });
   };
+  const deleteImage = (e) => {
+    car.imgURL.splice(e.target.value, 1);
+    setCar({ ...car });
+  };
 
   if (isCreated) {
     return <Redirect to={`/cars`} />;
   }
 
   const imgJSX = car.imgURL.map((image, index) => (
-    <img className="preview-image" src={image} alt={`car ${index + 1}`} />
+    <div className="photo-container" key={index}>
+      <img className="preview-image" src={image} alt={`car ${index + 1}`} />
+      <button value={index} onClick={deleteImage} type="button">
+        Delete
+      </button>
+    </div>
   ));
 
   return (

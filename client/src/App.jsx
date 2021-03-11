@@ -24,7 +24,6 @@ const App = () => {
   }, []);
 
   const clearUser = () => setUser(null);
-
   return (
     <div className="app">
       <Switch>
@@ -32,10 +31,10 @@ const App = () => {
           <Home user={user} />
         </Route>
         <Route path="/sign-up">
-          <SignUp setUser={setUser} />
+          <SignUp setUser={setUser} user={user} />
         </Route>
         <Route path="/sign-in">
-          <SignIn setUser={setUser} />
+          <SignIn setUser={setUser} user={user} />
         </Route>
         <Route path="/sign-out">
           <SignOut setUser={setUser} clearUser={clearUser} />
