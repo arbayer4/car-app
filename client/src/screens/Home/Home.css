@@ -23,7 +23,6 @@ button.nav.default-nav:hover {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
   background-color: none;
-  /* color: white; */
 }
 
 .first-of-type {
@@ -32,16 +31,21 @@ button.nav.default-nav:hover {
   background-color: none;
 }
 
-.each-slide > div {
+.each-slide > div,
+.slide-background > div {
   background-size: cover;
   background-repeat: no-repeat;
-  height: 450px;
+  height: 60vh;
+  min-width: 100vw;
 }
+
 .home-header {
   padding-top: 50px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
+  margin-left: 20px;
+  margin-bottom: 0px;
 }
 
 .about-us {
@@ -53,6 +57,16 @@ button.nav.default-nav:hover {
   padding-top: 25px;
 }
 
+.about-us-header {
+  background: #003049;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30px;
+  padding: 0px;
+}
+
 .about-us-blurb {
   width: 50vw;
   padding-bottom: 50px;
@@ -62,8 +76,12 @@ button.nav.default-nav:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  /* width: 100vw; */
+  margin: 100px;
+  font-size: larger;
+}
+.blog-post {
+  display: flex;
+  justify-content: center;
 }
 
 .blog-credit:hover {
@@ -75,5 +93,3 @@ button.nav.default-nav:hover {
   color: gray;
   align-self: right;
 }
-
-/* changes */
