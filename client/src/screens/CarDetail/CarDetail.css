@@ -54,7 +54,10 @@
 
 .lower-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    position: relative;
+    height: 200px
+
 }
 
 .price {

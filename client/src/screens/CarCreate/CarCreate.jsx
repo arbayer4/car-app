@@ -195,6 +195,7 @@ const CarCreate = (props) => {
             id="description"
             cols="30"
             rows="10"
+            maxlength="500"
             required
             value={car.description}
             onChange={handleChange}
