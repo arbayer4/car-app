@@ -2,7 +2,7 @@ import Layout from "../../components/shared/Layout/Layout";
 import { Redirect, useParams } from "react-router-dom";
 import { getCar, updateCar } from "../../services/cars";
 import { useState, useEffect } from "react";
-import "./CarEdit.css";
+// import "./CarEdit.css";
 
 const CarEdit = (props) => {
   const [car, setCar] = useState({
