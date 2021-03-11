@@ -61,6 +61,7 @@
     flex-direction: row;
     position: relative;
     height: 200px
+}
 
 ::-webkit-scrollbar {
   display: none;
