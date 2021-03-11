@@ -13,7 +13,7 @@ const authenticatedOptions = (
 );
 const unauthenticatedOptions = (
   <NavLink to="/sign-in">
-    <button className="login-link">Account</button>
+    <button className="login-link">My Account</button>
   </NavLink>
 );
 const alwaysOptions = (

@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import { getCar, deleteCar } from "../../services/cars";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useHistory } from "react-router-dom";
 import "./CarDetail.css";
 
 const CarDetail = (props) => {
   const [car, setCar] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
+  const history = useHistory();
 
   useEffect(() => {
     const fetchCar = async () => {
@@ -21,6 +22,11 @@ const CarDetail = (props) => {
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
+  const detailDeleteCar = () => {
+    deleteCar(car._id);
+    props.setToggleFetch((curr) => !curr);
+    history.push("/cars");
+  };
 
   const imgJSX = car.imgURL.map((image, index) => (
     <img className="image-thumbnail" src={image} alt={`car ${index + 1}`} />
@@ -48,12 +54,11 @@ const CarDetail = (props) => {
                   </Link>
                 </button>
                 <button
+                  type="button"
                   className="delete-button"
-                  onClick={() => deleteCar(car._id)}
+                  onClick={detailDeleteCar}
                 >
-                  <Link className="delete-link" to={`/cars`}>
-                    Delete
-                  </Link>
+                  Delete
                 </button>
               </div>
             ) : null}
