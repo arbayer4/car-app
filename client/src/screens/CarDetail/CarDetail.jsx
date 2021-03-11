@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../components/shared/Layout/Layout";
-import { deleteCar, getCar } from "../../services/cars";
+import { getCar, deleteCar } from "../../services/cars";
 import { useParams, Link } from "react-router-dom";
 import './CarDetail.css'
 
@@ -26,7 +26,7 @@ const CarDetail = (props) => {
     <Layout user={props.user}>
       <div className="car-details">
         <div className="car-image-container">
-          <img className="car-image-main" src={car.imgURL[0]} alt={car.make} />
+          <img className="car-image-main" src={car.imgURL} alt={car.make} />
           <img
             className="car-image-thumbnail"
             src={car.imgURL}
