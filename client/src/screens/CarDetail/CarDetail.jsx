@@ -25,7 +25,8 @@ const CarDetail = (props) => {
   const detailDeleteCar = () => {
     deleteCar(car._id);
     props.setToggleFetch((curr) => !curr);
-    history.push("/cars");
+    setTimeout(() => history.push("/cars"), 500);
+    // history.push("/cars");
   };
 
   const imgJSX = car.imgURL.map((image, index) => (
