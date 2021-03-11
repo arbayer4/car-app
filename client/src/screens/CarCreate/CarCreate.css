@@ -73,6 +73,8 @@
   flex-direction: column nowrap;
   height: 100px;
 }
+.delete-button {
+}
 .preview-images {
   display: flex;
   flex-flow: row wrap;

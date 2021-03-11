@@ -16,12 +16,6 @@ const SignUp = (props) => {
     isError: false,
     errMsg: "",
   });
-  const checkUser = () => {
-    if (props.user) {
-      history.goBack();
-    }
-  };
-  window.onload = checkUser();
 
   const handleChange = (event) =>
     setForm({
