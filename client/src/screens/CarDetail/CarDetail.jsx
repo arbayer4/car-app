@@ -50,7 +50,7 @@ const CarDetail = (props) => {
             {car.year} {car.make} {car.model}
           </div>
           <div className="description">{car.description}</div>
-          <div className="price">{car.price}</div>
+          <div className="price">$ {car.price}</div>
           {props.user ? (
             <div className="buttons">
               <Link className="edit-link" to={`/cars/${car._id}/edit`}>

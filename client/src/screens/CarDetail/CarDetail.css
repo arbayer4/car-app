@@ -54,6 +54,7 @@
   font-size: 20px;
   justify-content: center;
   scrollbar-width: none;
+  height: 50vh;
 }
 
 .lower-container {
@@ -62,7 +63,6 @@
   position: relative;
   height: 200px;
 }
-
 ::-webkit-scrollbar {
   display: none;
 }
@@ -84,6 +84,7 @@
   border: none;
   border-radius: 50px;
   margin-top: 20px;
+  outline: none;
 }
 .edit-button:hover {
   background-color: #f7ca68;
