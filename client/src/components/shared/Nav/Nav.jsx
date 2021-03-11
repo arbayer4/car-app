@@ -3,11 +3,11 @@ import { NavLink } from "react-router-dom";
 
 const authenticatedOptions = (
   <>
-    <NavLink className="link" to="/create-car">
-      <p className="cars-link">Add Listing</p>
+    <NavLink className="cars-link" to="/create-car">
+      Add Listing
     </NavLink>
-    <NavLink className="link" to="/sign-out">
-      <p className="cars-link"> Sign-Out</p>
+    <NavLink className="cars-link" to="/sign-out">
+      Sign-Out
     </NavLink>
   </>
 );
@@ -18,8 +18,8 @@ const unauthenticatedOptions = (
 );
 const alwaysOptions = (
   <>
-    <NavLink to="/cars">
-      <p className="cars-link">Browse All Collector Cars</p>
+    <NavLink className="cars-link" to="/cars">
+      Browse All Collector Cars
     </NavLink>
   </>
 );
