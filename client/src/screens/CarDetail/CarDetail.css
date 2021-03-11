@@ -1,43 +1,74 @@
-.car-details {
+.main-container {
     display: flex;
     flex-direction: row;
     padding-top: 75px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .image-container {
     display: flex;
     flex-direction: column;
+    object-fit: contain;
 }
 
-.car-image-main {
-    width: 65vh;
+.image-main {
+    width: 75vh;
+    padding-right: 30px;
 }
 
-.car-image-thumbnail {
-    width: 150px;
-    padding-top: 10px;
-}
-
-.car-detail-container {
-    background-color:rgb(255, 146, 14);
-    color: white;
-    width: 65vh;
-}
-
-.car-detail-title {
+.image-thumbnail {
     display: flex;
     flex-direction: row;
-    font-weight: bolder;
-    font-size: 25px;
+    padding-top: 10px;
+    padding-right: 12px;
+    height: 100px;
+    object-fit:contain;
+}
+
+.details-container {
+    background-color:rgb(255, 146, 14);
+    color: white;
+    width: 75vh;
+    height: 55vh;
+    padding: 30px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 31px;
+    letter-spacing: -1px;
+    word-spacing: 3px;
     justify-content: center;
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.lower-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.price {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 20px;
+    bottom: 8px;
 }
 
 .edit-button,
 .delete-button {
     padding: 10px 25px;
-    margin: 5px;
+    margin: 6px;
     text-align: center;
     color: rgb(255, 255, 255);
     background-color: #ffb81f;
