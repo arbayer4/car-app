@@ -20,6 +20,7 @@ const CarCreate = (props) => {
     interiorColor: "--",
     doors: "--",
     transmission: "--",
+    ownersEmail: props.user.email,
   });
   const [img, setImg] = useState("");
 
