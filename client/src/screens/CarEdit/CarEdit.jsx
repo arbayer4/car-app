@@ -6,7 +6,7 @@ import "./CarEdit.css";
 
 const CarEdit = (props) => {
   const [car, setCar] = useState({
-    imgURL: "",
+    imgURL: [],
     year: "",
     make: "",
     model: "",
@@ -22,6 +22,7 @@ const CarEdit = (props) => {
     transmission: "",
   });
 
+  const [img, setImg] = useState("");
   const [isUpdated, setUpdated] = useState(false);
   let { id } = useParams();
 
@@ -40,16 +41,41 @@ const CarEdit = (props) => {
       [name]: value,
     });
   };
+  const handleImage = (event) => {
+    // event.preventDefault();
+    setCar({
+      ...car,
+      ["imgURL"]: [...car.imgURL, img],
+    });
+    setImg("");
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const updated = await updateCar(id, car);
     setUpdated({ updated });
   };
+  const deleteImage = (e) => {
+    car.imgURL.splice(e.target.value, 1);
+    setCar({ ...car });
+  };
 
   if (isUpdated) {
     return <Redirect to={`/cars/${id}`} />;
   }
+  const imgJSX = car.imgURL.map((image, index) => (
+    <div className="photo-container" key={index}>
+      <img className="preview-image" src={image} alt={`car ${index + 1}`} />
+      <button
+        classname="delete-button"
+        value={index}
+        onClick={deleteImage}
+        type="button"
+      >
+        Delete
+      </button>
+    </div>
+  ));
 
   return (
     <Layout user={props.user}>
@@ -195,18 +221,21 @@ const CarEdit = (props) => {
             value={car.description}
             onChange={handleChange}
           />
+          <div className="preview-images">{imgJSX}</div>
           <label htmlFor="images">Images:</label>
           <input
             type="url"
             name="imgURL"
             id="images"
-            value={car.imgURL}
-            required
-            onChange={handleChange}
+            value={img}
+            onChange={(e) => setImg(e.target.value)}
           />
-        <button className="save-button" type="submit">
-          Save Changes
-        </button>
+          <button className="photo-button" type="button" onClick={handleImage}>
+            Add Image
+          </button>
+          <button className="save-button" type="submit">
+            Save Changes
+          </button>
         </div>
       </form>
     </Layout>
