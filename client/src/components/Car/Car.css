@@ -1,82 +1,88 @@
-.car a {
-  text-decoration: none;
-  border: none;
-  color: white;
-  font-size: 20px;
-}
-
-.car a:visited {
-  text-decoration: none;
-  color: white;
-}
-
-.car a:hover {
-  text-decoration: none;
-  color: #fcbf49;
-}
-
-.car {
-  display: flex;
-  flex-direction: row;
-  margin: 10vh;
-  justify-content: left;
-}
-
 .container-all {
+  color: white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 15vh;
+  margin-bottom: 30vh;
+  justify-self: center;
 }
 
 .container-image-and-data {
   display: flex;
   flex-direction: row;
-  margin-bottom: 8vh;
+  justify-content: center;
 }
 
 .container-image {
+  background-color: white;
+  border-radius: 25px;
   display: flex;
-  width: 700px;
-  height: 400px;
-  margin-right: -150px;
+  width: 40vw;
+  height: 50vh;
+  margin-right: -100px;
   object-fit: cover;
   box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.774);
   z-index: 2;
 }
 .car-image {
+  border-radius: 25px;
   display: flex;
-  width: 700px;
-  height: 400px;
+  width: 40vw;
+  height: 50vh;
   margin-right: -200px;
   object-fit: cover;
 }
 
 .container-data {
-  width: 50vh;
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
   font-size: 18px;
   margin-top: -50px;
   margin-bottom: -50px;
-  overflow: scroll;
-  scrollbar-width: none;
   background-color: rgb(255, 146, 14);
 }
 
 .car-title,
+.veiw-more-detail,
 .car-description,
 .car-price {
-  display: flex;
-  flex-direction: row;
-  margin-left: 15vh;
+  margin-left: 11vh;
 }
 
 .car-title {
+  font-size: 30px;
+  font-weight: bold;
   margin-top: 5vh;
 }
 
 .car-description {
+  font-size: 20px;
+  padding: 10px;
+  overflow: scroll;
+  scrollbar-width: none;
+  height: 30vh;
   margin-top: 2vh;
-  margin-left: 17vh;
+  margin-left: 120px;
+  margin-right: 3vw;
 }
 
 .car-price {
+  font-size: 25px;
   margin-top: 5vh;
+}
+.veiw-more-detail {
+  order: 5;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+.veiw-more-detail:hover {
+  color: #fcbf49;
+  border-bottom: 3px solid #fcbf49;
+}
+.car-image:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
