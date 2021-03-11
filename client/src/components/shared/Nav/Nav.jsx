@@ -28,6 +28,7 @@ const Nav = ({ user }) => {
     <nav>
       <div className="nav">
         <NavLink className="logo" to="/">
+          <img className="icon" src="https://i.imgur.com/aVuOKod.jpg"></img>
           Sunday Driver
         </NavLink>
         <div className="links">
