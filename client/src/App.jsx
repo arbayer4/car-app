@@ -13,6 +13,7 @@ import { verifyUser } from "./services/users";
 
 const App = () => {
   const [user, setUser] = useState(null);
+  const [toggleFetch, setToggleFetch] = useState(false);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -40,7 +41,7 @@ const App = () => {
           <SignOut setUser={setUser} clearUser={clearUser} />
         </Route>
         <Route exact path="/cars">
-          <Cars user={user} />
+          <Cars user={user} toggleFetch={toggleFetch} />
         </Route>
         <Route path="/create-car">
           {user ? <CarCreate user={user} /> : <Redirect to="/sign-up" />}
@@ -49,7 +50,7 @@ const App = () => {
           {user ? <CarEdit user={user} /> : <Redirect to="/" />}
         </Route>
         <Route exact path="/cars/:id">
-          <CarDetail user={user} />
+          <CarDetail user={user} setToggleFetch={setToggleFetch} />
         </Route>
       </Switch>
     </div>

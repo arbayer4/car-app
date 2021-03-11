@@ -20,7 +20,7 @@ const Cars = (props) => {
       setQueriedCars(cars);
     };
     fetchCars();
-  }, []);
+  }, [props.toggleFetch]);
 
   // const handleSort = type => {
   //   setSortType(type) {
