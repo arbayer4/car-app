@@ -1,5 +1,6 @@
 const Car = require("../models/car");
 const db = require("../db/connection");
+const User = require("../models/user");
 
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
@@ -27,8 +28,43 @@ const getCar = async (req, res) => {
 
 const createCar = async (req, res) => {
   try {
-    const car = await new Car(req.body);
+    const user = await User.findOne({ email: req.body.ownersEmail });
+    const {
+      year,
+      make,
+      model,
+      description,
+      price,
+      vin,
+      mileage,
+      engine,
+      zipcode,
+      exteriorColor,
+      interiorColor,
+      doors,
+      transmission,
+    } = req.body;
+    const payload = {
+      imgURL: [...req.body.imgURL],
+      year,
+      make,
+      model,
+      description,
+      price,
+      vin,
+      mileage,
+      engine,
+      zipcode,
+      exteriorColor,
+      interiorColor,
+      doors,
+      transmission,
+      owner: user,
+    };
+    const car = new Car(payload);
     await car.save();
+    user.cars.push(car);
+    await user.save();
     res.status(201).json(car);
   } catch (error) {
     console.log(error);
