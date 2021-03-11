@@ -12,7 +12,6 @@
   text-decoration: none;
   color: #fcbf49;
 }
-
 .car {
   display: flex;
   flex-direction: row;
@@ -20,35 +19,43 @@
   justify-content: center;
 }
 .car-image {
+  display: flex;
   height: 45vh;
-  justify-self: center;
   box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.774);
-  z-index: 1;
+  z-index: 2;
   margin-bottom: 30vh;
   margin-top: 12.5vh;
+  grid-column: 2 / span 6;
+  grid-row: 1;
+  z-index: 1;
+}
+.details-fp {
+  justify-content: right;
+  order: 1;
 }
 .car-details-fp {
-  display: grid;
+  display: flex;
+  padding: 2vw;
+  white-space: normal;
   width: 50vw;
-  grid-template-areas:
-    "mk" "md" "yr"
-    "ds" "ds" "ds"
-    "ds" "ds" "ds"
-    "pr" "none" "none";
   background-color: #f77f00;
   color: white;
   height: 50vh;
-  padding: 15px;
   margin-top: 10vh;
+  grid-column: 5 / span 7;
+  grid-row: 1;
+}
+.hidden {
+  width: 20vw;
+  order: 0;
 }
 .car-make {
-  font-size: 20px;
-  grid-area: mk;
+  font-size: 30px;
 }
 .car-description {
+  font-size: 18px;
   padding: 10px;
   margin-top: 10px;
-  grid-area: ds;
   overflow: scroll;
   margin: 10px;
   padding: 10px;
@@ -58,9 +65,43 @@
   display: none;
 }
 .car-year {
-  grid-area: yr;
+  font-size: 18px;
 }
 .car-model {
-  grid-area: md;
+  font-size: 20px;
+}
+.car-price {
   font-size: 18px;
+}
+.veiw-more {
+  font-size: 18px;
+}
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+}
+.car-vin {
+  display: none;
+}
+.car-zipcode {
+  display: none;
+}
+.car-doors {
+  display: none;
+}
+.car-interior-color {
+  display: none;
+}
+.car-exterior-color {
+  display: none;
+}
+.car-transmission {
+  display: none;
+}
+.car-mileage {
+  display: none;
+}
+.car-engine {
+  display: none;
 }

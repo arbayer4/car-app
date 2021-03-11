@@ -8,12 +8,13 @@ import Cars from "./screens/Cars/Cars";
 import SignIn from "./screens/SignIn/SignIn";
 import SignUp from "./screens/SignUp/SignUp";
 import SignOut from "./screens/SignOut/SignOut";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect, useHistory } from "react-router-dom";
 import { verifyUser } from "./services/users";
 
 const App = () => {
   const [user, setUser] = useState(null);
   const [toggleFetch, setToggleFetch] = useState(false);
+  const history = useHistory();
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -31,10 +32,17 @@ const App = () => {
           <Home user={user} />
         </Route>
         <Route path="/sign-up">
+<<<<<<< HEAD
           <SignUp setUser={setUser} user={user} />
         </Route>
         <Route path="/sign-in">
           <SignIn setUser={setUser} user={user} />
+=======
+          {!user ? <SignUp setUser={setUser} /> : history.goBack()}
+        </Route>
+        <Route path="/sign-in">
+          {!user ? <SignIn setUser={setUser} /> : <Redirect to="/" />}
+>>>>>>> 0b539030c8bfe3ca7af2d776f43e2dc8b6c0c5aa
         </Route>
         <Route path="/sign-out">
           <SignOut setUser={setUser} clearUser={clearUser} />
@@ -42,7 +50,7 @@ const App = () => {
         <Route exact path="/cars">
           <Cars user={user} toggleFetch={toggleFetch} />
         </Route>
-        <Route path="/create-car">
+        <Route exact path="/create-car">
           {user ? <CarCreate user={user} /> : <Redirect to="/sign-up" />}
         </Route>
         <Route exact path="/cars/:id/edit">
