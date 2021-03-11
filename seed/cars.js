@@ -11,7 +11,9 @@ const main = async () => {
     phone: "2604220123",
     password_digest:
       "$2b$11$zd3.fNsMpXFPVKUwxDyCR.JVkzFwGUZiF1HrbQh5ir8u9q1UqNhfS",
+    cars: [],
   });
+  await user1.save();
   const cars = [
     {
       imgURL: [
@@ -87,7 +89,7 @@ const main = async () => {
       transmission: "manual",
       interiorColor: "tan",
       exteriorColor: "green",
-      own,
+      owner: user1,
     },
     {
       imgURL: [
@@ -109,6 +111,7 @@ const main = async () => {
       interiorColor: "black",
       doors: "two-door",
       transmission: "4-speed manual",
+      owner: user1,
     },
     {
       imgURL: [
@@ -130,10 +133,14 @@ const main = async () => {
       interiorColor: "Black",
       doors: "two-door",
       transmission: "4-speed manual",
+      owner: user1,
     },
   ];
   await Car.insertMany(cars);
   console.log("Created Cars!");
+
+  user1.cars = await Car.find({ owner: user1 });
+  await user1.save();
 };
 const run = async () => {
   await main();
