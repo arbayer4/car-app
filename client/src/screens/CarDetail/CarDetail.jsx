@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import { deleteCar, getCar } from "../../services/cars";
-import { useParams, Link } from "react-router-dom";
+import { Redirect, useParams, Link } from "react-router-dom";
 import './CarDetail.css'
 
 const CarDetail = (props) => {
   const [car, setCar] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
+    const [isDeleted, setDeleted] = useState(false);
   const { id } = useParams();
 
   useEffect(() => {
@@ -18,6 +19,16 @@ const CarDetail = (props) => {
     fetchCar();
   }, [id]);
 
+  const handleDelete = async (event) => {
+    event.preventDefault();
+    // let { id } = props.match.params;
+    const deleted = await deleteCar(id, car);
+    setDeleted({ deleted });
+  };
+
+  if (isDeleted) {
+    return <Redirect to={`/cars`} />;
+  }
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
