@@ -55,6 +55,13 @@
   justify-content: center;
   scrollbar-width: none;
 }
+
+.lower-container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 200px
+
 ::-webkit-scrollbar {
   display: none;
 }
