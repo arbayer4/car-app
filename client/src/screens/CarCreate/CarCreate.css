@@ -1,6 +1,6 @@
 .create-form {
   display: flex;
-  min-height: 80vh;
+  /* min-height: 80vh; */
   flex-flow: column nowrap;
   box-sizing: border-box;
   align-items: center;
