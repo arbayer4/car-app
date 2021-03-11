@@ -14,7 +14,7 @@ const Home = (props) => {
   return (
     <Layout user={props.user}>
       <div className="home">
-        <h2 className="home-header">Editors Choice</h2>
+        <h2 className="home-header">Our Favorites</h2>
         <div className="slide-container">
           <Slide>
             <div className="each-slide">
@@ -23,7 +23,7 @@ const Home = (props) => {
                   backgroundImage: `url(${slideImages[0]})`,
                 }}
               >
-                <span>Slide 1</span>
+                <span></span>
               </div>
             </div>
             <div className="each-slide">
@@ -33,7 +33,7 @@ const Home = (props) => {
                   backgroundImage: `url(${slideImages[1]})`,
                 }}
               >
-                <span>Slide 2</span>
+                <span></span>
               </div>
             </div>
             <div className="each-slide">
@@ -42,7 +42,7 @@ const Home = (props) => {
                   backgroundImage: `url(${slideImages[2]})`,
                 }}
               >
-                <span>Slide 3</span>
+                <span></span>
               </div>
             </div>
           </Slide>

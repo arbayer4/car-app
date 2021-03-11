@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./SignUp.css";
 import { signIn, signUp } from "../../services/users";
-import { useHistory } from "react-router-dom";
+import { useHistory, Redirect } from "react-router-dom";
 import Layout from "../../components/shared/Layout/Layout";
 
 const SignUp = (props) => {
@@ -16,6 +16,12 @@ const SignUp = (props) => {
     isError: false,
     errMsg: "",
   });
+  const checkUser = () => {
+    if (props.user) {
+      history.goBack();
+    }
+  };
+  window.onload = checkUser();
 
   const handleChange = (event) =>
     setForm({
