@@ -22,27 +22,23 @@ const CarDetail = (props) => {
     return <h1>Loading...</h1>;
   }
 
+  const imgJSX = car.imgURL.map((image, index) => (
+    <img className="image-thumbnail" src={image} alt={`car ${index + 1}`} />
+  ));
+
   return (
     <Layout user={props.user}>
-      <div className="car-details">
-        <div className="car-image-container">
-          <img className="car-image-main" src={car.imgURL} alt={car.make} />
-          <img
-            className="car-image-thumbnail"
-            src={car.imgURL}
-            alt="Click image to enlarge"
-          />
+      <div className="main-container">
+        <div className="image-container">
+          <img className="image-main" src={car.imgURL[0]} alt={car.make} />
+          <div className="image-thumbnail">{imgJSX}</div>
         </div>
-        <div className="car-detail-container">
-          <div className="car-detail-title">
-            <div className="year">{car.year} </div>
-            <div className="make"> {car.make} </div>
-            <div className="model"> {car.model} </div>
-          </div>
-          <div className="car-detail-description">{car.description}</div>
-          <div className="car-detail-price">{car.price}</div>
-          <div className="button-container">
-            <div className="detail-buttons">
+        <div className="details-container">
+          <div className="title">{car.year} {car.make} {car.model}</div>
+          <div className="description">{car.description}</div>
+          <div className="lower-container">
+            <div className="price">{car.price}</div>
+            <div className="buttons">
               <button className="edit-button"><Link className="edit-link" to={`/cars/${car._id}/edit`}>Edit</Link></button>
               <button className="delete-button" onClick={() => deleteCar(car._id)}><Link className="delete-link" to={`/cars`}>Delete</Link></button>
             </div>
