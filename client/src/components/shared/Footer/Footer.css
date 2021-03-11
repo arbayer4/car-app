@@ -1,10 +1,14 @@
-.footer {
+footer {
   display: flex;
   flex-direction: column;
   background-color: #003049;
   color: white;
   height: 100px;
   justify-content: space-between;
+  clear: both;
+  position: relative;
+  min-height: 50px;
+  margin-top: auto;
 }
 .footer-logo {
   font-family: "Akaya Telivigala", cursive;

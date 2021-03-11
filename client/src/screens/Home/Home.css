@@ -1,7 +1,10 @@
 @import "react-slideshow-image/dist/styles.css";
-
+.app {
+  height: 100vh;
+}
 .home {
   color: #003049;
+  height: 100vh;
 }
 
 button.nav.default-nav {

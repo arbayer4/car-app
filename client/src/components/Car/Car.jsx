@@ -6,7 +6,9 @@ const Car = (props) => {
   return (
     <>
       <Link className="car" to={`/cars/${props._id}`}>
-        <img className="car-image" src={props.imgURL} alt={props.make} />
+        <div className="image-container">
+          <img className="car-image" src={props.imgURL} alt={props.make} />
+        </div>
         <div className="car-details-fp">
           <div className="car-year">{props.year}</div>
           <div className="car-make">{props.make}</div>
