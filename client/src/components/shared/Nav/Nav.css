@@ -2,8 +2,7 @@ nav {
   width: 100%;
 }
 .icon {
-  height: 35px;
-  padding-right: 10px;
+  height: 60px;
 }
 .nav {
   box-sizing: border-box;
@@ -21,6 +20,7 @@ nav {
   font-size: 50px;
   color: #003049;
   text-decoration: none;
+  justify-self: flex-start;
 }
 
 .login-link {

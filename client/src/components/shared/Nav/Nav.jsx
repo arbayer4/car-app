@@ -27,8 +27,10 @@ const Nav = ({ user }) => {
   return (
     <nav>
       <div className="nav">
-        <NavLink className="logo" to="/">
+        <NavLink className="icon" to="/">
           <img className="icon" src="https://i.imgur.com/aVuOKod.jpg"></img>
+        </NavLink>
+        <NavLink className="logo" to="/">
           Sunday Driver
         </NavLink>
         <div className="links">
