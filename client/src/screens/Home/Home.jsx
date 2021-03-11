@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../../components/shared/Layout/Layout";
 import { Slide } from "react-slideshow-image";
+import { NavLink } from "react-router-dom";
 import "./Home.css";
 // https://www.npmjs.com/package/react-slideshow-image
 
@@ -57,6 +58,9 @@ const Home = (props) => {
             shoppers have the ability to view selling vehicles and contact the
             seller via email or phone.
           </p>
+          <NavLink to="/sign-in">
+            <button className="login-link">My Account</button>
+          </NavLink>
         </div>
         <div className="blog">
           <h2 className="blog-title">
