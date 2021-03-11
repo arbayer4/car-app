@@ -1,80 +1,96 @@
 .main-container {
-    display: flex;
-    flex-direction: row;
-    padding-top: 75px;
-    padding-left: 60px;
-    padding-right: 60px;
+  display: flex;
+  flex-direction: column;
+  flex-direction: row;
+  padding-top: 75px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
-.image-container {
-    display: flex;
-    flex-direction: column;
-    object-fit: contain;
+.img-container {
+  display: flex;
+  flex-direction: column;
+  object-fit: contain;
 }
 
 .image-main {
-    width: 75vh;
-    padding-right: 30px;
+  width: 75vh;
+  padding-right: 30px;
 }
 
 .image-thumbnail {
-    display: flex;
-    flex-direction: row;
-    padding-top: 10px;
-    padding-right: 12px;
-    height: 100px;
-    object-fit:contain;
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  padding-right: 12px;
+  height: 100px;
+  object-fit: contain;
 }
 
 .details-container {
-    background-color:rgb(255, 146, 14);
-    color: white;
-    width: 75vh;
-    height: 55vh;
-    padding: 30px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: 75vh;
+  height: 55vh;
+  padding: 30px;
+  background-color: rgb(255, 146, 14);
 }
 
 .title {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 31px;
-    letter-spacing: -1px;
-    word-spacing: 3px;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 31px;
+  letter-spacing: -1px;
+  word-spacing: 3px;
+  justify-content: center;
 }
 
 .description {
-    display: flex;
-    flex-direction: row;
-    font-size: 20px;
-    justify-content: center;
+  overflow: scroll;
+  flex-direction: row;
+  font-size: 20px;
+  justify-content: center;
+  scrollbar-width: none;
 }
-
-.lower-container {
-    display: flex;
-    flex-direction: column;
+::-webkit-scrollbar {
+  display: none;
 }
 
 .price {
-    display: flex;
-    flex-direction: row;
-    font-weight: bold;
-    font-size: 20px;
-    bottom: 8px;
+  font-weight: bold;
+  padding: 10px;
+  font-size: 20px;
+  bottom: 8px;
 }
 
 .edit-button,
 .delete-button {
-    padding: 10px 25px;
-    margin: 6px;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    background-color: #ffb81f;
-    border: none;
-    border-radius: 50px;
-    margin-top: 20px;
-  }
-  
-  .save-button:hover {background-color: #ffa60b}
+  padding: 10px 25px;
+  margin: 6px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: #fcbf49;
+  border: none;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+.edit-button:hover {
+  background-color: #f7ca68;
+  cursor: pointer;
+}
+.delete-button:hover {
+  background-color: #f7ca68;
+  cursor: pointer;
+}
+.edit-button a {
+  color: white;
+}
+.edit-button a:visited {
+  color: white;
+}
+.save-button:hover {
+  background-color: #ffa60b;
+}
