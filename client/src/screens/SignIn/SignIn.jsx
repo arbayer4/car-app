@@ -54,7 +54,7 @@ const SignIn = (props) => {
     } else {
       return (
         <button className="signin-btn" type="submit">
-          Sign In
+          Login
         </button>
       );
     }
@@ -65,7 +65,7 @@ const SignIn = (props) => {
   return (
     <Layout user={props.user}>
       <div className="signin">
-        <h3 className="sign-in">Sign In</h3>
+        <h3 className="sign-in">Login</h3>
         <form className="signin-form" onSubmit={onSignIn}>
           <input
             className="signin-input"
@@ -87,7 +87,7 @@ const SignIn = (props) => {
           />
           {renderError()}
           <button className="orsignup-btn">
-            <Link to="/sign-up">Or SignUp</Link>
+            <Link to="/sign-up">Create Account</Link>
           </button>
         </form>
       </div>

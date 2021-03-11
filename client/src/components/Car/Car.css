@@ -1,12 +1,18 @@
-a.car {
+.car a {
   text-decoration: none;
   border: none;
   color: white;
+  font-size: 20px;
 }
 .car a:visited {
   text-decoration: none;
   color: white;
 }
+.car a:hover {
+  text-decoration: none;
+  color: #fcbf49;
+}
+
 .car {
   display: flex;
   flex-direction: row;
@@ -46,6 +52,10 @@ a.car {
   overflow: scroll;
   margin: 10px;
   padding: 10px;
+  scrollbar-width: none;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 .car-year {
   grid-area: yr;

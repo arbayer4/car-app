@@ -54,7 +54,7 @@ const SignUp = (props) => {
     } else {
       return (
         <button className="signup-btn" type="submit">
-          Sign Up
+          Create
         </button>
       );
     }
