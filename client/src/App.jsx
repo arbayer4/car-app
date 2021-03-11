@@ -14,7 +14,7 @@ import { verifyUser } from "./services/users";
 const App = () => {
   const [user, setUser] = useState(null);
   const [toggleFetch, setToggleFetch] = useState(false);
-  const history = useHistory();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -24,35 +24,45 @@ const App = () => {
     fetchUser();
   }, []);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 10);
+  }, []);
+
   const clearUser = () => setUser(null);
   return (
     <div className="app">
-      <Switch>
-        <Route exact path="/">
-          <Home user={user} />
-        </Route>
-        <Route path="/sign-up">
-          {!user ? <SignUp setUser={setUser} /> : history.goBack()}
-        </Route>
-        <Route path="/sign-in">
-          {!user ? <SignIn setUser={setUser} /> : <Redirect to="/" />}
-        </Route>
-        <Route path="/sign-out">
-          <SignOut setUser={setUser} clearUser={clearUser} />
-        </Route>
-        <Route exact path="/cars">
-          <Cars user={user} toggleFetch={toggleFetch} />
-        </Route>
-        <Route exact path="/create-car">
-          {user ? <CarCreate user={user} /> : <Redirect to="/sign-up" />}
-        </Route>
-        <Route exact path="/cars/:id/edit">
-          {user ? <CarEdit user={user} /> : <Redirect to="/" />}
-        </Route>
-        <Route exact path="/cars/:id">
-          <CarDetail user={user} setToggleFetch={setToggleFetch} />
-        </Route>
-      </Switch>
+      {loading ? (
+        <div></div>
+      ) : (
+        <Switch>
+          <Route exact path="/">
+            <Home user={user} />
+          </Route>
+          <Route path="/sign-up">
+            <SignUp setUser={setUser} user={user} />
+          </Route>
+          <Route path="/sign-in">
+            <SignIn setUser={setUser} user={user} />
+          </Route>
+          <Route path="/sign-out">
+            <SignOut setUser={setUser} clearUser={clearUser} />
+          </Route>
+          <Route exact path="/cars">
+            <Cars user={user} toggleFetch={toggleFetch} />
+          </Route>
+          <Route exact path="/create-car">
+            {user ? <CarCreate user={user} /> : <Redirect to="/sign-up" />}
+          </Route>
+          <Route exact path="/cars/:id/edit">
+            {user ? <CarEdit user={user} /> : <Redirect to="/" />}
+          </Route>
+          <Route exact path="/cars/:id">
+            <CarDetail user={user} setToggleFetch={setToggleFetch} />
+          </Route>
+        </Switch>
+      )}
     </div>
   );
 };
