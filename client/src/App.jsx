@@ -31,20 +31,13 @@ const App = () => {
         <Route exact path="/">
           <Home user={user} />
         </Route>
-        <Route path="/sign-up">
-<<<<<<< HEAD
-          <SignUp setUser={setUser} user={user} />
+        <Route exact path="/sign-up">
+          <SignUp user={user} setUser={setUser} />
         </Route>
-        <Route path="/sign-in">
-          <SignIn setUser={setUser} user={user} />
-=======
-          {!user ? <SignUp setUser={setUser} /> : history.goBack()}
+        <Route exact path="/sign-in">
+          <SignIn user={user} setUser={setUser} />
         </Route>
-        <Route path="/sign-in">
-          {!user ? <SignIn setUser={setUser} /> : <Redirect to="/" />}
->>>>>>> 0b539030c8bfe3ca7af2d776f43e2dc8b6c0c5aa
-        </Route>
-        <Route path="/sign-out">
+        <Route exact path="/sign-out">
           <SignOut setUser={setUser} clearUser={clearUser} />
         </Route>
         <Route exact path="/cars">
