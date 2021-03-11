@@ -33,3 +33,17 @@
     font-size: 25px;
     justify-content: center;
 }
+
+.edit-button,
+.delete-button {
+    padding: 10px 25px;
+    margin: 5px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: #ffb81f;
+    border: none;
+    border-radius: 50px;
+    margin-top: 20px;
+  }
+  
+  .save-button:hover {background-color: #ffa60b}
