@@ -40,7 +40,7 @@ const CarDetail = (props) => {
             <div className="price">{car.price}</div>
             <div className="buttons">
               <button className="edit-button"><Link className="edit-link" to={`/cars/${car._id}/edit`}>Edit</Link></button>
-              <button className="delete-button" onClick={() => deleteCar(car._id)}><Link className="delete-link" to={`/cars`}>Delete</Link></button>
+              <button className="delete-button" onClick={() => deleteCar(car._id)}><Link className="delete-link" to={`/cars`}>Delete</Link></button>git
             </div>
           </div>
         </div>
