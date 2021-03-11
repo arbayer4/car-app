@@ -17,6 +17,7 @@ const Car = new Schema(
     interiorColor: { type: String, required: false },
     doors: { type: String, required: false },
     transmission: { type: String, required: false },
+    owner: { type: Schema.Types.ObjectId, ref: "User" },
   },
   { timestamps: true }
 );
