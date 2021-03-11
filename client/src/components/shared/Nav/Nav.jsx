@@ -27,13 +27,15 @@ const Nav = ({ user }) => {
   return (
     <nav>
       <div className="nav">
-        <NavLink className="icon" to="/">
-          <img className="icon" src="https://i.imgur.com/aVuOKod.jpg"></img>
-        </NavLink>
-        <NavLink className="logo" to="/">
-          Sunday Driver
-        </NavLink>
-        <div className="links">
+        <div className="left-side">
+          <NavLink className="icon" to="/">
+            <img className="icon" src="https://i.imgur.com/aVuOKod.jpg"></img>
+          </NavLink>
+          <NavLink className="logo" to="/">
+            Sunday Driver
+          </NavLink>
+        </div>
+        <div className="right-side">
           {alwaysOptions}
           {user ? authenticatedOptions : unauthenticatedOptions}
         </div>
