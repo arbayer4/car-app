@@ -61,7 +61,9 @@ button.nav.default-nav:hover {
 .blog {
   display: flex;
   flex-direction: column;
-  width: 100vw;
+  align-items: center;
+
+  /* width: 100vw; */
 }
 
 .blog-credit:hover {

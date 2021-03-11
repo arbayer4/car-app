@@ -19,7 +19,7 @@ const unauthenticatedOptions = (
 const alwaysOptions = (
   <>
     <NavLink to="/cars">
-      <p className="cars-link">Cars</p>
+      <p className="cars-link">Browse All Collector Cars</p>
     </NavLink>
   </>
 );
