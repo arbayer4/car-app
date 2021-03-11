@@ -53,11 +53,9 @@ const CarDetail = (props) => {
           <div className="price">$ {car.price}</div>
           {props.user ? (
             <div className="buttons">
-              <button className="edit-button">
-                <Link className="edit-link" to={`/cars/${car._id}/edit`}>
-                  Edit
-                </Link>
-              </button>
+              <Link className="edit-link" to={`/cars/${car._id}/edit`}>
+                <button className="edit-button">Edit</button>
+              </Link>
               <button
                 type="button"
                 className="delete-button"

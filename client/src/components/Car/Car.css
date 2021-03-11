@@ -4,18 +4,21 @@
   color: white;
   font-size: 20px;
 }
+
 .car a:visited {
   text-decoration: none;
   color: white;
 }
+
 .car a:hover {
   text-decoration: none;
   color: #fcbf49;
 }
+
 .car {
   display: flex;
   flex-direction: row;
-  margin: 15vh;
+  margin: 10vh;
   justify-content: left;
 }
 
@@ -27,14 +30,14 @@
 .container-image-and-data {
   display: flex;
   flex-direction: row;
-  margin-bottom: 10vh;
+  margin-bottom: 8vh;
 }
 
 .container-image {
   display: flex;
   width: 700px;
   height: 400px;
-  margin-right: -200px;
+  margin-right: -150px;
   object-fit: cover;
   box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.774);
   z-index: 2;
@@ -48,9 +51,8 @@
 }
 
 .container-data {
-  width: 700px;
+  width: 50vh;
   font-size: 18px;
-  padding: 20px;
   margin-top: -50px;
   margin-bottom: -50px;
   overflow: scroll;
@@ -63,12 +65,18 @@
 .car-price {
   display: flex;
   flex-direction: row;
-  margin-left: 20vh;
-  margin-top: 4vh;
+  margin-left: 15vh;
+}
+
+.car-title {
+  margin-top: 5vh;
 }
 
 .car-description {
+  margin-top: 2vh;
+  margin-left: 17vh;
 }
 
 .car-price {
+  margin-top: 5vh;
 }
