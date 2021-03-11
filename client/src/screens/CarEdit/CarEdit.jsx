@@ -1,5 +1,5 @@
 import Layout from "../../components/shared/Layout/Layout";
-import { Redirect, useHistory, useParams } from "react-router-dom";
+import { Redirect, useParams } from "react-router-dom";
 import { getCar, updateCar } from "../../services/cars";
 import { useState, useEffect } from "react";
 import "./CarEdit.css";

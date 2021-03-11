@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../components/shared/Layout/Layout";
-import { getCar } from "../../services/cars";
+import { deleteCar, getCar } from "../../services/cars";
 import { useParams, Link } from "react-router-dom";
 import './CarDetail.css'
 
@@ -44,6 +44,7 @@ const CarDetail = (props) => {
           <div className="button-container">
             <div className="detail-buttons">
               <button className="edit-button"><Link className="edit-link" to={`/cars/${car._id}/edit`}>Edit</Link></button>
+              <button className="delete-button" onClick={() => deleteCar(car._id)}><Link className="delete-link" to={`/cars`}>Delete</Link></button>
             </div>
           </div>
         </div>
