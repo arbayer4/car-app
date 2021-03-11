@@ -57,10 +57,11 @@
 }
 
 .lower-container {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    height: 200px
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 200px;
+}
 
 ::-webkit-scrollbar {
   display: none;
