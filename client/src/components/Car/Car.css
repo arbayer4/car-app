@@ -24,6 +24,7 @@
   object-fit: cover;
   box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.774);
   z-index: 2;
+  order: 0;
 }
 .car-image {
   border-radius: 25px;
@@ -34,7 +35,7 @@
   object-fit: cover;
 }
 
-.container-data {
+.container-data-fp {
   display: flex;
   flex-direction: column;
   width: 40vw;
@@ -42,13 +43,14 @@
   margin-top: -50px;
   margin-bottom: -50px;
   background-color: rgb(255, 146, 14);
+  z-index: 1;
 }
 
 .car-title,
 .veiw-more-detail,
 .car-description,
 .car-price {
-  margin-left: 11vh;
+  margin-left: 8vw;
 }
 
 .car-title {
