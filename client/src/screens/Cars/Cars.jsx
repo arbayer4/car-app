@@ -46,19 +46,21 @@ const Cars = (props) => {
     const newQueriedCarsMake = allCars.filter((car) =>
       car.make.toLowerCase().includes(event.target.value.toLowerCase())
     );
+    setQueriedCars(newQueriedCarsMake, () => handleSort(sortType));
+
     const newQueriedCarsModel = allCars.filter((car) =>
       car.model.toLowerCase().includes(event.target.value.toLowerCase())
     );
-    setQueriedCars(newQueriedCarsMake.concat(newQueriedCarsModel), () =>
-      handleSort(sortType)
-    );
+    setQueriedCars(newQueriedCarsModel, () => handleSort(sortType));
+    // setQueriedCars(newQueriedCarsMake.concat(newQueriedCarsModel), () =>
+    //   handleSort(sortType)
+    // );
   };
 
   const handleSubmit = (event) => event.preventDefault();
 
   const carsJSX = queriedCars.map((car, index) => (
     <Car
-      key={index}
       _id={car._id}
       imgURL={car.imgURL}
       year={car.year}
@@ -66,6 +68,7 @@ const Cars = (props) => {
       make={car.make}
       model={car.model}
       price={car.price}
+      key={index}
     />
   ));
 

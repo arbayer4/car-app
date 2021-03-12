@@ -77,10 +77,9 @@ const CarCreate = (props) => {
           <div className="left-details">
             <div className="label-input">
               <input
-                name="make"
                 placeholder="Make"
-                id="make"
                 value={car.make}
+                name="make"
                 required
                 autoFocus
                 onChange={handleChange}
@@ -182,11 +181,11 @@ const CarCreate = (props) => {
             </div>
             <div className="label-input">
               <input
-                type="number"
+                type="text"
                 name="price"
-                id="price"
-                placeholder="Asking Price"
+                placeholder="Price"
                 value={car.price}
+                required
                 onChange={handleChange}
               />
             </div>
