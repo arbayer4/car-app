@@ -55,13 +55,7 @@ const SignUp = (props) => {
         </div>
       );
     } else if (form.password !== form.passwordConfirmation) {
-      console.log(form.passwordConfirmation);
-      console.log(form.passwordConfirmation);
-      return (
-        <div className="invalid-on-signup">
-          <p> Passwords Do Not Match</p>
-        </div>
-      );
+      return <p className="invalid-on-signup">Passwords Do Not Match</p>;
     }
     {
       return (
