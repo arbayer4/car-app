@@ -31,7 +31,7 @@ const SignIn = (props) => {
       .then((user) => {
         setUser(user);
       })
-      .then(() => history.push("/cars"))
+      .then(() => history.push("/mycars"))
       .catch((error) => {
         console.error(error);
         setForm({
