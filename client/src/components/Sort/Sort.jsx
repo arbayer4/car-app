@@ -13,7 +13,7 @@ const Sort = (props) => {
         <option className="option" value="make-ascending">
           &nbsp; Alphabetically, A-Z &nbsp;
         </option>
-        <option value="make-descendnig">
+        <option value="make-descending">
           &nbsp; Alphabetically, Z-A &nbsp;
         </option>
         <option value="price-ascending">
