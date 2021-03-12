@@ -211,7 +211,7 @@ const CarEdit = (props) => {
             <div className="label-input">
               <label htmlFor="price"></label>
               <input
-                type="text"
+                type="number"
                 name="price"
                 placeholder="Asking Price"
                 id="price"
