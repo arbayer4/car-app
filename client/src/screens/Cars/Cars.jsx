@@ -11,7 +11,7 @@ import { getCars } from "../../services/cars";
 const Cars = (props) => {
   const [allCars, setAllCars] = useState([]);
   const [queriedCars, setQueriedCars] = useState([]);
-  const [sortType, setSortType] = usestate([]);
+  const [sortType, setSortType] = useState([]);
 
   useEffect(() => {
     const fetchCars = async () => {
