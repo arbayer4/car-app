@@ -25,7 +25,7 @@ const CarDetail = (props) => {
   const detailDeleteCar = () => {
     deleteCar(car._id);
     props.setToggleFetch((curr) => !curr);
-    setTimeout(() => history.push("/cars"), 500);
+    setTimeout(() => history.push("/mycars"), 500);
     // history.push("/cars");
   };
 

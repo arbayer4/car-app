@@ -18,6 +18,7 @@ const Car = new Schema(
     doors: { type: String, required: false },
     transmission: { type: String, required: false },
     owner: { type: Schema.Types.ObjectId, ref: "users" },
+    // likes: [{type: Schema.Types.ObjectId, ref: "users"}]
   },
   { timestamps: true }
 );
