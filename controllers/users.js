@@ -78,6 +78,18 @@ const getUsers = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+const getUser = async (req, res) => {
+  try {
+    console.log(req.params.id);
+    const user = await User.findOne({ username: req.params.id }).populate(
+      "cars"
+    );
+    console.log(user);
+    res.json(user);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
 
 module.exports = {
   signUp,
@@ -85,4 +97,5 @@ module.exports = {
   verify,
   changePassword,
   getUsers,
+  getUser,
 };
