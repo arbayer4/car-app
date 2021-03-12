@@ -13,6 +13,14 @@ h3.sign-up {
   text-align: center;
   padding-top: 5vh;
 }
+.invalid-on-signup {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 0.7px;
+  color: #d62828;
+  text-shadow: 1px 1px 1px black;
+}
 .signup {
   background-image: url("https://i.imgur.com/QFLHCRv.jpg");
   background-size: cover;

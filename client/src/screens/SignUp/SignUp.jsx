@@ -47,11 +47,17 @@ const SignUp = (props) => {
     const toggleForm = form.isError ? "danger" : "";
     if (form.isError) {
       return (
-        <button type="submit" className={toggleForm}>
-          {form.errMsg}
-        </button>
+        <div className="invalid-on-signup">
+          <p> {form.errMsg}</p>
+          <button type="submit" className={toggleForm}>
+            Create
+          </button>
+        </div>
       );
-    } else {
+    } else if (form.password !== form.passwordConfirmation) {
+      return <p className="invalid-on-signup">Passwords Do Not Match</p>;
+    }
+    {
       return (
         <button className="signup-btn" type="submit">
           Create

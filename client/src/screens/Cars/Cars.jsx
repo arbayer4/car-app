@@ -6,7 +6,6 @@ import Sort from "../../components/Sort/Sort";
 import Search from "../../components/Search/Search";
 import Layout from "../../components/shared/Layout/Layout";
 import { getCars } from "../../services/cars";
-// import { PromiseProvider } from "mongoose";
 
 const Cars = (props) => {
   const [allCars, setAllCars] = useState([]);
@@ -23,7 +22,7 @@ const Cars = (props) => {
   }, [props.toggleFetch]);
 
   const handleSort = (type) => {
-    // setSortType(type);
+    setSortType(type);
     switch (type) {
       case "make-ascending":
         setQueriedCars(AZ(queriedCars));
@@ -46,19 +45,18 @@ const Cars = (props) => {
     const newQueriedCarsMake = allCars.filter((car) =>
       car.make.toLowerCase().includes(event.target.value.toLowerCase())
     );
+    setQueriedCars(newQueriedCarsMake, () => handleSort(sortType));
+
     const newQueriedCarsModel = allCars.filter((car) =>
       car.model.toLowerCase().includes(event.target.value.toLowerCase())
     );
-    setQueriedCars(newQueriedCarsMake.concat(newQueriedCarsModel), () =>
-      handleSort(sortType)
-    );
+    setQueriedCars(newQueriedCarsModel);
   };
 
   const handleSubmit = (event) => event.preventDefault();
 
   const carsJSX = queriedCars.map((car, index) => (
     <Car
-      key={index}
       _id={car._id}
       imgURL={car.imgURL}
       year={car.year}
@@ -66,6 +64,7 @@ const Cars = (props) => {
       make={car.make}
       model={car.model}
       price={car.price}
+      key={index}
     />
   ));
 
