@@ -1,9 +1,19 @@
 const db = require("../db/connection");
+const User = require("../models/user");
 const Car = require("../models/car");
 
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
 const main = async () => {
+  const user1 = new User({
+    username: "person5",
+    email: "person5@gmail.com",
+    phone: "2604220123",
+    password_digest:
+      "$2b$11$zd3.fNsMpXFPVKUwxDyCR.JVkzFwGUZiF1HrbQh5ir8u9q1UqNhfS",
+    cars: [],
+  });
+  await user1.save();
   const cars = [
     {
       imgURL: [
@@ -26,6 +36,7 @@ const main = async () => {
       interiorColor: "baby blue and creme",
       doors: "two-door",
       transmission: "3-speed manual",
+      owner: user1,
     },
     {
       imgURL: ["https://i.imgur.com/1fKboPc.jpg"],
@@ -43,6 +54,7 @@ const main = async () => {
       interiorColor: "baby blue and creme",
       doors: "two-door",
       transmission: "2-speed powerglide auto",
+      owner: user1,
     },
     {
       imgURL:
@@ -60,6 +72,7 @@ const main = async () => {
       transmission: "manual",
       interiorColor: "tan",
       exteriorColor: "blue",
+      owner: user1,
     },
     {
       imgURL:
@@ -76,6 +89,7 @@ const main = async () => {
       transmission: "manual",
       interiorColor: "tan",
       exteriorColor: "green",
+      owner: user1,
     },
     {
       imgURL: [
@@ -97,6 +111,7 @@ const main = async () => {
       interiorColor: "black",
       doors: "two-door",
       transmission: "4-speed manual",
+      owner: user1,
     },
     {
       imgURL: [
@@ -118,10 +133,14 @@ const main = async () => {
       interiorColor: "Black",
       doors: "two-door",
       transmission: "4-speed manual",
+      owner: user1,
     },
   ];
   await Car.insertMany(cars);
   console.log("Created Cars!");
+
+  user1.cars = await Car.find({ owner: user1 });
+  await user1.save();
 };
 const run = async () => {
   await main();

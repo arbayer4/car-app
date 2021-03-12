@@ -1,0 +1,98 @@
+.create-form {
+  display: flex;
+  /* min-height: 80vh; */
+  flex-flow: column nowrap;
+  box-sizing: border-box;
+  align-items: center;
+  /* justify-content: space-between; */
+  padding: 20px;
+  margin: 30px;
+  background-color: #f77f00;
+}
+.top {
+  box-sizing: border-box;
+  /* width: 100%; */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.left-details,
+.right-details {
+  box-sizing: border-box;
+  width: 40vw;
+  /* height: 40vh; */
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.label-input {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
+.label-input input {
+  width: 35vw;
+  height: 30px;
+}
+.label-input label {
+  font-size: 18px;
+}
+
+.bottom-details {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.bottom-details > textarea {
+  resize: vertical;
+  width: 76vw;
+}
+.bottom-details input {
+  width: 35vw;
+  height: 30px;
+}
+
+.create-button,
+.photo-button {
+  padding: 10px 35px;
+  text-align: center;
+  color: white;
+  background-color: #ffb81f;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.photo-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.form-delete-button {
+  padding: 10px 35px;
+  text-align: center;
+  color: white;
+  background-color: #ffb81f;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.preview-images {
+  display: flex;
+  flex-flow: row wrap;
+  box-sizing: border-box;
+}
+.preview-image {
+  height: 100px;
+  width: auto;
+
+  object-fit: contain;
+}

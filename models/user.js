@@ -7,7 +7,7 @@ const User = new Schema(
     email: { type: String, required: true },
     phone: { type: String, required: false },
     password_digest: { type: String, required: true },
-    // cars: [{type: Schema.Types.ObjectId, ref: 'Car' }]
+    cars: [{ type: Schema.Types.ObjectId, ref: "cars" }],
   },
   { timestamps: true }
 );

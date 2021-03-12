@@ -1,0 +1,145 @@
+.vehicle-details-header {
+  margin-top: 2vh;
+  margin-left: 70px;
+  font-size: 50px;
+  text-align: left;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-left: 60px;
+  padding-right: 60px;
+  position: relative; 
+}
+
+.container-data {
+  width: 50vh;
+  font-size: 18px;
+  margin-top: -50px;
+  margin-bottom: -50px;
+  overflow: scroll;
+  scrollbar-width: none;
+  background-color: rgb(255, 146, 14);
+}
+
+.img-container {
+  display: flex;
+  flex-direction: column;
+  object-fit: contain;
+}
+
+.image-main {
+  display: flex;
+  width: 81vh;
+  height:50vh;
+  object-fit:cover;
+  object-position:center;
+  box-shadow: 0px 20px 50px 0px;
+}
+
+.image-thumbnail {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+  padding-right: 15px;
+  width: 15vh;
+  height: 11vh;
+  object-fit: cover;
+  object-position:center;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  color: white;
+  width: 75vh;
+  height: 55vh;
+  padding: 40px;
+  background-color: rgb(255, 146, 14);
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 40px;
+  letter-spacing: -1px;
+  word-spacing: 3px;
+  justify-content: center;
+}
+
+.vehicle-specs {
+  font-size: 30px;
+  letter-spacing: 1.5px;
+}
+
+.description {
+  position: relative; 
+  overflow: scroll;
+  flex-direction: row;
+  font-size: 20px;
+  justify-content: center;
+  scrollbar-width: none;
+  height: 50vh;
+}
+
+.lower-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 200px;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+.edit-button,
+.delete-button {
+  padding: 10px 25px;
+  margin: 6px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: #fcbf49;
+  border: none;
+  border-radius: 50px;
+  margin-top: 20px;
+  outline: none;
+}
+
+.buttons {
+  flex-direction: row;
+  position: absolute; 
+  bottom: 0px; 
+  margin-bottom: 20px;
+}
+
+.price {
+  color: #227e2a;
+  font-size: 35px;
+  bottom: 0px; 
+  margin-bottom: 20px;
+}
+
+.edit-button:hover {
+  background-color: #f7ca68;
+  cursor: pointer;
+}
+.delete-button:hover {
+  background-color: #f7ca68;
+  cursor: pointer;
+}
+.edit-button a {
+  color: white;
+}
+.edit-button a:visited {
+  color: white;
+}
+.save-button:hover {
+  background-color: #ffa60b;
+}

@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+.signup-form {
+  font-family: "Open Sans Condensed", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-right: 30vw;
+  margin-left: 30vw;
+  justify-content: center;
+}
+h3.sign-up {
+  font-size: 45px;
+  color: #003049;
+  text-align: center;
+  padding-top: 5vh;
+}
+.signup {
+  background-image: url("https://i.imgur.com/QFLHCRv.jpg");
+  background-size: cover;
+}
+.signup-input {
+  font-family: "Open Sans Condensed", sans-serif;
+  padding: 15px;
+  border: none;
+  margin: 10px;
+  border-radius: 10px;
+}
+.signup-input::placeholder {
+  font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 0.7px;
+}
+.signup-btn {
+  font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 0.7px;
+  padding: 7px;
+  margin-top: 10px;
+  margin-left: 5vw;
+  margin-bottom: 100px;
+  background-color: #003049;
+  color: white;
+  font-size: 25px;
+  border-radius: 20px;
+  width: 30vw;
+  border: none;
+  margin-bottom: 35vh; /*this makes the image extend down the page  */
+  box-shadow: 2px 4px 6px #011827;
+}
+.signup-btn:hover {
+  background-color: #014366;
+  cursor: pointer;
+}
+.signup-btn:focus {
+  outline: none;
+  box-shadow: 2px 4px 4px #001c2ccc;
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #003049;
+  opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #003049;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #003049;
+}

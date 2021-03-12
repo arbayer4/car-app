@@ -1,0 +1,88 @@
+.container-all {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 15vh;
+  margin-bottom: 30vh;
+  justify-self: center;
+}
+
+.container-image-and-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container-image {
+  background-color: white;
+  border-radius: 25px;
+  display: flex;
+  width: 40vw;
+  height: 50vh;
+  margin-right: -100px;
+  object-fit: cover;
+  box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.774);
+  z-index: 2;
+}
+.car-image {
+  border-radius: 25px;
+  display: flex;
+  width: 40vw;
+  height: 50vh;
+  margin-right: -200px;
+  object-fit: cover;
+}
+
+.container-data {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  font-size: 18px;
+  margin-top: -50px;
+  margin-bottom: -50px;
+  background-color: rgb(255, 146, 14);
+}
+
+.car-title,
+.veiw-more-detail,
+.car-description,
+.car-price {
+  margin-left: 11vh;
+}
+
+.car-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 5vh;
+}
+
+.car-description {
+  font-size: 20px;
+  padding: 10px;
+  overflow: scroll;
+  scrollbar-width: none;
+  height: 30vh;
+  margin-top: 2vh;
+  margin-left: 120px;
+  margin-right: 3vw;
+}
+
+.car-price {
+  font-size: 25px;
+  margin-top: 5vh;
+}
+.veiw-more-detail {
+  order: 5;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+.veiw-more-detail:hover {
+  color: #fcbf49;
+  border-bottom: 3px solid #fcbf49;
+}
+.car-image:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
