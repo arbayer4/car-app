@@ -1,10 +1,28 @@
+.vehicle-details-header {
+  margin-top: 2vh;
+  margin-left: 5vh;
+  font-size: 50px;
+  text-align: left;
+}
+
 .main-container {
   display: flex;
-  flex-direction: column;
   flex-direction: row;
-  padding-top: 75px;
+  justify-content: space-around;
+  padding-top: 20px;
   padding-left: 60px;
   padding-right: 60px;
+  position: relative; 
+}
+
+.container-data {
+  width: 50vh;
+  font-size: 18px;
+  margin-top: -50px;
+  margin-bottom: -50px;
+  overflow: scroll;
+  scrollbar-width: none;
+  background-color: rgb(255, 146, 14);
 }
 
 .img-container {
@@ -14,26 +32,33 @@
 }
 
 .image-main {
-  width: 75vh;
-  padding-right: 30px;
+  display: flex;
+  width: 80vh;
+  height:50vh;
+  object-fit:cover;
+  object-position:center;
+  box-shadow: 0px 20px 50px 0px;
 }
 
 .image-thumbnail {
   display: flex;
   flex-direction: row;
   padding-top: 10px;
-  padding-right: 12px;
-  height: 100px;
-  object-fit: contain;
+  padding-right: 15px;
+  width: 12vh;
+  height: 8vh;
+  object-fit: cover;
+  object-position:center;
 }
 
 .details-container {
   display: flex;
   flex-direction: column;
+  margin-left: 50px;
   color: white;
   width: 75vh;
   height: 55vh;
-  padding: 30px;
+  padding: 40px;
   background-color: rgb(255, 146, 14);
 }
 
@@ -42,10 +67,15 @@
   flex-direction: row;
   margin-bottom: 20px;
   font-weight: bold;
-  font-size: 31px;
+  font-size: 40px;
   letter-spacing: -1px;
   word-spacing: 3px;
   justify-content: center;
+}
+
+.vehicle-specs {
+  font-size: 30px;
+  letter-spacing: 1.5px;
 }
 
 .description {
@@ -56,22 +86,24 @@
   scrollbar-width: none;
 }
 
-.lower-container {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  height: 200px;
-}
-
 ::-webkit-scrollbar {
   display: none;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: row;
+  position: absolute; 
+  bottom: 0px; 
+  margin-bottom: 20px;
+}
+
 .price {
-  font-weight: bold;
-  padding: 10px;
-  font-size: 20px;
-  bottom: 8px;
+  color: #227e2a;
+  font-size: 35px;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 .edit-button,
@@ -83,7 +115,7 @@
   background-color: #fcbf49;
   border: none;
   border-radius: 50px;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 .edit-button:hover {
   background-color: #f7ca68;
