@@ -100,7 +100,9 @@
 
 
 .edit-button,
-.delete-button {
+.delete-button,
+.save-button,
+.email-seller-button {
   padding: 10px 25px;
   margin: 6px;
   text-align: center;
@@ -126,20 +128,23 @@
   margin-bottom: 20px;
 }
 
-.edit-button:hover {
+.edit-button:hover,
+.delete-button:hover,,
+.save-button:hover,
+.email-seller-button:hover {
   background-color: #f7ca68;
   cursor: pointer;
 }
-.delete-button:hover {
+/* .delete-button:hover {
   background-color: #f7ca68;
   cursor: pointer;
 }
 .edit-button a {
   color: white;
-}
+} */
 .edit-button a:visited {
   color: white;
 }
-.save-button:hover {
+/* .save-button:hover {
   background-color: #ffa60b;
-}
+} */

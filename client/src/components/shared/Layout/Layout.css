@@ -5,4 +5,5 @@
   box-sizing: border-box;
   min-height: 100vh;
   font-family: "Open Sans Condensed", sans-serif;
+  outline: none;
 }
