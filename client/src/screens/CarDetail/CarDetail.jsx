@@ -25,7 +25,7 @@ const CarDetail = (props) => {
   const detailDeleteCar = () => {
     deleteCar(car._id);
     props.setToggleFetch((curr) => !curr);
-    setTimeout(() => history.push("/cars"), 500);
+    setTimeout(() => history.push("/mycars"), 500);
     // history.push("/cars");
   };
 
@@ -95,7 +95,11 @@ const CarDetail = (props) => {
           ) : null}
           {!props.user ? (
             <div className="buttons">
-                <a href={`mailto:${car.owner.email}?subject==?UTF-8?B?IPCfmpg=?= SUNDAY DRIVER - Shopper Inquiry for your ${car.year} ${car.make} ${car.model}!`}><button className="email-seller-button">Email Seller</button></a>
+              <a
+                href={`mailto:${car.owner.email}?subject==?UTF-8?B?IPCfmpg=?= SUNDAY DRIVER - Shopper Inquiry for your ${car.year} ${car.make} ${car.model}!`}
+              >
+                <button className="email-seller-button">Email Seller</button>
+              </a>
             </div>
           ) : null}
         </div>
