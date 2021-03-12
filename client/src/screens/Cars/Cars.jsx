@@ -11,7 +11,7 @@ import { getCars } from "../../services/cars";
 const Cars = (props) => {
   const [allCars, setAllCars] = useState([]);
   const [queriedCars, setQueriedCars] = useState([]);
-  // const [sortType, setSortType] = usestate([]);
+  const [sortType, setSortType] = useState([]);
 
   useEffect(() => {
     const fetchCars = async () => {
@@ -49,7 +49,9 @@ const Cars = (props) => {
     const newQueriedCarsModel = allCars.filter((car) =>
       car.model.toLowerCase().includes(event.target.value.toLowerCase())
     );
-    setQueriedCars(newQueriedCarsMake.concat(newQueriedCarsModel));
+    setQueriedCars(newQueriedCarsMake.concat(newQueriedCarsModel), () =>
+      handleSort(sortType)
+    );
   };
 
   const handleSubmit = (event) => event.preventDefault();

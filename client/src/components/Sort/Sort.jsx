@@ -8,7 +8,8 @@ const Sort = (props) => {
 
   return (
     <form className="sort-container" onSubmit={props.handleSubmit}>
-      <lable htmlFor="sort" onChange={handleChange}>
+      <label htmlFor="sort">Sort By:</label>
+      <select className="sort" onChange={handleChange}>
         <option className="option" value="make-ascending">
           &nbsp;Alphabetically, A-Z &nbsp;
         </option>
@@ -17,7 +18,7 @@ const Sort = (props) => {
         <option value="price-descending">
           &nbsp;Price, high to low &nbsp;
         </option>
-      </lable>
+      </select>
     </form>
   );
 };
