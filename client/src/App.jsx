@@ -10,6 +10,7 @@ import SignUp from "./screens/SignUp/SignUp";
 import SignOut from "./screens/SignOut/SignOut";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { verifyUser } from "./services/users";
+import MyCars from "./screens/MyCars/MyCars";
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -64,6 +65,9 @@ const App = () => {
           </Route>
           <Route exact path="/cars/:id">
             <CarDetail user={user} setToggleFetch={setToggleFetch} />
+          </Route>
+          <Route exact path="/mycars">
+            <MyCars user={user} />
           </Route>
         </Switch>
       )}
