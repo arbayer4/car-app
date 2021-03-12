@@ -50,3 +50,12 @@ export const verifyUser = async () => {
   }
   return false;
 };
+
+export const myCars = async (username) => {
+  try {
+    const resp = await api.get(`/users/${username}`);
+    return resp.data.cars;
+  } catch (error) {
+    throw error;
+  }
+};
