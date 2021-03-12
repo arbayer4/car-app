@@ -95,7 +95,7 @@ const CarDetail = (props) => {
           ) : null}
           {!props.user ? (
             <div className="buttons">
-                <a href={`mailto:${car.owner.email}?subject=Sunday Driver - Shopper Inquiry on your ${car.year} ${car.make} ${car.model}!`}><button className="email-button">Email Seller</button> </a>
+                <a href={`mailto:${car.owner.email}?subject=SUNDAY DRIVER - SHOPPER INQUIRY // ${car.year} ${car.make} ${car.model}!`}><button className="email-button">Email Seller</button> </a>
             </div>
           ) : null}
         </div>
