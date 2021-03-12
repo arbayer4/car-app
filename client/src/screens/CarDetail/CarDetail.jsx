@@ -93,6 +93,11 @@ const CarDetail = (props) => {
               </button>
             </div>
           ) : null}
+          {!props.user ? (
+            <div className="buttons">
+                <button className="email-button" href="mailto:{car.owner.email}">Email Seller</button>
+            </div>
+          ) : null}
         </div>
       </div>
     </Layout>

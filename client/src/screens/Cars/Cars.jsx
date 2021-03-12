@@ -11,7 +11,7 @@ import { getCars } from "../../services/cars";
 const Cars = (props) => {
   const [allCars, setAllCars] = useState([]);
   const [queriedCars, setQueriedCars] = useState([]);
-  const [sortType, setSortType] = usestate([]);
+  // const [sortType, setSortType] = usestate([]);
 
   useEffect(() => {
     const fetchCars = async () => {
@@ -23,7 +23,7 @@ const Cars = (props) => {
   }, [props.toggleFetch]);
 
   const handleSort = (type) => {
-    setSortType(type);
+    // setSortType(type);
     switch (type) {
       case "make-ascending":
         setQueriedCars(AZ(queriedCars));
