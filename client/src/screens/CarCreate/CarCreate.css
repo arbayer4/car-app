@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+
 .create-form {
   display: flex;
   /* min-height: 80vh; */
@@ -27,6 +29,10 @@
   justify-content: space-between;
   align-items: center;
 }
+input {
+  outline: none;
+  font-family: "Open Sans Condensed", sans-serif;
+}
 .label-input {
   display: flex;
   flex-flow: row nowrap;
@@ -53,6 +59,8 @@
 .bottom-details > textarea {
   resize: vertical;
   width: 76vw;
+  font-family: "Open Sans Condensed", sans-serif;
+  outline: none;
 }
 .bottom-details input {
   width: 35vw;
