@@ -100,3 +100,36 @@
   cursor: pointer;
   opacity: 0.7;
 }
+
+@media only screen and (max-width: 900px) {
+  .car-title-fp {
+    padding-left: 15px;
+  }
+  .car-price-fp {
+    font-size: 25px;
+    padding-right: 15vw;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .container-all {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 5vh;
+    margin-bottom: 5vh;
+    justify-content: center;
+  }
+  .container-orange-card {
+    height: 50vh;
+    width: 45vw;
+    background-color: rgb(255, 146, 14);
+  }
+  .container-image-and-data {
+    justify-self: center;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 1;
+  }
+}
