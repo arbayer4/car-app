@@ -85,8 +85,15 @@
   font-size: 20px;
   justify-content: center;
   scrollbar-width: none;
+  height: 50vh;
 }
 
+.lower-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 200px;
+}
 ::-webkit-scrollbar {
   display: none;
 }
@@ -101,7 +108,8 @@
   background-color: #fcbf49;
   border: none;
   border-radius: 50px;
-  margin-top: 50px;
+  margin-top: 20px;
+  outline: none;
 }
 
 .buttons {

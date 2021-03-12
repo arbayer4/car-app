@@ -50,35 +50,8 @@ const CarDetail = (props) => {
           <div className="title">
             {car.year} {car.make} {car.model}
           </div>
-          <div className="vehicle-specs">
-            <div className="mileage">
-              <b>Mileage:</b> {car.mileage}
-            </div>
-            <div className="engine">
-              <b>Engine Type:</b> {car.engine}
-            </div>
-            <div className="transmission">
-              <b>Transmission:</b> {car.transmission}
-            </div>
-            <div className="doors">
-              <b>Number Doors:</b> {car.doors}
-            </div>
-            <div className="exterior-color">
-              <b>Exterior Color:</b> {car.exteriorColor}
-            </div>
-            <div className="interior-color">
-              <b>Interior Color:</b> {car.interiorColor}
-            </div>
-            <div className="vin">
-              <b>VIN:</b> {car.vin}
-            </div>
-            <div className="zipcode">
-              <b>Seller Location:</b> {car.zipcode}
-            </div>
-            <div className="price">
-              Price: ${car.price}
-            </div>
-          </div>
+          <div className="description">{car.description}</div>
+          <div className="price">$ {car.price}</div>
           {props.user ? (
             <div className="buttons">
               <Link className="edit-link" to={`/cars/${car._id}/edit`}>

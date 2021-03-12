@@ -55,6 +55,8 @@ button.nav.default-nav:hover {
   flex-direction: column;
   align-items: center;
   padding-top: 25px;
+  padding: 0px;
+  font-size: larger;
 }
 
 .about-us-header {
@@ -69,7 +71,6 @@ button.nav.default-nav:hover {
 
 .about-us-blurb {
   width: 50vw;
-  padding-bottom: 50px;
 }
 
 .blog {

@@ -27,8 +27,12 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 10);
+    }, 1000);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   const clearUser = () => setUser(null);
   return (
