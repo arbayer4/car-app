@@ -37,8 +37,8 @@ const CarDetail = (props) => {
       key={index}
     />
   ));
-  console.log(car.owner.email);
-  console.log(car.owner.phone);
+  // console.log(car.owner.email);
+  // console.log(car.owner.phone);
 
   return (
     <Layout user={props.user}>
