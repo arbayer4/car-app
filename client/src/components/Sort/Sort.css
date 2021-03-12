@@ -10,15 +10,14 @@
 
 .sort {
   width: 30vw;
-  height: auto;
+  height: 5vh;
   font-size: 14px;
+  padding-left: 10px;
+  padding-right: 10px;
+
   border: 1px solid rgb(255, 147, 14);
   border-radius: 25px;
   outline: none;
   align-content: left;
   font-family: "Open Sans Condensed", sans-serif;
-}
-
-.option {
-  background-color: white;
 }
