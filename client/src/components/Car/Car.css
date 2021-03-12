@@ -35,7 +35,7 @@
   object-fit: cover;
 }
 
-.container-data {
+.container-data-fp {
   display: flex;
   flex-direction: column;
   width: 40vw;
@@ -43,7 +43,7 @@
   margin-top: -50px;
   margin-bottom: -50px;
   background-color: rgb(255, 146, 14);
-  z-index: 2;
+  z-index: 1;
 }
 
 .car-title,
