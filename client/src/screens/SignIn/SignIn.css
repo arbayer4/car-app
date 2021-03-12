@@ -7,6 +7,14 @@
   margin-top: 0px;
   justify-content: center;
 }
+.invalid-on-signin p {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 0.7px;
+  color: #d62828;
+  text-shadow: 1px 1px 1px black;
+}
 h3.sign-in {
   font-family: "Open Sans Condensed", sans-serif;
   letter-spacing: 0.9px;

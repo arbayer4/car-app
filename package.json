@@ -27,6 +27,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.19",
     "morgan": "^1.10.0",
+    "react-image-select": "^1.0.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-slideshow-image": "^3.4.3",
