@@ -27,7 +27,7 @@ const main = async () => {
       model: "Bel Air",
       description:
         " A two-door hard top sedan version of the 1957 Chevrolet. The 1957 Chevrolet is a car that was introduced by Chevrolet in September 1956 for the 1957 model year. It was available in three series models: the upscale Bel Air, the mid-range Two-Ten, and the One-Fifty. A two-door station wagon, the Nomad, was produced as a Bel Air model.",
-      price: "120,000",
+      price: "120000",
       vin: "--",
       mileage: "110,000",
       engine: "",
@@ -45,9 +45,9 @@ const main = async () => {
       model: "Bel Air",
       description:
         " A two-door hard top sedan version of the 1959 Chevrolet. It was available in three series models: the upscale Bel Air, the mid-range Two-Ten, and the One-Fifty. A two-door station wagon, the Nomad, was produced as a Bel Air model.",
-      price: "120,000",
+      price: "120000",
       vin: "--",
-      mileage: "65,000",
+      mileage: "65000",
       engine: "I6",
       zipcode: "90210",
       exteriorColor: "blue",
@@ -64,7 +64,7 @@ const main = async () => {
       model: "Model T",
       description:
         "-1942-vintage 274 cu. in. Mercury flathead V8 engine with triple carburetors -1939 Lincoln-Zephyr three-speed manual transmission -Dropped tubular front axle with transverse leaf spring -1934 Ford rear end housing with Halibrand quick-change center section and transverse leaf spring, -1939 Ford four-wheel hydraulic drum brakes -Wheelbase: 100- Best Early Altered T Roadster at 2008 Grand National Roadster Show- A multiple award winner in period shows, beginning in 1957- First built in 1952 and featured in Hot Rod in 1954- Featured in many more period and recent magazine articles Wally Olson first transformed this 1927 T-Roadster into a show-stopping hot rod in 1952, intended as a family project with his sons. In September 1954, it made its magazine debut in a Hot Rod article entitled Lil Beau T. Bill Scott purchased the car in 1954-1955, adding the fenders, headlights, windshield and other items required for street legality. The first evidence of its Black Widow moniker dates to the August 1957 issue of Rodding and Re-styling, with an inventory of Bill Scott s mods, including a new full house flathead V8 and front suspension modifications including a tubular axle and shocks. Dean Jeffries applied the pinstriping and graphics. At the 1957 Sacramento Automata, the T won the award for Best Roadster, and by the time the 1959 Hot Rod Annual was published, the name Black Widow stuck. Bill Scott passed away around 1987, and for several years, his Black Widow deteriorated. In 2005, Richard Riddell, who bravely commenced its complete restoration, found the car. Riddell s work was extensive, with careful attention paid to reliability and safety of operation. The doors of the original steel body were welded shut, with the body and paint by Showtime Customs, the frame restored and powder-coated by Capps Powder Coat, the upholstery fitted by Brent s and brightwork handled by Ace Plating. The hot V8 engine, a circa-1942 Mercury 274-cubic inch flathead, was built by RPM Machine and equipped with Edelbrock finned aluminum heads and triple carburetors. The drivetrain comprises a 1939 Lincoln-Zephyr tranny, a 1934 Ford rear end, a Halibrand quick-change center, an enclosed drive shaft and a 1937 Ford tube axle. Braking is by 1939 Ford hydraulic drums all around, while 16-inch wheels and V8 hubcaps form the rolling stock. In July 2008, the Hot Rod Deluxe article entitled Tangled Web described how Richard Riddell discovered and restored the Black Widow over 3,400 hours to its 1950s glory. In 2008, it won Best Early Altered T Roadster at the Grand National Roadster Show. Sadly, Richard passed away shortly after finishing the project, but happily, he was able to see the car s return to prominence.",
-      price: "21,000",
+      price: "21000",
       vin: "--",
       mileage: "456 miles",
       engine: "4 cylinder",
@@ -102,7 +102,7 @@ const main = async () => {
       model: "Camaro SS",
       description:
         "Mint condition Camaro SS. Meticulously maintained, with complete engine overhaul last year. This baby purrs. White racing stripes add a nice pop. Original interior. Straight 6 engine.",
-      price: "45,000",
+      price: "45000",
       vin: "--",
       mileage: "65,000",
       engine: "Straight 6",
@@ -124,7 +124,7 @@ const main = async () => {
       model: "Mustang",
       description:
         "1965 brought few changes for the Mustang. The biggest change was the availability of a new fastback model, which was to become the basis for Carroll Shelby’s G.T. 350. The 120 horsepower, 200 cid 6 cylinder engine replaced the 170 cid 6 cylinder, the 289-2V, 200 horsepower V-8 replaced the 260-2V, the 289-4V was upgraded to 225 horsepower, and the 289-4V hi-po remained unchanged. Other changes for 1965 included: an alternator instead of a generator, relocation of the oil filler, integral power steering pump and reservoir (most 64½’s had a remote mounted reservoir), a wire retaining ring was added to the gas cap, the horns were smaller and relocated, and the interior carpet was continued up the sides of the rocker panel and under the sill plate. A new interior option was added, the interior decor group (known as the pony interior), which featured special seat covers with running horses across the back, special interior door panes with integral arm rests and pistol grip door handles, five gauge instrument panel, woodgrain steering wheel, and woodgrain appliques on the instrument cluster, glovebox, and optionally on the center console. Another option introduced in April of 1965 was the GT equipment group. Available only with one of the two four barrel engines, the GT group included five-dial instrumentation, disc brakes, larger sway bars, quicker steering ratio, dual exhaust which exited through the rear valance panel, grill mounted fog lights, and special lower body side stripes. A total of 559,451 Mustangs were produced for the 1965 model year.",
-      price: "55,000",
+      price: "55000",
       vin: "--",
       mileage: "79,000",
       engine: "8 Cylinder",
