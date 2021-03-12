@@ -3,7 +3,6 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/user");
 const Car = require("../models/car");
 const db = require("../db/connection");
-const { result } = require("lodash");
 
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 

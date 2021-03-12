@@ -51,7 +51,9 @@ const Cars = (props) => {
     const newQueriedCarsModel = allCars.filter((car) =>
       car.model.toLowerCase().includes(event.target.value.toLowerCase())
     );
-    setQueriedCars(newQueriedCarsMake.concat(newQueriedCarsModel));
+    setQueriedCars(newQueriedCarsMake.concat(newQueriedCarsModel), () =>
+      handleSort(sortType)
+    );
   };
 
   const handleSubmit = (event) => event.preventDefault();
