@@ -1,6 +1,6 @@
 .vehicle-details-header {
   margin-top: 2vh;
-  margin-left: 5vh;
+  margin-left: 70px;
   font-size: 50px;
   text-align: left;
 }
@@ -33,7 +33,7 @@
 
 .image-main {
   display: flex;
-  width: 80vh;
+  width: 81vh;
   height:50vh;
   object-fit:cover;
   object-position:center;
@@ -45,8 +45,8 @@
   flex-direction: row;
   padding-top: 10px;
   padding-right: 15px;
-  width: 12vh;
-  height: 8vh;
+  width: 15vh;
+  height: 11vh;
   object-fit: cover;
   object-position:center;
 }
@@ -79,6 +79,7 @@
 }
 
 .description {
+  position: relative; 
   overflow: scroll;
   flex-direction: row;
   font-size: 20px;
@@ -90,21 +91,6 @@
   display: none;
 }
 
-.buttons {
-  display: flex;
-  flex-direction: row;
-  position: absolute; 
-  bottom: 0px; 
-  margin-bottom: 20px;
-}
-
-.price {
-  color: #227e2a;
-  font-size: 35px;
-  display: flex;
-  flex-direction: column;
-  
-}
 
 .edit-button,
 .delete-button {
@@ -117,6 +103,21 @@
   border-radius: 50px;
   margin-top: 50px;
 }
+
+.buttons {
+  flex-direction: row;
+  position: absolute; 
+  bottom: 0px; 
+  margin-bottom: 20px;
+}
+
+.price {
+  color: #227e2a;
+  font-size: 35px;
+  bottom: 0px; 
+  margin-bottom: 20px;
+}
+
 .edit-button:hover {
   background-color: #f7ca68;
   cursor: pointer;
