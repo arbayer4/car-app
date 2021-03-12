@@ -59,7 +59,7 @@ const Home = (props) => {
             seller via email or phone.
           </p>
           <NavLink to="/sign-in">
-            <button className="login-link">My Account</button>
+            <button className="login-link-body">My Account</button>
           </NavLink>
         </div>
         <div className="blog">
