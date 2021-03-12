@@ -44,6 +44,7 @@ const Cars = (props) => {
 
   const carsJSX = queriedCars.map((car, index) => (
     <Car
+      key={index}
       _id={car._id}
       imgURL={car.imgURL}
       year={car.year}
