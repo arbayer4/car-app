@@ -4,11 +4,12 @@
   grid-template-columns: 30vw 30vw 15vw;
   grid-template-rows: repeat(4) 20vh;
   margin: 15vh;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
+  margin-top: 2vh;
   justify-content: center;
 }
 .container-orange-card {
-  height: 65vh;
+  height: 55vh;
   width: 45vw;
   z-index: 0;
   grid-row: 1 / span 4;
@@ -25,10 +26,11 @@
   z-index: 1;
 }
 .price-and-viewmore {
-  padding-top: 45px;
+  padding-top: 5vh;
+  margin-right: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   width: 35vw;
 }
 .container-image-fp {
@@ -64,7 +66,7 @@
 .price-and-viewmore,
 .car-title-fp,
 .car-description-fp {
-  margin-left: 10vw;
+  margin-left: 12vw;
 }
 
 .car-title-fp {
@@ -80,17 +82,17 @@
   scrollbar-width: none;
   height: 30vh;
   margin-top: 2vh;
-  margin-left: 110px;
+  margin-left: 12vw;
 }
 
 .car-price-fp {
   font-size: 25px;
-  padding-right: 20vw;
 }
 .view-more-detail {
   font-size: 25px;
   font-weight: bold;
   color: white;
+  padding-right: 5vw;
 }
 .view-more-detail:hover {
   color: #fcbf49;
