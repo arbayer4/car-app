@@ -7,12 +7,13 @@ import Sort from "../../components/Sort/Sort";
 import Search from "../../components/Search/Search";
 import Layout from "../../components/shared/Layout/Layout";
 import { getCars } from "../../services/cars";
+import { highestFirst, lowestFirst } from "../../utils/sort";
 // import { PromiseProvider } from "mongoose";
 
 const Cars = (props) => {
   const [allCars, setAllCars] = useState([]);
   const [queriedCars, setQueriedCars] = useState([]);
-  // const [sortType, setSortType] = usestate([]);
+  const [sortType, setSortType] = usestate([]);
 
   useEffect(() => {
     const fetchCars = async () => {
@@ -23,11 +24,25 @@ const Cars = (props) => {
     fetchCars();
   }, [props.toggleFetch]);
 
-  // const handleSort = type => {
-  //   setSortType(type) {
-
-  //   }
-  // }
+  const handleSort = (type) => {
+    setSortType(type);
+    switch (type) {
+      case "make-ascending":
+        setQueriedCars(AZ(queriedCars));
+        break;
+      case "make-descending":
+        setQueriedCars(ZA(queriedCars));
+        break;
+      case "price-ascending":
+        setQueriedCars(lowestFirst(queriedCars));
+        break;
+      case "price-descending":
+        setQueriedCars(highestFirst(queriedCars));
+        break;
+      default:
+        break;
+    }
+  };
 
   const handleSearch = (event) => {
     const newQueriedCarsMake = allCars.filter((car) =>
@@ -37,7 +52,6 @@ const Cars = (props) => {
       car.model.toLowerCase().includes(event.target.value.toLowerCase())
     );
     setQueriedCars(newQueriedCarsMake.concat(newQueriedCarsModel));
-    //   // left out handleSort for now
   };
 
   const handleSubmit = (event) => event.preventDefault();
@@ -58,6 +72,7 @@ const Cars = (props) => {
   return (
     <Layout user={props.user}>
       <Search onSubmit={handleSubmit} onChange={handleSearch} />
+      <Sort onSubmit={handleSubmit} onChange={handleSort} />
       <div>{carsJSX}</div>
     </Layout>
   );
