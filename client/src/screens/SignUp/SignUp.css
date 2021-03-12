@@ -13,7 +13,7 @@ h3.sign-up {
   text-align: center;
   padding-top: 5vh;
 }
-.invalid-on-signup p {
+.invalid-on-signup {
   text-align: center;
   font-size: 25px;
   font-weight: bold;
