@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Cars.css";
 import Car from "../../components/Car/Car";
-// import Search from "../../components/Search/Search";
-// import { AZ, ZA, lowestFirst, highestFirst } from '../../utils/sort'
+import { AZ, ZA, lowestFirst, highestFirst } from "../../utils/sort";
 import Sort from "../../components/Sort/Sort";
 import Search from "../../components/Search/Search";
 import Layout from "../../components/shared/Layout/Layout";
 import { getCars } from "../../services/cars";
-import { highestFirst, lowestFirst } from "../../utils/sort";
 // import { PromiseProvider } from "mongoose";
 
 const Cars = (props) => {
