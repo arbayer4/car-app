@@ -8,7 +8,7 @@ import Cars from "./screens/Cars/Cars";
 import SignIn from "./screens/SignIn/SignIn";
 import SignUp from "./screens/SignUp/SignUp";
 import SignOut from "./screens/SignOut/SignOut";
-import { Route, Switch, Redirect, useHistory } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import { verifyUser } from "./services/users";
 
 const App = () => {
