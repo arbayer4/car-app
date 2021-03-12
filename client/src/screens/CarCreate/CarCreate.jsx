@@ -53,7 +53,7 @@ const CarCreate = (props) => {
   };
 
   if (isCreated) {
-    return <Redirect to={`/cars`} />;
+    return <Redirect to={`/mycars`} />;
   }
 
   const imgJSX = car.imgURL.map((image, index) => (
@@ -205,7 +205,7 @@ const CarCreate = (props) => {
             <div className="label-input">
               {/* <label htmlFor="price">Price:</label> */}
               <input
-                type="text"
+                type="number"
                 name="price"
                 id="price"
                 placeholder="Asking Price"
@@ -248,7 +248,7 @@ const CarCreate = (props) => {
             </button>
           </div>
         </div>
-        <button className="create-button" type="submit">
+        <button className="create-button" type="submit" onClick={handleSubmit}>
           Submit
         </button>
       </form>
