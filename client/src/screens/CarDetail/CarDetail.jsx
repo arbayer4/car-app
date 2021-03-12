@@ -37,7 +37,7 @@ const CarDetail = (props) => {
       key={index}
     />
   ));
-  // console.log(car.owner.email);
+  // console.log(car);
   // console.log(car.owner.phone);
 
   return (
@@ -91,6 +91,11 @@ const CarDetail = (props) => {
               >
                 Delete
               </button>
+            </div>
+          ) : null}
+          {!props.user ? (
+            <div className="buttons">
+                <a href={`mailto:${car.owner.email}?subject=Sunday Driver - Shopper Inquiry on your ${car.year} ${car.make} ${car.model}!`}><button className="email-button">Email Seller</button> </a>
             </div>
           ) : null}
         </div>

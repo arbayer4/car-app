@@ -23,7 +23,7 @@ const Cars = (props) => {
   }, [props.toggleFetch]);
 
   const handleSort = (type) => {
-    setSortType(type);
+    // setSortType(type);
     switch (type) {
       case "make-ascending":
         setQueriedCars(AZ(queriedCars));
