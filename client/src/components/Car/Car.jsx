@@ -8,7 +8,7 @@ const Car = (props) => {
       <div className="container-image-and-data">
         <div className="container-image-fp">
           <Link className="car" to={`/cars/${props._id}`}>
-            <img className="car-image-fp" src={props.imgURL} alt={props.make} />
+            <img className="car-image-fp" src={props.imgURL ? props.imgURL : "https://images.unsplash.com/photo-1606017116209-b1ed168465e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80"} alt={props.make} />
           </Link>
         </div>
         <div className="container-data-fp">
