@@ -1,88 +1,102 @@
 .container-all {
   color: white;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 30vw 30vw 15vw;
+  grid-template-rows: repeat(4) 20vh;
   margin: 15vh;
-  margin-bottom: 30vh;
-  justify-self: center;
+  margin-bottom: 10vh;
+  justify-content: center;
 }
-
+.container-orange-card {
+  height: 65vh;
+  width: 45vw;
+  z-index: 0;
+  grid-row: 1 / span 4;
+  grid-column-start: 2;
+  background-color: rgb(255, 146, 14);
+}
 .container-image-and-data {
+  justify-self: center;
+  grid-row: 2 / span 2;
+  grid-column: 1 / span 3;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  z-index: 1;
 }
-
-.container-image {
+.price-and-viewmore {
+  padding-top: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 35vw;
+}
+.container-image-fp {
   background-color: white;
   border-radius: 25px;
-  display: flex;
-  width: 40vw;
-  height: 50vh;
+  width: 35vw;
+  height: 45vh;
   margin-right: -100px;
   object-fit: cover;
   box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.774);
   z-index: 2;
+  order: 0;
 }
-.car-image {
+.car-image-fp {
+  justify-self: center;
   border-radius: 25px;
-  display: flex;
-  width: 40vw;
-  height: 50vh;
+  width: 35vw;
+  height: 45vh;
   margin-right: -200px;
   object-fit: cover;
 }
 
-.container-data {
+.container-data-fp {
   display: flex;
   flex-direction: column;
-  width: 40vw;
+  width: 45vw;
   font-size: 18px;
   margin-top: -50px;
   margin-bottom: -50px;
-  background-color: rgb(255, 146, 14);
+  z-index: 2;
 }
 
-.car-title,
-.veiw-more-detail,
-.car-description,
-.car-price {
-  margin-left: 11vh;
+.price-and-viewmore,
+.car-title-fp,
+.car-description-fp {
+  margin-left: 10vw;
 }
 
-.car-title {
+.car-title-fp {
   font-size: 30px;
   font-weight: bold;
   margin-top: 5vh;
 }
 
-.car-description {
+.car-description-fp {
   font-size: 20px;
   padding: 10px;
   overflow: scroll;
   scrollbar-width: none;
   height: 30vh;
   margin-top: 2vh;
-  margin-left: 120px;
-  margin-right: 3vw;
+  margin-left: 110px;
 }
 
-.car-price {
+.car-price-fp {
   font-size: 25px;
-  margin-top: 5vh;
+  padding-right: 20vw;
 }
-.veiw-more-detail {
-  order: 5;
-  font-size: 30px;
+.view-more-detail {
+  font-size: 25px;
   font-weight: bold;
   color: white;
 }
-.veiw-more-detail:hover {
+.view-more-detail:hover {
   color: #fcbf49;
   border-bottom: 3px solid #fcbf49;
 }
-.car-image:hover {
+.car-image-fp:hover {
   cursor: pointer;
   opacity: 0.7;
 }

@@ -53,7 +53,7 @@ const CarCreate = (props) => {
   };
 
   if (isCreated) {
-    return <Redirect to={`/cars`} />;
+    return <Redirect to={`/mycars`} />;
   }
 
   const imgJSX = car.imgURL.map((image, index) => (
@@ -76,9 +76,7 @@ const CarCreate = (props) => {
         <div className="top">
           <div className="left-details">
             <div className="label-input">
-              {/* <label htmlFor="make">Make:</label> */}
               <input
-                type="text"
                 name="make"
                 placeholder="Make"
                 id="make"
@@ -89,9 +87,7 @@ const CarCreate = (props) => {
               />
             </div>
             <div className="label-input">
-              {/* <label htmlFor="model">Model:</label> */}
               <input
-                type="text"
                 name="model"
                 placeholder="Model"
                 id="model"
@@ -101,9 +97,7 @@ const CarCreate = (props) => {
               />
             </div>
             <div className="label-input">
-              {/* <label htmlFor="year">Year:</label> */}
               <input
-                type="text"
                 name="year"
                 placeholder="Year"
                 id="year"
@@ -113,9 +107,7 @@ const CarCreate = (props) => {
               />
             </div>
             <div className="label-input">
-              {/* <label htmlFor="zipcode">Zip Code:</label> */}
               <input
-                type="text"
                 name="zipcode"
                 id="zipcode"
                 placeholder="Zipcode"
@@ -124,9 +116,7 @@ const CarCreate = (props) => {
               />
             </div>
             <div className="label-input">
-              {/* <label htmlFor="exterior-color">Exterior Color</label> */}
               <input
-                type="text"
                 name="exteriorColor"
                 id="exterior-color"
                 placeholder="Exterior Color"
@@ -135,9 +125,7 @@ const CarCreate = (props) => {
               />
             </div>
             <div className="label-input">
-              {/* <label htmlFor="doors">Doors:</label> */}
               <input
-                type="text"
                 name="doors"
                 id="doors"
                 placeholder="Number of Doors"
@@ -148,9 +136,7 @@ const CarCreate = (props) => {
           </div>
           <div className="right-details">
             <div className="label-input">
-              {/* <label htmlFor="mileage">Mileage:</label> */}
               <input
-                type="text"
                 name="mileage"
                 id="mileage"
                 placeholder="Mileage"
@@ -159,9 +145,7 @@ const CarCreate = (props) => {
               />
             </div>
             <div className="label-input">
-              {/* <label htmlFor="transmission">Transmission:</label> */}
               <input
-                type="text"
                 name="transmission"
                 id="transmission"
                 placeholder="Transmission"
@@ -170,9 +154,7 @@ const CarCreate = (props) => {
               />
             </div>
             <div className="label-input">
-              {/* <label htmlFor="engine">Engine:</label> */}
               <input
-                type="text"
                 name="engine"
                 id="engine"
                 placeholder="Engine"
@@ -181,9 +163,7 @@ const CarCreate = (props) => {
               />
             </div>
             <div className="label-input">
-              {/* <label htmlFor="vin">VIN:</label> */}
               <input
-                type="text"
                 name="vin"
                 id="vin"
                 placeholder="VIN"
@@ -192,9 +172,7 @@ const CarCreate = (props) => {
               />
             </div>
             <div className="label-input">
-              {/* <label htmlFor="interior-color">Interior Color:</label> */}
               <input
-                type="text"
                 name="interiorColor"
                 id="interior-color"
                 placeholder="Interior Color"
@@ -203,9 +181,8 @@ const CarCreate = (props) => {
               />
             </div>
             <div className="label-input">
-              {/* <label htmlFor="price">Price:</label> */}
               <input
-                type="text"
+                type="number"
                 name="price"
                 id="price"
                 placeholder="Asking Price"
@@ -216,7 +193,6 @@ const CarCreate = (props) => {
           </div>
         </div>
         <div className="bottom-details">
-          {/* <label htmlFor="description">Description</label> */}
           <textarea
             name="description"
             id="description"
@@ -229,10 +205,9 @@ const CarCreate = (props) => {
             onChange={handleChange}
           />
           <div className="preview-images">{imgJSX}</div>
-          {/* <label htmlFor="images">Image URL:</label> */}
+
           <div className="image-input-button">
             <input
-              type="url"
               name="imgURL"
               id="images"
               placeholder="Image URL"
@@ -248,7 +223,7 @@ const CarCreate = (props) => {
             </button>
           </div>
         </div>
-        <button className="create-button" type="submit">
+        <button className="create-button" type="submit" onClick={handleSubmit}>
           Submit
         </button>
       </form>

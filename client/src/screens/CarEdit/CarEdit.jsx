@@ -2,7 +2,7 @@ import Layout from "../../components/shared/Layout/Layout";
 import { Redirect, useParams } from "react-router-dom";
 import { getCar, updateCar } from "../../services/cars";
 import { useState, useEffect } from "react";
-// import "./CarEdit.css";
+import "./CarEdit.css";
 
 const CarEdit = (props) => {
   const [car, setCar] = useState({
@@ -67,7 +67,7 @@ const CarEdit = (props) => {
     <div className="photo-container" key={index}>
       <img className="preview-image" src={image} alt={`car ${index + 1}`} />
       <button
-        classname="delete-button"
+        className="form-delete-button"
         value={index}
         onClick={deleteImage}
         type="button"
@@ -83,10 +83,11 @@ const CarEdit = (props) => {
         <div className="top">
           <div className="left-details">
             <div className="label-input">
-              <label htmlFor="make">Make:</label>
+              <label htmlFor="make"></label>
               <input
                 type="text"
                 name="make"
+                placeholder="Make"
                 id="make"
                 value={car.make}
                 required
@@ -95,10 +96,11 @@ const CarEdit = (props) => {
               />
             </div>
             <div className="label-input">
-              <label htmlFor="model">Model:</label>
+              <label htmlFor="model"></label>
               <input
                 type="text"
                 name="model"
+                placeholder="Model"
                 id="model"
                 value={car.model}
                 required
@@ -106,10 +108,11 @@ const CarEdit = (props) => {
               />
             </div>
             <div className="label-input">
-              <label htmlFor="year">Year:</label>
+              <label htmlFor="year"></label>
               <input
                 type="text"
                 name="year"
+                placeholder="Year"
                 id="year"
                 value={car.year}
                 required
@@ -117,17 +120,18 @@ const CarEdit = (props) => {
               />
             </div>
             <div className="label-input">
-              <label htmlFor="zipcode">Zip Code:</label>
+              <label htmlFor="zipcode"></label>
               <input
                 type="text"
                 name="zipcode"
+                placeholder="Zipcode"
                 id="zipcode"
                 value={car.zipcode}
                 onChange={handleChange}
               />
             </div>
             <div className="label-input">
-              <label htmlFor="exterior-color">Exterior Color:</label>
+              <label htmlFor="exterior-color"></label>
               <input
                 type="text"
                 name="exteriorColor"
@@ -137,10 +141,11 @@ const CarEdit = (props) => {
               />
             </div>
             <div className="label-input">
-              <label htmlFor="doors">Doors:</label>
+              <label htmlFor="doors"></label>
               <input
                 type="text"
                 name="doors"
+                placeholder="Doors"
                 id="doors"
                 value={car.doors}
                 onChange={handleChange}
@@ -149,60 +154,66 @@ const CarEdit = (props) => {
           </div>
           <div className="right-details">
             <div className="label-input">
-              <label htmlFor="mileage">Mileage:</label>
+              <label htmlFor="mileage"></label>
               <input
                 type="text"
                 name="mileage"
+                placeholder="Mileage"
                 id="mileage"
                 value={car.mileage}
                 onChange={handleChange}
               />
             </div>
             <div className="label-input">
-              <label htmlFor="transmission">Transmission:</label>
+              <label htmlFor="transmission"></label>
               <input
                 type="text"
                 name="transmission"
+                placeholder="Transmission"
                 id="transmission"
                 value={car.transmission}
                 onChange={handleChange}
               />
             </div>
             <div className="label-input">
-              <label htmlFor="engine">Engine:</label>
+              <label htmlFor="engine"></label>
               <input
                 type="text"
                 name="engine"
+                placeholder="Engine"
                 id="engine"
                 value={car.engine}
                 onChange={handleChange}
               />
             </div>
             <div className="label-input">
-              <label htmlFor="vin">VIN:</label>
+              <label htmlFor="vin"></label>
               <input
                 type="text"
                 name="vin"
+                placeholder="VIN"
                 id="vin"
                 value={car.vin}
                 onChange={handleChange}
               />
             </div>
             <div className="label-input">
-              <label htmlFor="interior-color">Interior Color:</label>
+              <label htmlFor="interior-color"></label>
               <input
                 type="text"
                 name="interiorColor"
+                placeholder="Interior Color"
                 id="interior-color"
                 value={car.interiorColor}
                 onChange={handleChange}
               />
             </div>
             <div className="label-input">
-              <label htmlFor="price">Price:</label>
+              <label htmlFor="price"></label>
               <input
-                type="text"
+                type="number"
                 name="price"
+                placeholder="Asking Price"
                 id="price"
                 value={car.price}
                 onChange={handleChange}
@@ -211,10 +222,11 @@ const CarEdit = (props) => {
           </div>
         </div>
         <div className="bottom-details">
-          <label htmlFor="description">Description:</label>
+          <label htmlFor="description"></label>
           <textarea
             name="description"
             id="description"
+            placeholder="Description"
             cols="30"
             rows="10"
             required
@@ -222,10 +234,11 @@ const CarEdit = (props) => {
             onChange={handleChange}
           />
           <div className="preview-images">{imgJSX}</div>
-          <label htmlFor="images">Images:</label>
+          <label htmlFor="images"></label>
           <input
             type="url"
             name="imgURL"
+            placeholder="Image URL"
             id="images"
             value={img}
             onChange={(e) => setImg(e.target.value)}

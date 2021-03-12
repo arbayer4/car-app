@@ -31,12 +31,13 @@ const SignIn = (props) => {
       .then((user) => {
         setUser(user);
       })
-      .then(() => history.push("/cars"))
+      .then(() => history.push("/mycars"))
       .catch((error) => {
         console.error(error);
         setForm({
           isError: true,
-          errorMsg: "Invalid Credentials",
+          errorMsg:
+            "Invalid Credentials: Your Username or Password is incorrect. Try Again",
           username: "",
           password: "",
         });
@@ -47,9 +48,12 @@ const SignIn = (props) => {
     const toggleForm = form.isError ? "danger" : "";
     if (form.isError) {
       return (
-        <button type="submit" className={toggleForm}>
-          {form.errorMsg}
-        </button>
+        <div className="invalid-on-signin">
+          <p>{form.errorMsg}</p>
+          <button className="signin-btn" type="submit">
+            Login
+          </button>
+        </div>
       );
     } else {
       return (
