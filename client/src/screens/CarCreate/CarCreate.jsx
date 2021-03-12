@@ -23,7 +23,6 @@ const CarCreate = (props) => {
     ownersEmail: props.user.email,
   });
   const [img, setImg] = useState("");
-
   const [isCreated, setCreated] = useState(false);
 
   const handleChange = (event) => {
@@ -34,7 +33,7 @@ const CarCreate = (props) => {
     });
   };
   const handleImage = (event) => {
-    // event.preventDefault();
+    event.preventDefault();
     setCar({
       ...car,
       ["imgURL"]: [...car.imgURL, img],
@@ -183,7 +182,7 @@ const CarCreate = (props) => {
             </div>
             <div className="label-input">
               <input
-                type="text"
+                type="number"
                 name="price"
                 placeholder="Price"
                 value={car.price}
@@ -224,7 +223,7 @@ const CarCreate = (props) => {
             </button>
           </div>
         </div>
-        <button className="create-button" type="submit" onClick={handleSubmit}>
+        <button className="create-button" type="submit">
           Submit
         </button>
       </form>

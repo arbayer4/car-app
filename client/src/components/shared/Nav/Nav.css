@@ -49,7 +49,7 @@ a {
 .right-side {
   display: flex;
   height: 80px;
-  width: 30vw;
+  width: 40vw;
   justify-content: space-between;
   align-items: center;
 }
