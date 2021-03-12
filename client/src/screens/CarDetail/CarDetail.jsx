@@ -77,7 +77,11 @@ const CarDetail = (props) => {
             <div className="zipcode">
               <b>Seller Location:</b> {car.zipcode}
             </div>
-            <div className="price">Price: ${car.price}</div>
+            <b classname="description-header">Seller's Description: </b>
+            <div className="description">{car.description}</div>
+            <div className="price">
+              <b>${car.price}</b>
+            </div>
           </div>
           {props.user ? (
             <div className="buttons">
@@ -95,8 +99,16 @@ const CarDetail = (props) => {
           ) : null}
           {!props.user ? (
             <div className="buttons">
-                <a href={`mailto:${car.owner.email}?subject==?UTF-8?B?IPCfmpg=?= SUNDAY DRIVER - Shopper Inquiry for your ${car.year} ${car.make} ${car.model}!`}><button type="button" className="email-seller-button">Email Seller</button></a>
-                <button type="button" className="call-seller-button">Call Seller</button>
+              <a
+                href={`mailto:${car.owner.email}?subject==?UTF-8?B?IPCfmpg=?= SUNDAY DRIVER - Shopper Inquiry for your ${car.year} ${car.make} ${car.model}!`}
+              >
+                <button type="button" className="email-seller-button">
+                  Email Seller
+                </button>
+              </a>
+              <button type="button" className="call-seller-button">
+                Call Seller
+              </button>
             </div>
           ) : null}
         </div>

@@ -52,6 +52,7 @@
 }
 
 .details-container {
+  height: 30vh;
   display: flex;
   flex-direction: column;
   margin-left: 50px;
@@ -78,14 +79,15 @@
   letter-spacing: 1.5px;
 }
 
+.description-header {
+  font-size: 10px;
+}
+
 .description {
-  position: relative; 
-  overflow: scroll;
-  flex-direction: row;
   font-size: 20px;
-  justify-content: center;
+  overflow: scroll;
   scrollbar-width: none;
-  height: 50vh;
+  height: 15vh;
 }
 
 .lower-container {
