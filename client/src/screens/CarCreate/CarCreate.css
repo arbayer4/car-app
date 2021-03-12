@@ -72,9 +72,10 @@
 }
 .photo-container {
   display: flex;
-  flex-direction: column nowrap;
+  flex-flow: column nowrap;
 }
-.delete-button {
+
+.form-delete-button {
   padding: 10px 35px;
   text-align: center;
   color: white;
@@ -90,6 +91,8 @@
   box-sizing: border-box;
 }
 .preview-image {
-  width: 100px;
-  height: auto;
+  height: 100px;
+  width: auto;
+
+  object-fit: contain;
 }

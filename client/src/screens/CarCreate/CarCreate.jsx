@@ -60,7 +60,7 @@ const CarCreate = (props) => {
     <div className="photo-container" key={index}>
       <img className="preview-image" src={image} alt={`car ${index + 1}`} />
       <button
-        classname="delete-button"
+        className="form-delete-button"
         value={index}
         onClick={deleteImage}
         type="button"
