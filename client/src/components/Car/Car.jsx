@@ -11,14 +11,14 @@ const Car = (props) => {
             <img className="car-image" src={props.imgURL} alt={props.make} />
           </Link>
         </div>
-        <div className="container-data">
+        <div className="container-data-fp">
           <div className="car-title">
             {props.year} {props.make} {props.model}
           </div>
           <div className="car-description">{props.description}</div>
           <p className="car-price">${props.price}</p>
           <Link className="veiw-more-detail" to={`/cars/${props._id}`}>
-            Veiw More
+            View More
           </Link>
         </div>
       </div>
