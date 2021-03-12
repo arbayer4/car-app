@@ -223,7 +223,7 @@ const CarCreate = (props) => {
             </button>
           </div>
         </div>
-        <button className="create-button" type="submit" onClick={handleSubmit}>
+        <button className="create-button" type="submit">
           Submit
         </button>
       </form>
