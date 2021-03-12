@@ -98,6 +98,7 @@ const CarCreate = (props) => {
             <div className="label-input">
               <input
                 required
+                type="number"
                 name="year"
                 placeholder="Year"
                 id="year"
@@ -107,6 +108,7 @@ const CarCreate = (props) => {
             </div>
             <div className="label-input">
               <input
+                type="number"
                 name="zipcode"
                 id="zipcode"
                 placeholder="Zipcode"
@@ -222,7 +224,7 @@ const CarCreate = (props) => {
             </button>
           </div>
         </div>
-        <button className="create-button" type="submit" onClick={handleSubmit}>
+        <button className="create-button" type="submit">
           Submit
         </button>
       </form>
