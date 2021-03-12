@@ -66,7 +66,7 @@ const SignUp = (props) => {
     <Layout>
       <div className="signup">
         <form className="signup-form" onSubmit={onSignUp}>
-          <h3 className="sign-up">Sign Up</h3>
+          <h3 className="sign-up">Create Account</h3>
           <input
             className="signin-input"
             required

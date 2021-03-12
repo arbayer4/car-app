@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
 .signin-form {
   display: flex;
   flex-direction: column;
@@ -7,11 +8,13 @@
   justify-content: center;
 }
 h3.sign-in {
-  font-size: 30px;
+  font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 0.9px;
+  font-size: 45px;
   color: #003049;
   text-align: center;
   margin-top: 0px;
-  padding-top: 10vh;
+  padding-top: 5vh;
 }
 .signin {
   background-image: url("https://i.imgur.com/QFLHCRv.jpg");
@@ -26,26 +29,36 @@ h3.sign-in {
   outline: none;
   box-shadow: #3233338c 2px 2px 3px;
 }
+.signin-input::placeholder {
+  letter-spacing: 0.7px;
+  font-size: 15px;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: bold;
+}
 .signin-btn {
+  font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 0.7px;
   padding: 7px;
   margin-top: 10px;
   margin-left: 5vw;
   background-color: #003049;
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   border: none;
   border-radius: 20px;
   width: 30vw;
   box-shadow: 2px 2px 6px #011827;
 }
 .orsignup-btn {
+  font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 0.7px;
   padding: 7px;
   margin-top: 10px;
   margin-left: 5vw;
   margin-bottom: 100px;
   background-color: #003049;
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   border: none;
   border-radius: 20px;
   width: 30vw;

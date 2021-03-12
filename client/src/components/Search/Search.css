@@ -1,1 +1,21 @@
-/* empty  */
+.search-form {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+.search-input {
+  width: 30vw;
+  font-size: 18px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid rgb(255, 147, 14);
+  border-radius: 25px;
+  outline: none;
+}
+
+.search-input::placeholder {
+  letter-spacing: 0.5px;
+}
