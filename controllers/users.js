@@ -1,7 +1,9 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require("../models/user");
+const Car = require("../models/car");
 const db = require("../db/connection");
+const { result } = require("lodash");
 
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
@@ -23,6 +25,7 @@ const signUp = async (req, res) => {
       username: user.username,
       email: user.email,
       phone: user.phone,
+      _id: user._id,
     };
     const token = jwt.sign(payload, TOKEN_KEY);
     res.status(201).json({ token });
@@ -34,11 +37,15 @@ const signUp = async (req, res) => {
 const signIn = async (req, res) => {
   try {
     const { username, password } = req.body;
-    const user = await User.findOne({ username: username });
+    const user = await User.findOne({ username: username }).populate("cars");
+    console.log(user);
+    console.log(user);
     if (await bcrypt.compare(password, user.password_digest)) {
       const payload = {
         username: user.username,
         email: user.email,
+        _id: user._id,
+        cars: user.cars,
       };
       const token = jwt.sign(payload, TOKEN_KEY);
       res.status(201).json({ token });
@@ -64,9 +71,19 @@ const verify = async (req, res) => {
 
 const changePassword = async (req, res) => {};
 
+const getUsers = async (req, res) => {
+  try {
+    const users = await User.find().populate("cars");
+    res.json(users);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+};
+
 module.exports = {
   signUp,
   signIn,
   verify,
   changePassword,
+  getUsers,
 };
