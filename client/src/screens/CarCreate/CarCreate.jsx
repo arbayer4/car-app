@@ -98,6 +98,7 @@ const CarCreate = (props) => {
             </div>
             <div className="label-input">
               <input
+                type="number"
                 name="year"
                 placeholder="Year"
                 id="year"
@@ -108,6 +109,7 @@ const CarCreate = (props) => {
             </div>
             <div className="label-input">
               <input
+                type="number"
                 name="zipcode"
                 id="zipcode"
                 placeholder="Zipcode"
