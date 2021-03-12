@@ -6,6 +6,10 @@
   padding-top: 10px;
 }
 
+.sort {
+  outline: none;
+}
+
 /* .search-input {
   width: 30vw;
   font-size: 18px;
