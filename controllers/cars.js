@@ -16,7 +16,7 @@ const getCars = async (req, res) => {
 const getCar = async (req, res) => {
   try {
     const { id } = req.params;
-    const car = await Car.findById(id);
+    const car = await Car.findById(id).populate("owner");
     if (car) {
       return res.json(car);
     }
