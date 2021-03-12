@@ -1,4 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
 .signup-form {
+  font-family: "Open Sans Condensed", sans-serif;
   display: flex;
   flex-direction: column;
   margin-right: 30vw;
@@ -6,29 +8,36 @@
   justify-content: center;
 }
 h3.sign-up {
-  font-size: 30px;
+  font-size: 45px;
   color: #003049;
   text-align: center;
-  padding-top: 10vh;
+  padding-top: 5vh;
 }
 .signup {
   background-image: url("https://i.imgur.com/QFLHCRv.jpg");
   background-size: cover;
 }
-.signin-input {
+.signup-input {
+  font-family: "Open Sans Condensed", sans-serif;
   padding: 15px;
   border: none;
   margin: 10px;
   border-radius: 10px;
 }
+.signup-input::placeholder {
+  font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 0.7px;
+}
 .signup-btn {
+  font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 0.7px;
   padding: 7px;
   margin-top: 10px;
   margin-left: 5vw;
   margin-bottom: 100px;
   background-color: #003049;
   color: white;
-  font-size: 20px;
+  font-size: 25px;
   border-radius: 20px;
   width: 30vw;
   border: none;
