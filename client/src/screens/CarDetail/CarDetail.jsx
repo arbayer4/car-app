@@ -7,6 +7,7 @@ import "./CarDetail.css";
 const CarDetail = (props) => {
   const [car, setCar] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
+  const [userCars, setUserCars] = useState([]);
   const { id } = useParams();
   const history = useHistory();
   let num = 0;
@@ -17,6 +18,7 @@ const CarDetail = (props) => {
       setLoaded(true);
     };
     fetchCar();
+    console.log(userCars);
   }, [id]);
 
   if (!isLoaded) {
@@ -39,6 +41,10 @@ const CarDetail = (props) => {
   ));
   // console.log(car);
   // console.log(car.owner.phone);
+  // console.log(props.user.cars);
+  // const match = props.user.cars.filter((curr) => curr._id === car._id);
+  console.log(car.owner.username);
+  console.log(props.user.username);
 
   return (
     <Layout user={props.user}>
@@ -83,7 +89,7 @@ const CarDetail = (props) => {
               <b>${car.price}</b>
             </div>
           </div>
-          {props.user ? (
+          {props.user.username === car.owner.username ? (
             <div className="buttons">
               <Link className="edit-link" to={`/cars/${car._id}/edit`}>
                 <button className="edit-button">Edit</button>
