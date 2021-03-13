@@ -34,8 +34,8 @@
 
 .image-main {
   display: flex;
-  width: 100vh;
-  height: 75vh;
+  width: 80vh;
+  height: 60vh;
   object-fit: cover;
   object-position: center;
   border-radius: 15px;
@@ -47,8 +47,8 @@
   flex-direction: row;
   padding-top: 10px;
   padding-right: 15px;
-  width: 150px;
-  height: 120px;
+  width: 12vh;
+  height: 8vh;
   object-fit: cover;
   object-position: center;
   /* border-radius: 30%; */
@@ -86,18 +86,18 @@
 .title-price {
   /* justify-content: center; */
   color: #227e2a;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bolder;
 }
 
 .vehicle-attribute {
-  font-size: 22px;
+  font-size: 28px;
   font-weight:bold;
   letter-spacing: 1.5px;
 }
 
 .vehicle-input {
-  font-size: 20px;
+  font-size: 25px;
   font-weight:300;
   letter-spacing: 1px;
 }
