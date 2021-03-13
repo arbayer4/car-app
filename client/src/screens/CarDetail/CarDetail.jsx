@@ -41,6 +41,15 @@ const CarDetail = (props) => {
     setUserCarPics(temp);
   };
 
+  const imgJSX = car.imgURL.map((image, index) => (
+    <img
+      className="image-thumbnail"
+      src={image}
+      alt={`car ${index + 1}`}
+      key={index}
+    />
+  ));
+
   const imgJSX = userCarPics.map((image, index) => {
     if (index > 0) {
       return (
@@ -55,6 +64,7 @@ const CarDetail = (props) => {
     }
   });
 
+
   return (
     <Layout user={props.user}>
       <div className="vehicle-details-header">Vehicle Details</div>
@@ -63,8 +73,13 @@ const CarDetail = (props) => {
           <img
             className="image-main"
             src={
+
+              car.imgURL[num]
+                ? car.imgURL[num]
+
               userCarPics[num]
                 ? userCarPics[num]
+
                 : "https://images.unsplash.com/photo-1606017116209-b1ed168465e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80"
             }
             alt={car.make}
