@@ -39,7 +39,7 @@ const CarDetail = (props) => {
       key={index}
     />
   ));
-
+  
   return (
     <Layout user={props.user}>
       <div className="vehicle-details-header">Vehicle Details</div>
@@ -49,39 +49,20 @@ const CarDetail = (props) => {
           <div className="image-thumbnail">{imgJSX}</div>
         </div>
         <div className="details-container">
-          <div className="title">
-            {car.year} {car.make} {car.model}
-          </div>
+          <div className="title">{car.year} {car.make} {car.model}</div>
           <div className="vehicle-specs">
-            <div className="mileage">
-              <b>Mileage:</b> {car.mileage}
-            </div>
-            <div className="engine">
-              <b>Engine Type:</b> {car.engine}
-            </div>
-            <div className="transmission">
-              <b>Transmission:</b> {car.transmission}
-            </div>
-            <div className="doors">
-              <b>Number Doors:</b> {car.doors}
-            </div>
-            <div className="exterior-color">
-              <b>Exterior Color:</b> {car.exteriorColor}
-            </div>
-            <div className="interior-color">
-              <b>Interior Color:</b> {car.interiorColor}
-            </div>
-            <div className="vin">
-              <b>VIN:</b> {car.vin}
-            </div>
-            <div className="zipcode">
-              <b>Seller Location:</b> {car.zipcode}
-            </div>
-            <b classname="description-header">Seller's Description: </b>
-            <div className="description">{car.description}</div>
-            <div className="price">
-              <b>${car.price}</b>
-            </div>
+            <div className="vehicle-attribute">Mileage:  <span className="vehicle-input">{car.mileage}</span></div>
+            <div className="vehicle-attribute">Engine Type:  <span className="vehicle-input">{car.engine}</span></div>
+            <div className="vehicle-attribute">Transmission:  <span className="vehicle-input">{car.transmission}</span></div>
+            <div className="vehicle-attribute">Number Doors:  <span className="vehicle-input">{car.doors}</span></div>
+            <div className="vehicle-attribute">Exterior Color:  <span className="vehicle-input">{car.exteriorColor}</span></div>
+            <div className="vehicle-attribute">Interior Color:  <span className="vehicle-input">{car.interiorColor}</span></div>
+            <div className="vehicle-attribute">VIN:  <span className="vehicle-input">{car.vin}</span></div>
+            <div className="vehicle-attribute">Seller Location:  <span className="vehicle-input">{car.zipcode}</span></div>
+            <br/>
+            <div className="vehicle-attribute">Seller's Description</div>
+            <div className="vehicle-description">{car.description}</div>
+            <div className="vehicle-price">${car.price}</div>
           </div>
           {!props.user ? (
             <div className="buttons">

@@ -1,6 +1,6 @@
 .vehicle-details-header {
   margin-top: 2vh;
-  margin-left: 70px;
+  margin-left: 50px;
   font-size: 50px;
   text-align: left;
 }
@@ -57,8 +57,9 @@
   margin-left: 50px;
   color: white;
   width: 75vh;
-  min-height: 55vh;
-  padding: 40px;
+  min-height: 60vh;
+  padding: 50px;
+  margin-bottom: 50px;
   background-color: rgb(255, 146, 14);
 }
 
@@ -73,20 +74,24 @@
   justify-content: center;
 }
 
-.vehicle-specs {
-  font-size: 30px;
+.vehicle-attribute {
+  font-size: 22px;
+  font-weight:bold;
   letter-spacing: 1.5px;
 }
 
-.description-header {
-  font-size: 0px;
+.vehicle-input {
+  font-size: 20px;
+  font-weight:300;
+  letter-spacing: 1px;
 }
 
-.description {
-  font-size: 20px;
+.vehicle-description {
+  font-size: 19px;
   overflow: scroll;
   scrollbar-width: none;
   height: 15vh;
+  margin: 8px;
 }
 
 .lower-container {
@@ -97,6 +102,13 @@
 }
 ::-webkit-scrollbar {
   display: none;
+}
+
+.buttons {
+  flex-direction: row;
+  /* position: absolute; */
+  bottom: 0px;
+  /* margin-bottom: 20px; */
 }
 
 .edit-button,
@@ -115,23 +127,17 @@
   outline: none;
 }
 
-.buttons {
-  flex-direction: row;
-  position: absolute;
-  bottom: 0px;
-  margin-bottom: 20px;
-}
-
-.price {
+.vehicle-price {
   color: #227e2a;
   font-size: 35px;
+  font-weight: bold;
   bottom: 0px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 .edit-button:hover,
 .delete-button:hover,
-,
 .save-button:hover,
 .email-seller-button:hover .call-seller-button:hover {
   background-color: #f7ca68;
