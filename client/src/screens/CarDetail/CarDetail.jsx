@@ -7,28 +7,38 @@ import "./CarDetail.css";
 const CarDetail = (props) => {
   const [car, setCar] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
-  const [userCars, setUserCars] = useState([]);
+  const [userCarPics, setUserCarPics] = useState([]);
   const { id } = useParams();
   const history = useHistory();
   let num = 0;
   useEffect(() => {
     const fetchCar = async () => {
-      const car = await getCar(id);
-      setCar(car);
+      const fetchedCar = await getCar(id);
+      setCar(fetchedCar);
+      setUserCarPics(fetchedCar.imgURL);
       setLoaded(true);
     };
     fetchCar();
-    console.log(userCars);
   }, [id]);
 
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
+
   const detailDeleteCar = () => {
     deleteCar(car._id);
     props.setToggleFetch((curr) => !curr);
     setTimeout(() => history.push("/mycars"), 500);
-    // history.push("/cars");
+  };
+  const spliceArray = (index, array) => {
+    const temp = array.splice(index, 1);
+    return [...temp, ...array];
+  };
+  const switchPic = (index) => {
+    let temp = userCarPics;
+    const featured = temp.splice(index, 1);
+    temp = featured.concat(temp);
+    setUserCarPics(temp);
   };
 
   const imgJSX = car.imgURL.map((image, index) => (
@@ -40,6 +50,21 @@ const CarDetail = (props) => {
     />
   ));
 
+  const imgJSX = userCarPics.map((image, index) => {
+    if (index > 0) {
+      return (
+        <img
+          className="image-thumbnail"
+          src={image}
+          alt={`car ${index + 1}`}
+          key={index}
+          onClick={() => switchPic(index)}
+        />
+      );
+    }
+  });
+
+
   return (
     <Layout user={props.user}>
       <div className="vehicle-details-header">Vehicle Details</div>
@@ -48,8 +73,13 @@ const CarDetail = (props) => {
           <img
             className="image-main"
             src={
+
               car.imgURL[num]
                 ? car.imgURL[num]
+
+              userCarPics[num]
+                ? userCarPics[num]
+
                 : "https://images.unsplash.com/photo-1606017116209-b1ed168465e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80"
             }
             alt={car.make}
