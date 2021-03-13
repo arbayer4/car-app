@@ -7,28 +7,28 @@ import "./CarDetail.css";
 const CarDetail = (props) => {
   const [car, setCar] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
-  const [userCars, setUserCars] = useState([]);
+  const [userCarPics, setUserCarPics] = useState([]);
   const { id } = useParams();
   const history = useHistory();
   let num = 0;
   useEffect(() => {
     const fetchCar = async () => {
-      const car = await getCar(id);
-      setCar(car);
+      const fetchedCar = await getCar(id);
+      setCar(fetchedCar);
+      setUserCarPics(fetchedCar.imgURL);
       setLoaded(true);
     };
     fetchCar();
-    console.log(userCars);
   }, [id]);
 
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
+
   const detailDeleteCar = () => {
     deleteCar(car._id);
     props.setToggleFetch((curr) => !curr);
     setTimeout(() => history.push("/mycars"), 500);
-    // history.push("/cars");
   };
 
   const imgJSX = car.imgURL.map((image, index) => (
