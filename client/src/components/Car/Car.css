@@ -153,8 +153,7 @@
   }
 
   .car-description-fp {
-    display: none;
-    font-size: 10px;
+    font-size: 15px;
     padding: 5px;
     overflow: scroll;
     scrollbar-width: none;
