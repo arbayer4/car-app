@@ -49,7 +49,11 @@ const CarDetail = (props) => {
           <div className="image-thumbnail">{imgJSX}</div>
         </div>
         <div className="details-container">
-          <div className="title">{car.year} {car.make} {car.model}</div>
+          <div className="title">
+            <div className="title-car">{car.year} {car.make} {car.model}</div>
+            <div className="title-price">${car.price}</div>
+          </div>
+          <br/>
           <div className="vehicle-specs">
             <div className="vehicle-attribute">Mileage:  <span className="vehicle-input">{car.mileage}</span></div>
             <div className="vehicle-attribute">Engine Type:  <span className="vehicle-input">{car.engine}</span></div>
@@ -62,13 +66,12 @@ const CarDetail = (props) => {
             <br/>
             <div className="vehicle-attribute">Seller's Description</div>
             <div className="vehicle-description">{car.description}</div>
-            <div className="vehicle-price">${car.price}</div>
           </div>
-          {!props.user ? (
+          <div className="lower-container">
+            {!props.user ? (
             <div className="buttons">
               <a
-                href={`mailto:${car.owner.email}?subject==?UTF-8?B?IPCfmpg=?= SUNDAY DRIVER - Shopper Inquiry for your ${car.year} ${car.make} ${car.model}!`}
-              >
+                href={`mailto:${car.owner.email}?subject==🚘= SUNDAY DRIVER - Shopper Inquiry for your ${car.year} ${car.make} ${car.model}!`}>
                 <button type="button" className="email-seller-button">
                   Email Seller
                 </button>
@@ -104,6 +107,12 @@ const CarDetail = (props) => {
               </button>
             </div>
           )}
+          </div>
+            <br/><Link className="back-to-cars" to={`/cars`}>
+          ← Back to Collector Cars
+            </Link>
+            </div>
+            <div>
         </div>
       </div>
     </Layout>
