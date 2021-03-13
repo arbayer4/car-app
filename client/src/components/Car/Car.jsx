@@ -28,7 +28,7 @@ const Car = (props) => {
           <div className="price-and-viewmore">
             <div className="car-price-fp">${newPrice}</div>
             <Link className="view-more-detail" to={`/cars/${props._id}`}>
-              View More
+              View more details ➝
             </Link>
           </div>
         </div>
