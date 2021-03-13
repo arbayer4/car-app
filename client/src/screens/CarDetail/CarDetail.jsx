@@ -39,12 +39,6 @@ const CarDetail = (props) => {
       key={index}
     />
   ));
-  // console.log(car);
-  // console.log(car.owner.phone);
-  // console.log(props.user.cars);
-  // const match = props.user.cars.filter((curr) => curr._id === car._id);
-  console.log(car.owner.username);
-  console.log(props.user.username);
 
   return (
     <Layout user={props.user}>
@@ -89,7 +83,20 @@ const CarDetail = (props) => {
               <b>${car.price}</b>
             </div>
           </div>
-          {props.user.username === car.owner.username ? (
+          {!props.user ? (
+            <div className="buttons">
+              <a
+                href={`mailto:${car.owner.email}?subject==?UTF-8?B?IPCfmpg=?= SUNDAY DRIVER - Shopper Inquiry for your ${car.year} ${car.make} ${car.model}!`}
+              >
+                <button type="button" className="email-seller-button">
+                  Email Seller
+                </button>
+              </a>
+              <button type="button" className="call-seller-button">
+                Call Seller
+              </button>
+            </div>
+          ) : props.user.username === car.owner.username ? (
             <div className="buttons">
               <Link className="edit-link" to={`/cars/${car._id}/edit`}>
                 <button className="edit-button">Edit</button>
