@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./CarCreate.css";
 import Layout from "../../components/shared/Layout/Layout";
-import { Redirect } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 import { createCar } from "../../services/cars";
 
 const CarCreate = (props) => {
@@ -24,6 +24,7 @@ const CarCreate = (props) => {
   });
   const [img, setImg] = useState("");
   const [isCreated, setCreated] = useState(false);
+  const history = useHistory();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -45,15 +46,15 @@ const CarCreate = (props) => {
     event.preventDefault();
     const created = await createCar(car);
     setCreated({ created });
+    if (!isCreated) {
+      console.log("Error Creating");
+    }
+    history.push("/mycars");
   };
   const deleteImage = (e) => {
     car.imgURL.splice(e.target.value, 1);
     setCar({ ...car });
   };
-
-  if (isCreated) {
-    return <Redirect to={`/mycars`} />;
-  }
 
   const imgJSX = car.imgURL.map((image, index) => (
     <div className="photo-container" key={index}>

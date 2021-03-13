@@ -102,8 +102,7 @@ const CarDetail = (props) => {
                 Delete
               </button>
             </div>
-          ) : null}
-          {!props.user ? (
+          ) : (
             <div className="buttons">
               <a
                 href={`mailto:${car.owner.email}?subject==?UTF-8?B?IPCfmpg=?= SUNDAY DRIVER - Shopper Inquiry for your ${car.year} ${car.make} ${car.model}!`}
@@ -116,7 +115,7 @@ const CarDetail = (props) => {
                 Call Seller
               </button>
             </div>
-          ) : null}
+          )}
         </div>
       </div>
     </Layout>
