@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./CarCreate.css";
 import Layout from "../../components/shared/Layout/Layout";
-import { Redirect } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 import { createCar } from "../../services/cars";
 
 const CarCreate = (props) => {
@@ -24,6 +24,7 @@ const CarCreate = (props) => {
   });
   const [img, setImg] = useState("");
   const [isCreated, setCreated] = useState(false);
+  const history = useHistory();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -45,15 +46,15 @@ const CarCreate = (props) => {
     event.preventDefault();
     const created = await createCar(car);
     setCreated({ created });
+    if (!isCreated) {
+      console.log("Error Creating");
+    }
+    history.push("/mycars");
   };
   const deleteImage = (e) => {
     car.imgURL.splice(e.target.value, 1);
     setCar({ ...car });
   };
-
-  if (isCreated) {
-    return <Redirect to={`/mycars`} />;
-  }
 
   const imgJSX = car.imgURL.map((image, index) => (
     <div className="photo-container" key={index}>
@@ -77,31 +78,32 @@ const CarCreate = (props) => {
             <div className="label-input">
               <input
                 placeholder="Make"
+                required
                 value={car.make}
                 name="make"
-                required
                 autoFocus
                 onChange={handleChange}
               />
             </div>
             <div className="label-input">
               <input
+                required
                 name="model"
                 placeholder="Model"
                 id="model"
                 value={car.model}
-                required
                 onChange={handleChange}
+                innerHTML="*"
               />
             </div>
             <div className="label-input">
               <input
+                required
                 type="number"
                 name="year"
                 placeholder="Year"
                 id="year"
                 value={car.year}
-                required
                 onChange={handleChange}
               />
             </div>
@@ -223,7 +225,13 @@ const CarCreate = (props) => {
             </button>
           </div>
         </div>
-        <button className="create-button" type="submit">
+        {car.imgURL.length ? null : <p>Must Upload At Least One Picture</p>}
+
+        <button
+          className="create-button"
+          type="submit"
+          disabled={!car.imgURL.length}
+        >
           Submit
         </button>
       </form>

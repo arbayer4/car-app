@@ -7,6 +7,7 @@ import "./CarDetail.css";
 const CarDetail = (props) => {
   const [car, setCar] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
+  const [userCars, setUserCars] = useState([]);
   const { id } = useParams();
   const history = useHistory();
   let num = 0;
@@ -17,6 +18,7 @@ const CarDetail = (props) => {
       setLoaded(true);
     };
     fetchCar();
+    console.log(userCars);
   }, [id]);
 
   if (!isLoaded) {
@@ -37,8 +39,6 @@ const CarDetail = (props) => {
       key={index}
     />
   ));
-  // console.log(car);
-  // console.log(car.owner.phone);
 
   return (
     <Layout user={props.user}>
@@ -83,20 +83,6 @@ const CarDetail = (props) => {
               <b>${car.price}</b>
             </div>
           </div>
-          {props.user ? (
-            <div className="buttons">
-              <Link className="edit-link" to={`/cars/${car._id}/edit`}>
-                <button className="edit-button">Edit</button>
-              </Link>
-              <button
-                type="button"
-                className="delete-button"
-                onClick={detailDeleteCar}
-              >
-                Delete
-              </button>
-            </div>
-          ) : null}
           {!props.user ? (
             <div className="buttons">
               <a
@@ -110,7 +96,33 @@ const CarDetail = (props) => {
                 Call Seller
               </button>
             </div>
-          ) : null}
+          ) : props.user.username === car.owner.username ? (
+            <div className="buttons">
+              <Link className="edit-link" to={`/cars/${car._id}/edit`}>
+                <button className="edit-button">Edit</button>
+              </Link>
+              <button
+                type="button"
+                className="delete-button"
+                onClick={detailDeleteCar}
+              >
+                Delete
+              </button>
+            </div>
+          ) : (
+            <div className="buttons">
+              <a
+                href={`mailto:${car.owner.email}?subject==?UTF-8?B?IPCfmpg=?= SUNDAY DRIVER - Shopper Inquiry for your ${car.year} ${car.make} ${car.model}!`}
+              >
+                <button type="button" className="email-seller-button">
+                  Email Seller
+                </button>
+              </a>
+              <button type="button" className="call-seller-button">
+                Call Seller
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </Layout>
