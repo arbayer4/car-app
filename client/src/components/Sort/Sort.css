@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
+
 .sort-container {
   display: flex;
   justify-content: center;
@@ -7,18 +9,15 @@
 }
 
 .sort {
-  outline: none;
-}
-
-/* .search-input {
   width: 30vw;
+  height: 5vh;
   font-size: 18px;
-  padding: 12px 20px 12px 40px;
+  padding-left: 40px;
+  color: #003049;
+
   border: 1px solid rgb(255, 147, 14);
   border-radius: 25px;
   outline: none;
-} */
-
-/* .search-input::placeholder {
-  letter-spacing: 0.5px;
-} */
+  align-content: left;
+  font-family: "Open Sans Condensed", sans-serif;
+}

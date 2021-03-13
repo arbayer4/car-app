@@ -12,15 +12,15 @@
   padding-top: 20px;
   padding-left: 60px;
   padding-right: 60px;
-  position: relative; 
+  position: relative;
 }
 
 .container-data {
   width: 50vh;
   font-size: 18px;
-  margin-top: -50px;
-  margin-bottom: -50px;
-  overflow: scroll;
+  /* margin-top: -50px; */
+  /* margin-bottom: -50px; */
+  /* overflow: scroll; */
   scrollbar-width: none;
   background-color: rgb(255, 146, 14);
 }
@@ -28,15 +28,17 @@
 .img-container {
   display: flex;
   flex-direction: column;
-  object-fit: contain;
+  object-fit: fill;
+  /* justify-content:center; */
 }
 
 .image-main {
   display: flex;
-  width: 81vh;
-  height:50vh;
-  object-fit:cover;
-  object-position:center;
+  width: 80vh;
+  height: 60vh;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
   box-shadow: 0px 20px 50px 0px;
 }
 
@@ -45,110 +47,128 @@
   flex-direction: row;
   padding-top: 10px;
   padding-right: 15px;
-  width: 15vh;
-  height: 11vh;
+  width: 12vh;
+  height: 8vh;
   object-fit: cover;
-  object-position:center;
+  object-position: center;
+  /* border-radius: 30%; */
+
 }
 
 .details-container {
-  height: 30vh;
+  border-radius: 6px;
   display: flex;
   flex-direction: column;
   margin-left: 50px;
   color: white;
-  width: 75vh;
-  height: 55vh;
+  width: 80vh;
+  min-height: 60vh;
   padding: 40px;
+  margin-bottom: 75px;
   background-color: rgb(255, 146, 14);
 }
 
 .title {
   display: flex;
-  flex-direction: row;
-  margin-bottom: 20px;
+  flex-direction: column;
+  /* justify-content:center; */
+  /* margin-left: auto; */
+  margin-right: auto;
+}
+
+.title-car {
+  /* justify-content: center; */
   font-weight: bold;
   font-size: 40px;
   letter-spacing: -1px;
   word-spacing: 3px;
-  justify-content: center;
+}
+.title-price {
+  /* justify-content: center; */
+  color: #227e2a;
+  font-size: 30px;
+  font-weight: bolder;
 }
 
-.vehicle-specs {
-  font-size: 30px;
+.vehicle-attribute {
+  font-size: 28px;
+  font-weight:bold;
   letter-spacing: 1.5px;
 }
 
-.description-header {
-  font-size: 10px;
+.vehicle-input {
+  font-size: 25px;
+  font-weight:300;
+  letter-spacing: 1px;
 }
 
-.description {
-  font-size: 20px;
+.vehicle-description {
+  font-size: 21px;
+  font-style: italic;
   overflow: scroll;
   scrollbar-width: none;
   height: 15vh;
+  margin: 8px;
 }
 
-.lower-container {
+.lower-container  {
+  /* margin-right: 10px; */
   display: flex;
   flex-direction: row;
-  position: relative;
-  height: 200px;
+  justify-content: center;
 }
+
 ::-webkit-scrollbar {
   display: none;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* bottom: 0px; */
+}
 
 .edit-button,
 .delete-button,
 .save-button,
 .email-seller-button,
 .call-seller-button {
-  padding: 10px 25px;
-  margin: 6px;
+  font-size: medium;
+  font-weight: bold;
+  padding: 10px 30px;
+  margin-left: 10px;
   text-align: center;
   color: rgb(255, 255, 255);
   background-color: #fcbf49;
   border: none;
-  border-radius: 50px;
+  border-radius: 8px;
   margin-top: 20px;
   outline: none;
 }
 
-.buttons {
-  flex-direction: row;
-  position: absolute; 
-  bottom: 0px; 
-  margin-bottom: 20px;
-}
-
-.price {
-  color: #227e2a;
-  font-size: 35px;
-  bottom: 0px; 
-  margin-bottom: 20px;
-}
-
 .edit-button:hover,
-.delete-button:hover,,
+.delete-button:hover,
 .save-button:hover,
-.email-seller-button:hover
-.call-seller-button:hover {
+.email-seller-button:hover .call-seller-button:hover {
   background-color: #f7ca68;
   cursor: pointer;
 }
-/* .delete-button:hover {
-  background-color: #f7ca68;
-  cursor: pointer;
-}
-.edit-button a {
-  color: white;
-} */
+
 .edit-button a:visited {
   color: white;
 }
-/* .save-button:hover {
-  background-color: #ffa60b;
-} */
+
+.back-to-cars {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  color: #003049;
+}
+
+.back-to-cars:hover {
+  color: white;
+  border-bottom: 3px solid white;
+}
