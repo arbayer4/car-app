@@ -45,7 +45,7 @@ const CarDetail = (props) => {
       <div className="vehicle-details-header">Vehicle Details</div>
       <div className="main-container">
         <div className="img-container">
-          <img className="image-main" src={car.imgURL[num]} alt={car.make} />
+          <img className="image-main" src={car.imgURL[num] ? car.imgURL[num] : "https://images.unsplash.com/photo-1606017116209-b1ed168465e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80"} alt={car.make} />
           <div className="image-thumbnail">{imgJSX}</div>
         </div>
         <div className="details-container">
