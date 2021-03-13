@@ -222,7 +222,13 @@ const CarCreate = (props) => {
             </button>
           </div>
         </div>
-        <button className="create-button" type="submit">
+        {car.imgURL.length ? null : <p>Must Upload At Least One Picture</p>}
+
+        <button
+          className="create-button"
+          type="submit"
+          disabled={!car.imgURL.length}
+        >
           Submit
         </button>
       </form>
