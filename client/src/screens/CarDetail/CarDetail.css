@@ -1,6 +1,6 @@
 .vehicle-details-header {
   margin-top: 2vh;
-  margin-left: 50px;
+  margin-left: 70px;
   font-size: 50px;
   text-align: left;
 }
@@ -28,15 +28,17 @@
 .img-container {
   display: flex;
   flex-direction: column;
-  object-fit: contain;
+  object-fit: fill;
+  /* justify-content:center; */
 }
 
 .image-main {
   display: flex;
-  width: 81vh;
-  height: 50vh;
+  width: 100vh;
+  height: 75vh;
   object-fit: cover;
   object-position: center;
+  border-radius: 15px;
   box-shadow: 0px 20px 50px 0px;
 }
 
@@ -45,21 +47,24 @@
   flex-direction: row;
   padding-top: 10px;
   padding-right: 15px;
-  width: 15vh;
-  height: 11vh;
+  width: 150px;
+  height: 120px;
   object-fit: cover;
   object-position: center;
+  /* border-radius: 30%; */
+
 }
 
 .details-container {
+  border-radius: 6px;
   display: flex;
   flex-direction: column;
   margin-left: 50px;
   color: white;
   width: 80vh;
   min-height: 60vh;
-  padding: 50px;
-  margin-bottom: 50px;
+  padding: 40px;
+  margin-bottom: 75px;
   background-color: rgb(255, 146, 14);
 }
 
@@ -81,7 +86,7 @@
 .title-price {
   /* justify-content: center; */
   color: #227e2a;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bolder;
 }
 
@@ -107,7 +112,7 @@
 }
 
 .lower-container  {
-  margin-right: 10px;
+  /* margin-right: 10px; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -118,8 +123,10 @@
 }
 
 .buttons {
+  display: flex;
   flex-direction: row;
-  bottom: 0px;
+  justify-content: space-between;
+  /* bottom: 0px; */
 }
 
 .edit-button,
@@ -153,6 +160,9 @@
 }
 
 .back-to-cars {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   font-size: 25px;
   font-weight: bold;
   color: #003049;
