@@ -5,10 +5,13 @@ const bodyParser = require("body-parser");
 const logger = require("morgan");
 const routes = require("./routes");
 
+var corsOptions = {
+  origin: "*",
+};
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(bodyParser.json());
 app.use(logger("dev"));
 
