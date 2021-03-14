@@ -37,7 +37,7 @@ const CarDetail = (props) => {
     temp = featured.concat(temp);
     setUserCarPics(temp);
   };
-
+  let newPrice = car.price.replace(/\d(?=(?:\d{3})+$)/g, "$&,"); //recieved from stackoverflow https://stackoverflow.com/questions/27311714/adding-commas-to-numbers-when-typing
   const imgJSX = userCarPics.map((image, index) => {
     if (index > 0) {
       return (
@@ -55,7 +55,7 @@ const CarDetail = (props) => {
   return (
     <Layout user={props.user}>
       <div className="vehicle-details-header">Vehicle Details</div>
-      <div className="main-container">
+      <div className="main-container-dt">
         <div className="img-container">
           <img className="image-main" src={userCarPics[0]} alt={car.make} />
           <div className="image-thumbnail">{imgJSX}</div>
@@ -65,7 +65,7 @@ const CarDetail = (props) => {
             <div className="title-car">
               {car.year} {car.make} {car.model}
             </div>
-            <div className="title-price">${car.price}</div>
+            <div className="title-price">${newPrice}</div>
           </div>
           <br />
           <div className="vehicle-specs">
