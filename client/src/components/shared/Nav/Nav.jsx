@@ -9,7 +9,7 @@ const authenticatedOptions = (
     <NavLink className="cars-link" to="/mycars">
       My Profile
     </NavLink>
-    <NavLink className="cars-link" to="/sign-out">
+    <NavLink className="signout-link" to="/sign-out">
       Sign-Out
     </NavLink>
   </>

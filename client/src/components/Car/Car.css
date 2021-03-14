@@ -219,7 +219,7 @@
   }
   .price-and-viewmore {
     padding: 0px;
-    width: 50vw;
+    width: 70vw;
   }
   .car-title-fp {
     font-size: 20px;
@@ -238,7 +238,7 @@
   .car-price-fp {
     font-size: 18px;
     margin: 0 auto;
-    padding-right: 8px;
+    padding-right: 30vw;
   }
   .view-more-detail {
     font-size: 18px;
@@ -249,7 +249,7 @@
   .container-image-fp {
     background-color: white;
     border-radius: 25px;
-    width: 50vw;
+    width: 70vw;
     height: 45vh;
     margin-right: 0px;
     object-fit: cover;
@@ -259,7 +259,7 @@
   .car-image-fp {
     justify-self: center;
     border-radius: 25px;
-    width: 50vw;
+    width: 70vw;
     height: 45vh;
     margin: 0px;
     object-fit: cover;
@@ -268,6 +268,6 @@
   .container-data-fp {
     display: flex;
     flex-direction: column;
-    width: 50vw;
+    width: 70vw;
   }
 }
