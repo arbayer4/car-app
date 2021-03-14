@@ -7,13 +7,15 @@ import "./CarDetail.css";
 const CarDetail = (props) => {
   const [car, setCar] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
+  const [userCarPics, setUserCarPics] = useState([]);
   const { id } = useParams();
   const history = useHistory();
   let num = 0;
   useEffect(() => {
     const fetchCar = async () => {
-      const car = await getCar(id);
-      setCar(car);
+      const fetchedCar = await getCar(id);
+      setCar(fetchedCar);
+      setUserCarPics(fetchedCar.imgURL);
       setLoaded(true);
     };
     fetchCar();
@@ -22,96 +24,131 @@ const CarDetail = (props) => {
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
+
   const detailDeleteCar = () => {
     deleteCar(car._id);
     props.setToggleFetch((curr) => !curr);
     setTimeout(() => history.push("/mycars"), 500);
-    // history.push("/cars");
   };
 
-  const imgJSX = car.imgURL.map((image, index) => (
-    <img
-      className="image-thumbnail"
-      src={image}
-      alt={`car ${index + 1}`}
-      key={index}
-    />
-  ));
-  // console.log(car);
-  // console.log(car.owner.phone);
+  const switchPic = (index) => {
+    let temp = userCarPics;
+    const featured = temp.splice(index, 1);
+    temp = featured.concat(temp);
+    setUserCarPics(temp);
+  };
+
+  const imgJSX = userCarPics.map((image, index) => {
+    if (index > 0) {
+      return (
+        <img
+          className="image-thumbnail"
+          src={image}
+          alt={`car ${index + 1}`}
+          key={index}
+          onClick={() => switchPic(index)}
+        />
+      );
+    }
+  });
 
   return (
     <Layout user={props.user}>
       <div className="vehicle-details-header">Vehicle Details</div>
       <div className="main-container">
         <div className="img-container">
-          <img className="image-main" src={car.imgURL[num]} alt={car.make} />
+          <img className="image-main" src={userCarPics[0]} alt={car.make} />
           <div className="image-thumbnail">{imgJSX}</div>
         </div>
         <div className="details-container">
           <div className="title">
-            {car.year} {car.make} {car.model}
+            <div className="title-car">
+              {car.year} {car.make} {car.model}
+            </div>
+            <div className="title-price">${car.price}</div>
           </div>
+          <br />
           <div className="vehicle-specs">
-            <div className="mileage">
-              <b>Mileage:</b> {car.mileage}
+            <div className="vehicle-attribute">
+              Mileage: <span className="vehicle-input">{car.mileage}</span>
             </div>
-            <div className="engine">
-              <b>Engine Type:</b> {car.engine}
+            <div className="vehicle-attribute">
+              Engine Type: <span className="vehicle-input">{car.engine}</span>
             </div>
-            <div className="transmission">
-              <b>Transmission:</b> {car.transmission}
+            <div className="vehicle-attribute">
+              Transmission:{" "}
+              <span className="vehicle-input">{car.transmission}</span>
             </div>
-            <div className="doors">
-              <b>Number Doors:</b> {car.doors}
+            <div className="vehicle-attribute">
+              Number Doors: <span className="vehicle-input">{car.doors}</span>
             </div>
-            <div className="exterior-color">
-              <b>Exterior Color:</b> {car.exteriorColor}
+            <div className="vehicle-attribute">
+              Exterior Color:{" "}
+              <span className="vehicle-input">{car.exteriorColor}</span>
             </div>
-            <div className="interior-color">
-              <b>Interior Color:</b> {car.interiorColor}
+            <div className="vehicle-attribute">
+              Interior Color:{" "}
+              <span className="vehicle-input">{car.interiorColor}</span>
             </div>
-            <div className="vin">
-              <b>VIN:</b> {car.vin}
+            <div className="vehicle-attribute">
+              VIN: <span className="vehicle-input">{car.vin}</span>
             </div>
-            <div className="zipcode">
-              <b>Seller Location:</b> {car.zipcode}
+            <div className="vehicle-attribute">
+              Seller Location:{" "}
+              <span className="vehicle-input">{car.zipcode}</span>
             </div>
-            <b classname="description-header">Seller's Description: </b>
-            <div className="description">{car.description}</div>
-            <div className="price">
-              <b>${car.price}</b>
-            </div>
+            <br />
+            <div className="vehicle-attribute">Seller's Description</div>
+            <div className="vehicle-description">{car.description}</div>
           </div>
-          {props.user ? (
-            <div className="buttons">
-              <Link className="edit-link" to={`/cars/${car._id}/edit`}>
-                <button className="edit-button">Edit</button>
-              </Link>
-              <button
-                type="button"
-                className="delete-button"
-                onClick={detailDeleteCar}
-              >
-                Delete
-              </button>
-            </div>
-          ) : null}
-          {!props.user ? (
-            <div className="buttons">
-              <a
-                href={`mailto:${car.owner.email}?subject==?UTF-8?B?IPCfmpg=?= SUNDAY DRIVER - Shopper Inquiry for your ${car.year} ${car.make} ${car.model}!`}
-              >
-                <button type="button" className="email-seller-button">
-                  Email Seller
+          <div className="lower-container">
+            {!props.user ? (
+              <div className="buttons">
+                <a
+                  href={`mailto:${car.owner.email}?subject==🚘= SUNDAY DRIVER - Shopper Inquiry for your ${car.year} ${car.make} ${car.model}!`}
+                >
+                  <button type="button" className="email-seller-button">
+                    Email Seller
+                  </button>
+                </a>
+                <button type="button" className="call-seller-button">
+                  Call Seller
                 </button>
-              </a>
-              <button type="button" className="call-seller-button">
-                Call Seller
-              </button>
-            </div>
-          ) : null}
+              </div>
+            ) : props.user.username === car.owner.username ? (
+              <div className="buttons">
+                <Link className="edit-link" to={`/cars/${car._id}/edit`}>
+                  <button className="edit-button">Edit</button>
+                </Link>
+                <button
+                  type="button"
+                  className="delete-button"
+                  onClick={detailDeleteCar}
+                >
+                  Delete
+                </button>
+              </div>
+            ) : (
+              <div className="buttons">
+                <a
+                  href={`mailto:${car.owner.email}?subject==?UTF-8?B?IPCfmpg=?= SUNDAY DRIVER - Shopper Inquiry for your ${car.year} ${car.make} ${car.model}!`}
+                >
+                  <button type="button" className="email-seller-button">
+                    Email Seller
+                  </button>
+                </a>
+                <button type="button" className="call-seller-button">
+                  Call Seller
+                </button>
+              </div>
+            )}
+          </div>
+          <br />
+          <Link className="back-to-cars" to={`/cars`}>
+            ← Back to Collector Cars
+          </Link>
         </div>
+        <div></div>
       </div>
     </Layout>
   );

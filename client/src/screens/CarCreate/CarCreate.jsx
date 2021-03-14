@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./CarCreate.css";
 import Layout from "../../components/shared/Layout/Layout";
-import { Redirect } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 import { createCar } from "../../services/cars";
 
 const CarCreate = (props) => {
@@ -23,8 +23,8 @@ const CarCreate = (props) => {
     ownersEmail: props.user.email,
   });
   const [img, setImg] = useState("");
-
   const [isCreated, setCreated] = useState(false);
+  const history = useHistory();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -34,7 +34,7 @@ const CarCreate = (props) => {
     });
   };
   const handleImage = (event) => {
-    // event.preventDefault();
+    event.preventDefault();
     setCar({
       ...car,
       ["imgURL"]: [...car.imgURL, img],
@@ -46,15 +46,15 @@ const CarCreate = (props) => {
     event.preventDefault();
     const created = await createCar(car);
     setCreated({ created });
+    if (!isCreated) {
+      console.log("Error Creating");
+    }
+    history.push("/mycars");
   };
   const deleteImage = (e) => {
     car.imgURL.splice(e.target.value, 1);
     setCar({ ...car });
   };
-
-  if (isCreated) {
-    return <Redirect to={`/mycars`} />;
-  }
 
   const imgJSX = car.imgURL.map((image, index) => (
     <div className="photo-container" key={index}>
@@ -75,123 +75,117 @@ const CarCreate = (props) => {
       <form className="create-form" onSubmit={handleSubmit}>
         <div className="top">
           <div className="left-details">
-            <div className="label-input">
-              <input
-                placeholder="Make"
-                value={car.make}
-                name="make"
-                required
-                autoFocus
-                onChange={handleChange}
-              />
-            </div>
-            <div className="label-input">
-              <input
-                name="model"
-                placeholder="Model"
-                id="model"
-                value={car.model}
-                required
-                onChange={handleChange}
-              />
-            </div>
-            <div className="label-input">
-              <input
-                name="year"
-                placeholder="Year"
-                id="year"
-                value={car.year}
-                required
-                onChange={handleChange}
-              />
-            </div>
-            <div className="label-input">
-              <input
-                name="zipcode"
-                id="zipcode"
-                placeholder="Zipcode"
-                value={car.zipcode}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="label-input">
-              <input
-                name="exteriorColor"
-                id="exterior-color"
-                placeholder="Exterior Color"
-                value={car.exteriorColor}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="label-input">
-              <input
-                name="doors"
-                id="doors"
-                placeholder="Number of Doors"
-                value={car.doors}
-                onChange={handleChange}
-              />
-            </div>
+            <label htmlFor="make">Make:</label>
+            <input
+              placeholder="Make"
+              required
+              value={car.make}
+              name="make"
+              id="make"
+              autoFocus
+              onChange={handleChange}
+            />
+            <label htmlFor="model">Model:</label>
+            <input
+              required
+              name="model"
+              placeholder="Model"
+              id="model"
+              value={car.model}
+              onChange={handleChange}
+              innerHTML="*"
+            />
+            <label htmlFor="year">Year</label>
+            <input
+              required
+              type="number"
+              name="year"
+              placeholder="Year"
+              id="year"
+              value={car.year}
+              onChange={handleChange}
+            />
+            <label htmlFor="zipcode">zipcode</label>
+            <input
+              type="number"
+              name="zipcode"
+              id="zipcode"
+              placeholder="Zipcode"
+              value={car.zipcode}
+              onChange={handleChange}
+            />
+            <label htmlFor="exterior-color">exterior color</label>
+            <input
+              name="exteriorColor"
+              id="exterior-color"
+              placeholder="Exterior Color"
+              value={car.exteriorColor}
+              onChange={handleChange}
+            />
+            <label htmlFor="doors">Number of doors</label>
+            <input
+              name="doors"
+              id="doors"
+              placeholder="Number of Doors"
+              value={car.doors}
+              onChange={handleChange}
+            />
           </div>
           <div className="right-details">
-            <div className="label-input">
-              <input
-                name="mileage"
-                id="mileage"
-                placeholder="Mileage"
-                value={car.mileage}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="label-input">
-              <input
-                name="transmission"
-                id="transmission"
-                placeholder="Transmission"
-                value={car.transmission}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="label-input">
-              <input
-                name="engine"
-                id="engine"
-                placeholder="Engine"
-                value={car.engine}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="label-input">
-              <input
-                name="vin"
-                id="vin"
-                placeholder="VIN"
-                value={car.vin}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="label-input">
-              <input
-                name="interiorColor"
-                id="interior-color"
-                placeholder="Interior Color"
-                value={car.interiorColor}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="label-input">
-              <input
-                type="text"
-                name="price"
-                placeholder="Price"
-                value={car.price}
-                required
-                onChange={handleChange}
-              />
-            </div>
+            <label htmlFor="mileage">Mileage</label>
+            <input
+              name="mileage"
+              id="mileage"
+              placeholder="Mileage"
+              value={car.mileage}
+              onChange={handleChange}
+            />
+            <label htmlFor="transmission">Transmision</label>
+            <input
+              name="transmission"
+              id="transmission"
+              placeholder="Transmission"
+              value={car.transmission}
+              onChange={handleChange}
+            />
+            <label htmlFor="engine">Engine</label>
+            <input
+              name="engine"
+              id="engine"
+              placeholder="Engine"
+              value={car.engine}
+              onChange={handleChange}
+            />
+            <label htmlFor="vin">VIN</label>
+            <input
+              name="vin"
+              id="vin"
+              placeholder="VIN"
+              value={car.vin}
+              onChange={handleChange}
+            />
+            <label htmlFor="interior-color">Interior Color</label>
+            <input
+              name="interiorColor"
+              id="interior-color"
+              placeholder="Interior Color"
+              value={car.interiorColor}
+              onChange={handleChange}
+            />
+            <label htmlFor="price">Price</label>
+            <input
+              type="number"
+              name="price"
+              id="price"
+              placeholder="Price"
+              value={car.price}
+              required
+              onChange={handleChange}
+            />
           </div>
         </div>
         <div className="bottom-details">
+          <label htmlFor="description">Car Description</label>
           <textarea
             name="description"
             id="description"
@@ -204,6 +198,7 @@ const CarCreate = (props) => {
             onChange={handleChange}
           />
           <div className="preview-images">{imgJSX}</div>
+          <label htmlFor="images">Add Image URL</label>
 
           <div className="image-input-button">
             <input
@@ -222,7 +217,13 @@ const CarCreate = (props) => {
             </button>
           </div>
         </div>
-        <button className="create-button" type="submit" onClick={handleSubmit}>
+        {car.imgURL.length ? null : <p>Must Upload At Least One Picture</p>}
+
+        <button
+          className="create-button"
+          type="submit"
+          disabled={!car.imgURL.length}
+        >
           Submit
         </button>
       </form>

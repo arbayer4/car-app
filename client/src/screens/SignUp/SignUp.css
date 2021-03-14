@@ -74,3 +74,33 @@ h3.sign-up {
   /* Microsoft Edge */
   color: #003049;
 }
+@media only screen and (max-width: 1000px) {
+  .signup {
+    background-position: right;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .signup-form {
+    font-size: 15px;
+  }
+  .signup h3 {
+    font-size: 30px;
+  }
+  .signup-input {
+    font-size: 18px;
+  }
+  .signup-input::placeholder {
+    font-size: 18px;
+  }
+  .signup-btn {
+    font-size: 18px;
+  }
+  .invalid-on-signup {
+    font-size: 20px;
+  }
+  .signup {
+    background-image: url("https://i.imgur.com/QFLHCRv.jpg");
+    background-size: cover;
+    background-position: right;
+  }
+}

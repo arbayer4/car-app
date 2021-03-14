@@ -29,6 +29,7 @@ const getCar = async (req, res) => {
 const createCar = async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.ownersEmail });
+    console.log(user);
     const {
       year,
       make,

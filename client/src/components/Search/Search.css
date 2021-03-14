@@ -19,3 +19,18 @@
 .search-input::placeholder {
   letter-spacing: 0.5px;
 }
+
+@media only screen and (max-width: 900px) {
+  .search-input {
+    font-size: 15px;
+    width: 20vw;
+    padding: 10px 18px 10px 30px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .search-input {
+    font-size: 12px;
+    width: 20vw;
+    padding: 8px 18px 8px 30px;
+  }
+}
