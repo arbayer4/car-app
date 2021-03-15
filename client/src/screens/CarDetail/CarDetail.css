@@ -17,9 +17,6 @@
 .container-data {
   width: 50vh;
   font-size: 18px;
-  /* margin-top: -50px; */
-  /* margin-bottomr: -50px; */
-  /* overflow: scroll; */
   scrollbar-width: none;
   background-color: rgb(255, 146, 14);
 }
@@ -28,7 +25,6 @@
   display: flex;
   flex-direction: column;
   object-fit: fill;
-  /* justify-content:center; */
 }
 
 .image-main {
@@ -50,7 +46,6 @@
   height: 8vh;
   object-fit: cover;
   object-position: center;
-  /* border-radius: 30%; */
 }
 .image-thumbnail:hover{
 cursor: pointer;
@@ -71,20 +66,16 @@ cursor: pointer;
 .title {
   display: flex;
   flex-direction: column;
-  /* justify-content:center; */
-  /* margin-left: auto; */
   margin-right: auto;
 }
 
 .title-car {
-  /* justify-content: center; */
   font-weight: bold;
   font-size: 40px;
   letter-spacing: -1px;
   word-spacing: 3px;
 }
 .title-price {
-  /* justify-content: center; */
   color: #227e2a;
   font-size: 30px;
   font-weight: bolder;
@@ -112,7 +103,6 @@ cursor: pointer;
 }
 
 .lower-container  {
-  /* margin-right: 10px; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -126,7 +116,6 @@ cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* bottom: 0px; */
 }
 .edit-button:hover,
 .delete-button:hover,
