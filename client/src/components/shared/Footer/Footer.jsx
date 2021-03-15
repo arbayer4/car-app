@@ -9,8 +9,10 @@ function Footer(props) {
         Sunday Driver
       </NavLink>
       <div className="created-by">
-        Created By: Andy Bayer | Allison Bierschenk | Gracen Hudacheck | Dan
-        Ober
+        Created By: <a href="https://github.com/arbayer4">Andy Bayer</a> |
+        <a href="https://github.com/allisonbierschenk">Allison Bierschenk</a> |
+        <a href="https://github.com/ghudachek">Gracen Hudacheck</a> |
+        <a href="https://github.com/daniel-ober">Dan Ober</a>
       </div>
       {/* <NavLink to="/sign-in">
         <p className="footer-login-link">Account</p>
