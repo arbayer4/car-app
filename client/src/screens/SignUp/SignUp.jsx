@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./SignUp.css";
 import { allUsers, signIn, signUp } from "../../services/users";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import Layout from "../../components/shared/Layout/Layout";
 
 const SignUp = (props) => {
@@ -69,10 +69,13 @@ const SignUp = (props) => {
       return <p className="invalid-on-signup">Username Already Taken</p>;
     } else if (users.some((user) => user.email === form.email)) {
       return (
-        <div>
+        <div className="email-taken">
           <p className="invalid-on-signup">
             Email Already Associated With Account.
           </p>
+          <Link to="/sign-in">
+            <p className="return-signin">Return to Sign-In</p>
+          </Link>
         </div>
       );
     } else {

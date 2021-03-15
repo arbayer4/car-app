@@ -89,11 +89,13 @@ a {
     right: 0;
     height: 100vh;
     width: 300px;
-    padding-top: 2vh;
-    z-index: 50;
+    padding-top: 50px;
+    transition: transform 0.3s ease-in-out;
+    
     /* display: none; */
     
   }
+  
   #open{
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
@@ -106,7 +108,7 @@ a {
   .inside-div {
     display: flex;
     flex-direction: column;
-    height: 20vh;
+    height: 30vh;
     justify-content: space-around;
   }
 }
