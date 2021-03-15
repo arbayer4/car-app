@@ -53,6 +53,7 @@ const CarDetail = (props) => {
         />
       );
     }
+    return null;
   });
 
   return (

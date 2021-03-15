@@ -15,7 +15,7 @@ const MyCars = (props) => {
       setMyUserCars(cars);
     };
     fetchMyCars();
-  }, []);
+  }, [props.user.username]);
 
   const carsJSX = myUserCars.map((car, index) => (
     <Car
