@@ -43,7 +43,7 @@ const CarDetail = (props) => {
   return (
     <Layout user={props.user}>
       <div className="vehicle-details-header">Vehicle Details</div>
-      <div className="main-container">
+      <div className="main-container-dt">
         <div className="img-container">
           <img
             className="image-main"
