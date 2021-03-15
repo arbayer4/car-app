@@ -23,13 +23,14 @@ nav {
 }
 
 .login-link {
+  font-family: "Open Sans Condensed", sans-serif;
   text-decoration: none;
   background-color: #d62828;
   color: white;
   width: auto;
   padding: 10px;
   font-size: 24px;
-  border-radius: 15px;
+  border-radius: 20px;
   border: none;
   outline: none;
 }
@@ -38,7 +39,8 @@ nav {
   background-color: #f77f00;
 }
 
-.cars-link, .signout-link {
+.cars-link,
+.signout-link {
   color: #003049;
   display: inline;
   font-size: 24px;
@@ -46,17 +48,27 @@ nav {
 a {
   text-decoration: none;
 }
-.right-side {
+
+.right-side,
+.inside-div {
   display: flex;
   height: 80px;
   width: 40vw;
   justify-content: space-between;
   align-items: center;
 }
-.signout-link{
+.signout-link {
   background-color: #d62828;
   color: white;
-  border-radius: 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  width: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 24px;
+  border: none;
+  outline: none;
 }
 .left-side {
   display: flex;
@@ -66,14 +78,47 @@ a {
   height: 80px;
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 768px) {
+  .right-side {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: #003049;
+    position: fixed;
+    /* transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'}; */
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    padding-top: 2vh;
+    z-index: 50;
+    /* display: none; */
+    
+  }
+  #open{
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+
+  }
+  .cars-link,
+  .login-link {
+    color: white;
+  }
+  .inside-div {
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (max-width: 500px) {
   .icon {
     height: 45px;
   }
   .logo {
     font-size: 25px;
   }
-  .cars-link, 
+  .cars-link,
   .signout-link {
     font-size: 18px;
   }
@@ -81,7 +126,7 @@ a {
     padding: 5px;
     font-size: 18px;
   }
-  .signout-link{
+  .signout-link {
     border-radius: 5px;
   }
 }
