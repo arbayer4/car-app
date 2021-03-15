@@ -95,6 +95,9 @@ input {
   font-weight: bold;
   margin-top: 20px;
 }
+.create-button:disabled {
+  background-color: #ffb81fd6;
+}
 .photo-container {
   display: flex;
   flex-flow: column nowrap;
@@ -110,6 +113,7 @@ input {
   font-weight: bold;
   margin-top: 20px;
 }
+
 .preview-images {
   display: flex;
   flex-flow: row wrap;
@@ -122,6 +126,9 @@ input {
 }
 .photo-button {
   margin-left: 10px;
+}
+.photo-button:hover, .create-button:hover, .form-delete-button:hover {
+  background-color: #ffb81fd6;
 }
 .preview-image {
   height: 100px;
