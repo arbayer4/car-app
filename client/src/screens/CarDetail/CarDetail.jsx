@@ -37,6 +37,10 @@ const CarDetail = (props) => {
     setUserCarPics(temp);
   };
   let newPrice = car.price.replace(/\d(?=(?:\d{3})+$)/g, "$&,"); //recieved from stackoverflow https://stackoverflow.com/questions/27311714/adding-commas-to-numbers-when-typing
+  let phoneNum = car.owner.phone.split("");
+  phoneNum.splice(3, 0, "-");
+  phoneNum.splice(7, 0, "-");
+  phoneNum.join("");
   const imgJSX = userCarPics.map((image, index) => {
     if (index > 0) {
       return (
