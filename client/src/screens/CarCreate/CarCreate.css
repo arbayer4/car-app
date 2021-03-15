@@ -145,4 +145,10 @@ input {
     width: 76vw;
     height: 30px;
   }
+  .image-input-button {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
 }
