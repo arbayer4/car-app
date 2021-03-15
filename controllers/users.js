@@ -36,7 +36,7 @@ const signUp = async (req, res) => {
 const signIn = async (req, res) => {
   try {
     const { username, password } = req.body;
-    const user = await User.findOne({ username: username }).populate("cars");
+    const user = await User.findOne({ username: username });
     console.log(user);
     console.log(user);
     if (await bcrypt.compare(password, user.password_digest)) {
@@ -44,7 +44,6 @@ const signIn = async (req, res) => {
         username: user.username,
         email: user.email,
         _id: user._id,
-        cars: user.cars,
       };
       const token = jwt.sign(payload, TOKEN_KEY);
       res.status(201).json({ token });
