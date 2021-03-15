@@ -196,10 +196,15 @@ cursor: pointer;
     margin-left: 0px;
   }
   
-  .container-data {
-    width: 80vh;
-    font-size: 18px;
-  }
+  /* .container-data {
+  width: 50vh;
+  font-size: 18px;
+  margin-top: -50px;
+  margin-bottom: -50px;
+  overflow: scroll;
+  scrollbar-width: none;
+  background-color: rgb(255, 146, 14);
+} */
   
 .img-container {
   justify-self: center;
@@ -284,91 +289,72 @@ cursor: pointer;
 
 }
 
-@media only screen and (max-width: 900px){
+@media only screen and (max-width: 950px){
   .vehicle-details-header {
     margin-top: 2vh;
     margin-bottom: 2vh;
     margin-left: auto;
     margin-right:auto;
     font-size: 50px;
-    text-align: center;
+    align-content: center;
   }
   
   .main-container-dt {
-    border-radius: 25px;
     display: flex;
     flex-direction: column;
     margin: 4vh;
-    color: white;
-    /* width: 80vh; */
-    /* min-height: 60vh; */
-    /* padding: 40px; */
-    /* margin-bottom: 75px; */
+    background-color: rgb(255, 146, 14);
+    box-shadow: 0px 0px 10px rgb(255 146 14 / 50%);
+    justify-content: center;
+    display: flex;
+    border-radius: 25px;
+    flex-direction: column;
     background-color: rgb(255, 146, 14);
   }
-  
-  /* .container-data {
-    width: 80vh;
-    font-size: 18px;
-    justify-content: center;
-  } */
-  
-/* .img-container {
-  justify-self: center;
-  width: 100vw;
-} */
 
   .image-main {
-    display: flex;
-    width: 83vh;
-    height: 50vh;
+    justify-content: center;
+    border-radius: 25px;
+    width: 76vw;
+    height: 40vw;
     object-fit: cover;
+    display: flex;
     object-position: center;
-    border-radius: 15px;
-    box-shadow: 0px 20px 50px 0px;
     box-shadow: rgba(0, 0, 0, 0.555) 0px 6px 20px 0px;
   }
   
   .image-thumbnail {
-    margin: 10px;
-    
+    justify-content: center;
     margin-bottom: 4vh;
     margin-left: auto;
     margin-right: auto;
   }
   
   .details-container {
-    justify-self:center;
-    margin: 10px;
-    width: 90vw;
-    min-height: 50vh;
-    padding: 20px;
-    margin-bottom: 60px;
+    display: flex;
+    text-align: center;
+    margin-left: -20vw;
+    background-color:rgba(255, 147, 14, 0);
   }
   
-  .title {
-    font-size: 35px;
-  }
-  
-  .title-car {
-    font-weight: bold;
-    font-size: 35px;
-  }
+  .title-car,
   .title-price {
-    color: #227e2a;
-    font-size: 28px;
-    font-weight: bolder;
-    padding-top: 10px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-left:  5vh;
+    margin-right: 5vh;
+    background-color:rgba(255, 147, 14, 0);
   }
   
   .vehicle-attribute {
-    font-size: 30px;
+    font-size: 27px;
     font-weight:bold;
     letter-spacing: 1.5px;
   }
   
   .vehicle-input {
-    font-size: 25px;
+    font-size: 24px;
     font-weight:300;
     letter-spacing: 1px;
   }
@@ -376,7 +362,8 @@ cursor: pointer;
   .vehicle-description {
     font-size: 25px;
     height: 15vh;
-    margin: 8px;
+    margin-left: 10vh;
+    margin-right: 10vh;
   }
   
   
