@@ -62,7 +62,7 @@ const CarDetail = (props) => {
       <div className="main-container-dt">
         <div className="img-container">
           <img className="image-main" src={userCarPics[0]} alt={car.make} />
-          <div className="image-thumbnail">{imgJSX}</div>
+          <div className="image-thumbnail-box">{imgJSX}</div>
         </div>
         <div className="details-container">
           <div className="title">
@@ -116,9 +116,9 @@ const CarDetail = (props) => {
                   </button>
                 </a>
                 <a href={`tel:${car.owner.phone}`}>
-                <button type="button" className="call-seller-button">
-                  Call Seller
-                </button>
+                  <button type="button" className="call-seller-button">
+                    Call Seller
+                  </button>
                 </a>
               </div>
             ) : props.user.username === car.owner.username ? (
