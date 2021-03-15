@@ -25,6 +25,9 @@ footer {
   padding-bottom: 10px;
   color:white;
 }
+.created-by a{
+  color: white;
+}
 .created-by a:visited{
   color: white;
 }

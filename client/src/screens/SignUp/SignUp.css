@@ -36,6 +36,22 @@ h3.sign-up {
   font-family: "Open Sans Condensed", sans-serif;
   letter-spacing: 0.7px;
 }
+.email-taken{
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.email-taken p {
+  margin: 10px;
+}
+.return-signin {
+  margin-bottom: 20px;
+  color: #014366;
+}
+.return-signin:hover {
+  color: white;
+}
 .signup-btn {
   font-family: "Open Sans Condensed", sans-serif;
   letter-spacing: 0.7px;
