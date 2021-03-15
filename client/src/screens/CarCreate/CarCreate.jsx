@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./CarCreate.css";
 import Layout from "../../components/shared/Layout/Layout";
-import { Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { createCar } from "../../services/cars";
 
 const CarCreate = (props) => {
