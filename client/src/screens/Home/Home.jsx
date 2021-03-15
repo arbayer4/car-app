@@ -47,6 +47,7 @@ const Home = (props) => {
               </div>
             </div>
           </Slide>
+          <div className="mobile-img"></div>
         </div>
         <div className="about-us">
           <h2 className="about-us-header">About Sunday Driver</h2>

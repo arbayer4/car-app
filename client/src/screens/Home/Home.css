@@ -133,6 +133,21 @@ li{
   height: 45vh;
   min-width: 100vw;
 }
+/* mobile display hide the slider --comment out all below if you want slider to work */
+.each-slide > div,
+.slide-background > div {
+  display: none;
+}
+.react-slideshow-container{
+  display: none;
+}
+/* static image option for mobile */
+.mobile-img{
+  background-image: url('https://i.imgur.com/qeTwVVm.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 30vh;
+}
 }
 @media only screen and (max-width: 500px) {
 
@@ -156,15 +171,35 @@ li p{
   width: 80vw;
   font-size: 15px;
 }
-.each-slide > div,
-.slide-background > div {
-  background-size: cover;
-  background-position: center;
-  height: 30vh;
-  min-width: 100vw;
-}
 .login-link-body {
   padding: 10px;
   font-size: 20px;
+}
+.each-slide > div,
+.slide-background > div {
+  display: none;
+ background-size: cover;
+  background-position: center;
+  height: 30vh;
+  min-width: 100vw; 
+}
+/* mobile display hide the slider --comment out all below to let slider work */
+.each-slide > div,
+.slide-background > div {
+  display: none;
+  /* background-size: cover;
+  background-position: center;
+  height: 30vh;
+  min-width: 100vw; */
+}
+.react-slideshow-container{
+  display: none;
+}
+/* static image option for mobile */
+.mobile-img{
+  background-image: url('https://i.imgur.com/qeTwVVm.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 25vh;
 }
 }
