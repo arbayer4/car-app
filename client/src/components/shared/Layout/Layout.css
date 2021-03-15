@@ -8,3 +8,6 @@
   outline: none;
 }
 
+a:visited {
+  color: white;
+}
