@@ -34,6 +34,7 @@
   margin-right: 10px;
   display: flex;
   flex-direction: row;
+  flex-flow: wrap;
   justify-content: space-between;
   width: 35vw;
 }
@@ -98,12 +99,12 @@
   font-weight: bold;
   color: #003049;
   padding-right: 5vw;
+  transition: .2s ease-in;
 }
-
 .view-more-detail:hover {
   color: white;
-  border-bottom: 3px solid white;
-}
+  border-bottom: 2px solid white;
+}  
 .car-image-fp:hover {
   cursor: pointer;
   opacity: 0.7;
@@ -155,7 +156,7 @@
     overflow: scroll;
     scrollbar-width: none;
     height: 20vh;
-   margin-left: 5vw;
+    margin-left: 5vw;
   }
 
   .view-more-detail {

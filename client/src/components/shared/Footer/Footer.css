@@ -25,7 +25,10 @@ footer {
   padding-bottom: 10px;
   color: white;
 }
-.created-by a:visited {
+.created-by a{
+  color: white;
+}
+.created-by a:visited{
   color: white;
   text-decoration: none;
 }

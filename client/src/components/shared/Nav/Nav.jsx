@@ -29,7 +29,6 @@ const Nav = ({ user }) => {
       <NavLink className="cars-link" to="/cars">
         Browse All Collector Cars
       </NavLink>
-      <Burger setBurger={setBurgerOpen} />
     </>
   );
 
@@ -47,8 +46,9 @@ const Nav = ({ user }) => {
           <NavLink className="logo" to="/">
             Sunday Driver
           </NavLink>
+          <Burger setBurger={setBurgerOpen} />
         </div>
-        <div className="right-side" id={burgerOpen ? "open" : null}>
+        <div className="right-side" id={burgerOpen ? null : "open"}>
           <div className="inside-div">
             {alwaysOptions}
             {user ? authenticatedOptions : unauthenticatedOptions}

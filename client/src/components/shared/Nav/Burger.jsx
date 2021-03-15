@@ -8,14 +8,19 @@ const StyledBurger = styled.div`
   position: fixed;
   top: 15px;
   right: 20px;
-  display: flex;
-  justify-content: space-around;
-  flex-flow: column nowrap;
+  z-index: 3;
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+  }
 
   #burger-lines {
     width: 2rem;
     height: 0.25rem;
-    background-color: ${({ open }) => (open ? "#ffffff" : "white")};
+    background-color: ${({ open }) => (open ? "#ffffff" : "#003049")};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
