@@ -138,22 +138,29 @@ li{
 
   .blog-title{
   width: 80vw;
+  font-size: 20px;
 }
 .about-us-blurb{
   width: 80vw;
+  font-size: 18px;
 }
 .blog-post{
   width: 80vw;
+  font-size: 18px;
 }
 li{
   width: 80vw;
+  font-size: 18px;
+}
+li p{
+  width: 80vw;
+  font-size: 15px;
 }
 .each-slide > div,
 .slide-background > div {
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  height: 15vh;
+  height: 30vh;
   min-width: 100vw;
 }
 }
