@@ -109,15 +109,17 @@ const CarDetail = (props) => {
             {!props.user ? (
               <div className="buttons">
                 <a
-                  href={`mailto:${car.owner.email}?subject==🚘= SUNDAY DRIVER - Shopper Inquiry for your ${car.year} ${car.make} ${car.model}!`}
+                  href={`mailto:${car.owner.email}?subject=🚘 SUNDAY DRIVER - Shopper Inquiry for your ${car.year} ${car.make} ${car.model}!`}
                 >
                   <button type="button" className="email-seller-button">
                     Email Seller
                   </button>
                 </a>
+                <a href={`tel:${car.owner.phone}`}>
                 <button type="button" className="call-seller-button">
                   Call Seller
                 </button>
+                </a>
               </div>
             ) : props.user.username === car.owner.username ? (
               <div className="buttons">
