@@ -30,8 +30,8 @@
 
 .image-main {
   display: flex;
-  width: 80vh;
-  height: 60vh;
+  width: 41vw;
+  height: 30vw;
   object-fit: cover;
   object-position: center;
   border-radius: 15px;
@@ -63,7 +63,7 @@
   flex-direction: column;
   margin-left: 50px;
   color: white;
-  width: 80vh;
+  width: 40vw;
   min-height: 60vh;
   padding: 40px;
   margin-bottom: 75px;
