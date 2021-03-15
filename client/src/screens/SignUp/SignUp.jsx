@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./SignUp.css";
-import { signIn, signUp } from "../../services/users";
+import { allUsers, signIn, signUp } from "../../services/users";
 import { useHistory } from "react-router-dom";
 import Layout from "../../components/shared/Layout/Layout";
 
@@ -16,6 +16,15 @@ const SignUp = (props) => {
     isError: false,
     errMsg: "",
   });
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      const all = await allUsers();
+      setUsers(all);
+    };
+    fetchUsers();
+  }, []);
 
   const handleChange = (event) =>
     setForm({
@@ -56,8 +65,17 @@ const SignUp = (props) => {
       );
     } else if (form.password !== form.passwordConfirmation) {
       return <p className="invalid-on-signup">Passwords Do Not Match</p>;
-    }
-    {
+    } else if (users.some((user) => user.username === form.username)) {
+      return <p className="invalid-on-signup">Username Already Taken</p>;
+    } else if (users.some((user) => user.email === form.email)) {
+      return (
+        <div>
+          <p className="invalid-on-signup">
+            Email Already Associated With Account.
+          </p>
+        </div>
+      );
+    } else {
       return (
         <button className="signup-btn" type="submit">
           Create

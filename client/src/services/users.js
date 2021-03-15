@@ -50,6 +50,14 @@ export const verifyUser = async () => {
   }
   return false;
 };
+export const allUsers = async () => {
+  try {
+    const res = await api.get("/users");
+    return res.data;
+  } catch (error) {
+    throw error;
+  }
+};
 
 export const myCars = async (username) => {
   try {
