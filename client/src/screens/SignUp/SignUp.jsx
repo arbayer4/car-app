@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./SignUp.css";
 import { allUsers, signIn, signUp } from "../../services/users";
-<<<<<<< HEAD
 import { useHistory } from "react-router-dom";
-=======
-import { useHistory, Link, Redirect } from "react-router-dom";
-
->>>>>>> 7d0997fd94d39bb7cb914b9344a52633fa707e04
 import Layout from "../../components/shared/Layout/Layout";
 
 const SignUp = (props) => {
