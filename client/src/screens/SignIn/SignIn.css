@@ -76,6 +76,8 @@ h3.sign-in {
 .orsignup-btn a {
   text-decoration: none;
 }
+
+.signin-btn a:visited,
 .orsignup-btn a:visited {
   color: white;
   text-decoration: none;
