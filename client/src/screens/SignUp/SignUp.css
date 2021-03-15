@@ -109,14 +109,17 @@ h3.sign-up {
     font-size: 18px;
   }
   .signup-btn {
-    font-size: 18px;
+    font-size: 20px;
   }
   .invalid-on-signup {
     font-size: 20px;
   }
   .signup {
-    background-image: url("https://i.imgur.com/QFLHCRv.jpg");
-    background-size: cover;
     background-position: right;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .signup h3 {
+    font-size: 25px;
   }
 }
