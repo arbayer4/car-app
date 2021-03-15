@@ -61,7 +61,7 @@ const CarDetail = (props) => {
             <div className="title-car">
               {car.year} {car.make} {car.model}
             </div>
-            <div className="title-price">${car.price}</div>
+            <div className="title-price">${newPrice}</div>
           </div>
           <br />
           <div className="vehicle-specs">
