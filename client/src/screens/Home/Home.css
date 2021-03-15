@@ -34,6 +34,7 @@ button.nav.default-nav:hover {
 .each-slide > div,
 .slide-background > div {
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   height: 60vh;
   min-width: 100vw;
