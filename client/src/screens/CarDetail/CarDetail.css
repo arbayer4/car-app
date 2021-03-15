@@ -287,42 +287,54 @@ cursor: pointer;
 @media only screen and (max-width: 900px){
   .vehicle-details-header {
     margin-top: 2vh;
-    margin-left: 60px;
+    margin-bottom: 2vh;
+    margin-left: auto;
+    margin-right:auto;
     font-size: 50px;
-    text-align: left;
+    text-align: center;
   }
   
   .main-container-dt {
+    border-radius: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0px;
-    margin-left: 5vw;
+    margin: 4vh;
+    color: white;
+    /* width: 80vh; */
+    /* min-height: 60vh; */
+    /* padding: 40px; */
+    /* margin-bottom: 75px; */
+    background-color: rgb(255, 146, 14);
   }
   
-  .container-data {
+  /* .container-data {
     width: 80vh;
     font-size: 18px;
     justify-content: center;
-  }
+  } */
   
-.img-container {
+/* .img-container {
   justify-self: center;
-  width: 90vw;
-}
+  width: 100vw;
+} */
+
   .image-main {
-    margin: 0 auto;
-    justify-self: center;
-    width: 80vw;
-    height: 45vh;
+    display: flex;
+    width: 83vh;
+    height: 50vh;
+    object-fit: cover;
+    object-position: center;
     border-radius: 15px;
+    box-shadow: 0px 20px 50px 0px;
     box-shadow: rgba(0, 0, 0, 0.555) 0px 6px 20px 0px;
   }
   
   .image-thumbnail {
-    margin: 15px;
+    margin: 10px;
+    
     margin-bottom: 4vh;
-    margin-left: 40px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .details-container {

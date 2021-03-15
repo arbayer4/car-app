@@ -30,29 +30,33 @@ const CarDetail = (props) => {
     setTimeout(() => history.push("/mycars"), 500);
   };
 
-  const imgJSX = car.imgURL.map((image, index) => (
-    <img
-      className="image-thumbnail"
-      src={image}
-      alt={`car ${index + 1}`}
-      key={index}
-    />
-  ));
+  const switchPic = (index) => {
+    let temp = userCarPics;
+    const featured = temp.splice(index, 1);
+    temp = featured.concat(temp);
+    setUserCarPics(temp);
+  };
+  let newPrice = car.price.replace(/\d(?=(?:\d{3})+$)/g, "$&,"); //recieved from stackoverflow https://stackoverflow.com/questions/27311714/adding-commas-to-numbers-when-typing
+  const imgJSX = userCarPics.map((image, index) => {
+    if (index > 0) {
+      return (
+        <img
+          className="image-thumbnail"
+          src={image}
+          alt={`car ${index + 1}`}
+          key={index}
+          onClick={() => switchPic(index)}
+        />
+      );
+    }
+  });
 
   return (
     <Layout user={props.user}>
       <div className="vehicle-details-header">Vehicle Details</div>
       <div className="main-container-dt">
         <div className="img-container">
-          <img
-            className="image-main"
-            src={
-              car.imgURL[num]
-                ? car.imgURL[num]
-                : "https://images.unsplash.com/photo-1606017116209-b1ed168465e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80"
-            }
-            alt={car.make}
-          />
+          <img className="image-main" src={userCarPics[0]} alt={car.make} />
           <div className="image-thumbnail">{imgJSX}</div>
         </div>
         <div className="details-container">
@@ -60,7 +64,7 @@ const CarDetail = (props) => {
             <div className="title-car">
               {car.year} {car.make} {car.model}
             </div>
-            <div className="title-price">${car.price}</div>
+            <div className="title-price">${newPrice}</div>
           </div>
           <br />
           <div className="vehicle-specs">
