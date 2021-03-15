@@ -1,5 +1,6 @@
 import "./Nav.css";
 import { NavLink } from "react-router-dom";
+import Burger from "../Nav/Burger";
 
 const authenticatedOptions = (
   <>
@@ -24,6 +25,7 @@ const alwaysOptions = (
     <NavLink className="cars-link" to="/cars">
       Browse All Collector Cars
     </NavLink>
+    <Burger />
   </>
 );
 const Nav = ({ user }) => {
@@ -43,8 +45,10 @@ const Nav = ({ user }) => {
           </NavLink>
         </div>
         <div className="right-side">
-          {alwaysOptions}
-          {user ? authenticatedOptions : unauthenticatedOptions}
+          <div className="inside-div">
+            {alwaysOptions}
+            {user ? authenticatedOptions : unauthenticatedOptions}
+          </div>
         </div>
       </div>
     </nav>
