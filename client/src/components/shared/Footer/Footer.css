@@ -27,13 +27,12 @@ footer {
 }
 .created-by a:visited {
   color: white;
+  text-decoration: none;
 }
 .created-by a:hover {
   color: #d62828;
 }
-a:visited {
-  color: white;
-}
+
 /* 
 .footer-login-link {
   color: white;

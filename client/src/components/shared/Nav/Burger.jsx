@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React, { useState } from "react";
+import Nav from "./Nav";
 
 const StyledBurger = styled.div`
   width: 2rem;
@@ -11,7 +12,7 @@ const StyledBurger = styled.div`
   justify-content: space-around;
   flex-flow: column nowrap;
 
-  div {
+  #burger-lines {
     width: 2rem;
     height: 0.25rem;
     background-color: ${({ open }) => (open ? "#ffffff" : "white")};
@@ -39,11 +40,13 @@ const Burger = (props) => {
     props.setBurger((curr) => !curr);
   };
   return (
-    <StyledBurger open={open} onClick={burgerClick}>
-      <div></div>
-      <div></div>
-      <div></div>
-    </StyledBurger>
+    <>
+      <StyledBurger open={open} onClick={burgerClick}>
+        <div id="burger-lines"></div>
+        <div id="burger-lines"></div>
+        <div id="burger-lines"></div>
+      </StyledBurger>
+    </>
   );
 };
 

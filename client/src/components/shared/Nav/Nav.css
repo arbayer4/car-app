@@ -84,7 +84,6 @@ a {
     flex-flow: column nowrap;
     background-color: #003049;
     position: fixed;
-    /* transform: ${({open}) => open ? 'translateX(0)' : 'translateX(100%)'}; */
     top: 0;
     right: 0;
     height: 100vh;
@@ -92,12 +91,10 @@ a {
     padding-top: 2vh;
     z-index: 50;
     /* display: none; */
-    
   }
-  #open{
+  #open {
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
-
   }
   .cars-link,
   .login-link {
