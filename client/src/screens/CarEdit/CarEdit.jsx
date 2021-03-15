@@ -45,7 +45,7 @@ const CarEdit = (props) => {
     event.preventDefault();
     setCar({
       ...car,
-      ["imgURL"]: [...car.imgURL, img],
+      imgURL: [...car.imgURL, img],
     });
     setImg("");
   };

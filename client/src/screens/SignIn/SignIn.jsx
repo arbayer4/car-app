@@ -45,7 +45,7 @@ const SignIn = (props) => {
   };
 
   const renderError = () => {
-    const toggleForm = form.isError ? "danger" : "";
+    // const toggleForm = form.isError ? "danger" : "";
     if (form.isError) {
       return (
         <div className="invalid-on-signin">
