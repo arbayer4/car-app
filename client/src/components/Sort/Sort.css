@@ -27,6 +27,7 @@
     width: 30vw;
     height: 5vh;
     font-size: 15px;
+    padding-left: 20px;
   }
   .sort::placeholder{
     font-size: 15px;
