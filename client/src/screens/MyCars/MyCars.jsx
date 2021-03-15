@@ -3,6 +3,7 @@ import Layout from "../../components/shared/Layout/Layout";
 import { myCars } from "../../services/users";
 import Car from "../../components/Car/Car";
 import { Link } from "react-router-dom";
+import "./MyCars.css";
 
 const MyCars = (props) => {
   const [myUserCars, setMyUserCars] = useState([]);
@@ -30,17 +31,18 @@ const MyCars = (props) => {
   ));
   return (
     <Layout user={props.user}>
-      {myUserCars.length ? (
-        <div>{carsJSX}</div>
-      ) : (
-        <div>
-          <h1>Hello {props.user.username}</h1>
+      <div className="my-cars-container">
+        <h1>Hello {props.user.username}</h1>
+        <p>View All Your Current Listings Below:</p>
+        {myUserCars.length ? (
+          <div>{carsJSX}</div>
+        ) : (
           <div>
             You haven't listed any cars. You can add your listing{" "}
             <Link to="/create-car">here</Link>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </Layout>
   );
 };

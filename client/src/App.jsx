@@ -61,13 +61,13 @@ const App = () => {
             {user ? <CarCreate user={user} /> : <Redirect to="/sign-up" />}
           </Route>
           <Route exact path="/cars/:id/edit">
-            {user ? <CarEdit user={user} /> : <Redirect to="/" />}
+            {user ? <CarEdit user={user} /> : <Redirect to="/sign-in" />}
           </Route>
           <Route exact path="/cars/:id">
             <CarDetail user={user} setToggleFetch={setToggleFetch} />
           </Route>
           <Route exact path="/mycars">
-            <MyCars user={user} />
+            {user ? <MyCars user={user} /> : <Redirect to="/sign-in" />}
           </Route>
         </Switch>
       )}

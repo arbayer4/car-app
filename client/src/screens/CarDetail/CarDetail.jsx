@@ -10,7 +10,6 @@ const CarDetail = (props) => {
   const [userCarPics, setUserCarPics] = useState([]);
   const { id } = useParams();
   const history = useHistory();
-  let num = 0;
   useEffect(() => {
     const fetchCar = async () => {
       const fetchedCar = await getCar(id);
