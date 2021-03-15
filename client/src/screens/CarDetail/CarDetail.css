@@ -18,7 +18,7 @@
   width: 50vh;
   font-size: 18px;
   /* margin-top: -50px; */
-  /* margin-bottom: -50px; */
+  /* margin-bottomr: -50px; */
   /* overflow: scroll; */
   scrollbar-width: none;
   background-color: rgb(255, 146, 14);
@@ -150,7 +150,6 @@ cursor: pointer;
   border: none;
   border-radius: 8px;
   margin-top: 20px;
-  
 }
 
 .edit-button:hover,
@@ -180,7 +179,104 @@ cursor: pointer;
   border-bottom: 3px solid white;
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 950px){
+  .vehicle-details-header {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: auto;
+    margin-right:auto;
+    font-size: 50px;
+    align-content: center;
+  }
+  
+  .main-container-dt {
+    display: flex;
+    flex-direction: column;
+    margin: 4vh;
+    background-color: rgb(255, 146, 14);
+    box-shadow: 0px 0px 10px rgb(255 146 14 / 50%);
+    justify-content: center;
+    display: flex;
+    border-radius: 25px;
+    flex-direction: column;
+    background-color: rgb(255, 146, 14);
+  }
+
+  .image-main {
+    justify-content: center;
+    border-radius: 25px;
+    width: 75vw;
+    height: 40vw;
+    object-fit: cover;
+    display: flex;
+    object-position: center;
+    box-shadow: rgba(0, 0, 0, 0.555) 0px 6px 20px 0px;
+  }
+  
+  .image-thumbnail {
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .details-container {
+    display: flex;
+    text-align: center;
+    margin-left: -20vw;
+    background-color:rgba(255, 147, 14, 0);
+  }
+
+  .title-car,
+  .title-price {
+    margin: 0 auto;
+    justify-content: center;
+    width: 105vw;
+  }
+  
+  .vehicle-attribute {
+    font-size: 27px;
+    font-weight:bold;
+    letter-spacing: 1.5px;
+  }
+  
+  .vehicle-input {
+    font-size: 24px;
+    font-weight:300;
+    letter-spacing: 1px;
+  }
+  
+  .vehicle-description {
+    font-size: 25px;
+    height: 15vh;
+    margin-left: 10vh;
+    margin-right: 10vh;
+  }
+  
+  
+  .edit-button,
+  .delete-button,
+  .save-button,
+  .email-seller-button,
+  .call-seller-button {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 18px 30px;
+    margin-left: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    
+  }  
+  .edit-button a:visited {
+    color: white;
+  }
+  
+  .back-to-cars {
+    font-size: 25px;
+  }
+
+}
+
+/* @media only screen and (max-width: 500px){
   .vehicle-details-header {
     margin-top: 2vh;
     margin-left: 60px;
@@ -197,9 +293,14 @@ cursor: pointer;
   }
   
   .container-data {
-    width: 80vh;
-    font-size: 18px;
-  }
+  width: 50vh;
+  font-size: 18px;
+  margin-top: -50px;
+  margin-bottom: -50px;
+  overflow: scroll;
+  scrollbar-width: none;
+  background-color: rgb(255, 146, 14);
+}
   
 .img-container {
   justify-self: center;
@@ -282,111 +383,4 @@ cursor: pointer;
     font-size: 18px;
   }
 
-}
-
-@media only screen and (max-width: 900px){
-  .vehicle-details-header {
-    margin-top: 2vh;
-    margin-left: 60px;
-    font-size: 50px;
-    text-align: left;
-  }
-  
-  .main-container-dt {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0px;
-    margin-left: 5vw;
-  }
-  
-  .container-data {
-    width: 80vh;
-    font-size: 18px;
-    justify-content: center;
-  }
-  
-.img-container {
-  justify-self: center;
-  width: 90vw;
-}
-  .image-main {
-    margin: 0 auto;
-    justify-self: center;
-    width: 80vw;
-    height: 45vh;
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.555) 0px 6px 20px 0px;
-  }
-  
-  .image-thumbnail {
-    margin: 15px;
-    margin-bottom: 4vh;
-    margin-left: 40px;
-  }
-  
-  .details-container {
-    justify-self:center;
-    margin: 10px;
-    width: 90vw;
-    min-height: 50vh;
-    padding: 20px;
-    margin-bottom: 60px;
-  }
-  
-  .title {
-    font-size: 35px;
-  }
-  
-  .title-car {
-    font-weight: bold;
-    font-size: 35px;
-  }
-  .title-price {
-    color: #227e2a;
-    font-size: 28px;
-    font-weight: bolder;
-    padding-top: 10px;
-  }
-  
-  .vehicle-attribute {
-    font-size: 30px;
-    font-weight:bold;
-    letter-spacing: 1.5px;
-  }
-  
-  .vehicle-input {
-    font-size: 25px;
-    font-weight:300;
-    letter-spacing: 1px;
-  }
-  
-  .vehicle-description {
-    font-size: 25px;
-    height: 15vh;
-    margin: 8px;
-  }
-  
-  
-  .edit-button,
-  .delete-button,
-  .save-button,
-  .email-seller-button,
-  .call-seller-button {
-    font-size: 25px;
-    font-weight: bold;
-    padding: 18px 30px;
-    margin-left: 10px;
-    border-radius: 8px;
-    margin-top: 10px;
-    
-  }  
-  .edit-button a:visited {
-    color: white;
-  }
-  
-  .back-to-cars {
-    font-size: 25px;
-  }
-
-}
+} */
