@@ -109,7 +109,8 @@
   opacity: 0.7;
 }
 
-@media only screen and (max-width: 1050px) {
+/* ipad pro size */
+@media only screen and (max-width: 1024px) {
   .container-all {
     color: white;
     display: flex;
@@ -192,6 +193,7 @@
     padding-right: 35vw;
   }
 }
+/* slightly smaller ipads/tablets */
 @media only screen and (max-width: 950px) {
   .container-all {
     color: white;
@@ -273,6 +275,7 @@
     padding-right: 30vw;
   }
 }
+/* mobile sizes */
 @media only screen and (max-width: 500px) {
   .container-all {
     color: white;
