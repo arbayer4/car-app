@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import React, { useState } from "react";
-import Nav from "./Nav";
 
 const StyledBurger = styled.div`
   width: 2rem;
