@@ -20,22 +20,26 @@ const StyledBurger = styled.div`
     transition: all 0.3s linear;
 
     &:nth-child(1) {
-      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0deg)")};
     }
     &:nth-child(2) {
       transform: ${({ open }) => (open ? "translateX(100%)" : "translateX(0)")};
       opacity: ${({ open }) => (open ? 0 : 1)};
     }
     &:nth-child(3) {
-      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0deg)")};
     }
   }
 `;
 
-const Burger = () => {
+const Burger = (props) => {
   const [open, setOpen] = useState(false);
+  const burgerClick = () => {
+    setOpen(!open);
+    props.setBurger((curr) => !curr);
+  };
   return (
-    <StyledBurger open={open} onClick={() => setOpen(!open)}>
+    <StyledBurger open={open} onClick={burgerClick}>
       <div></div>
       <div></div>
       <div></div>
