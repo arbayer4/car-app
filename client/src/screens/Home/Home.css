@@ -163,4 +163,8 @@ li p{
   height: 30vh;
   min-width: 100vw;
 }
+.login-link-body {
+  padding: 10px;
+  font-size: 20px;
+}
 }
