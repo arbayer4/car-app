@@ -7,6 +7,8 @@ import "./MyCars.css";
 
 const MyCars = (props) => {
   const [myUserCars, setMyUserCars] = useState([]);
+  const name = props.user.username;
+  const nameCap = name.charAt(0).toUpperCase() + name.slice(1);
 
   useEffect(() => {
     const fetchMyCars = async () => {
@@ -32,7 +34,7 @@ const MyCars = (props) => {
   return (
     <Layout user={props.user}>
       <div className="my-cars-container">
-        <h1>Hello {props.user.username}</h1>
+        <h1>Hello {nameCap}</h1>
         <p>View All Your Current Listings Below:</p>
         {myUserCars.length ? (
           <div>{carsJSX}</div>
