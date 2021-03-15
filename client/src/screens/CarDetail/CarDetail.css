@@ -193,6 +193,7 @@ cursor: pointer;
     flex-direction: column;
     justify-content: center;
     padding: 0px;
+    margin-left: 0px;
   }
   
   .container-data {
@@ -203,21 +204,21 @@ cursor: pointer;
 .img-container {
   justify-self: center;
   width: 90vw;
+  height: 30vh;
 }
   .image-main {
-    margin-left: 5vw;
+    margin-left: 10vw;
     width: 90vw;
-    height: 25vh;
+    height: 20vh;
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.555) 0px 6px 10px 0px;
   }
   
   .image-thumbnail {
-    margin-left: 2vw;
-    width: 12vh;
-    height: 8vh;
+    margin-left:0px;
+    width: 5vh;
+    height: 6vh;
     margin-bottom: 4vh;
-    justify-self: center;
   }
   
   .details-container {
