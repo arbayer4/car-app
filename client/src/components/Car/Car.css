@@ -139,7 +139,7 @@
   .price-and-viewmore {
     padding-top: 10px;
     justify-content: center;
-    width: 60vw;
+    width: 80vw;
   }
   .car-title-fp {
     font-size: 28px;
@@ -164,7 +164,7 @@
   .container-image-fp {
     background-color: white;
     border-radius: 25px;
-    width: 60vw;
+    width: 85vw;
     height: 45vh;
     margin-right: 0px;
     object-fit: cover;
@@ -174,7 +174,7 @@
   .car-image-fp {
     justify-self: center;
     border-radius: 25px;
-    width: 60vw;
+    width: 85vw;
     height: 45vh;
     margin: 0px;
     object-fit: cover;
@@ -183,7 +183,7 @@
   .container-data-fp {
     display: flex;
     flex-direction: column;
-    width: 60vw;
+    width: 80vw;
   }
   .car-price-fp {
     font-size: 25px;
@@ -224,7 +224,7 @@
   .car-title-fp {
     font-size: 20px;
     font-weight: bold;
-    margin-top: 10vh;
+    margin-top: 9vh;
   }
 
   .car-description-fp {
@@ -232,7 +232,7 @@
     padding: 5px;
     overflow: scroll;
     scrollbar-width: none;
-    height: 20vh;
+    height: 15vh;
   }
 
   .car-price-fp {
@@ -249,8 +249,8 @@
   .container-image-fp {
     background-color: white;
     border-radius: 25px;
-    width: 70vw;
-    height: 45vh;
+    width: 85vw;
+    height: 35vh;
     margin-right: 0px;
     object-fit: cover;
     box-shadow: 4px 2px 10px rgba(0, 0, 0, 0.774);
@@ -259,8 +259,8 @@
   .car-image-fp {
     justify-self: center;
     border-radius: 25px;
-    width: 70vw;
-    height: 45vh;
+    width: 85vw;
+    height: 35vh;
     margin: 0px;
     object-fit: cover;
   }
@@ -268,6 +268,6 @@
   .container-data-fp {
     display: flex;
     flex-direction: column;
-    width: 70vw;
+    width: 85vw;
   }
 }
