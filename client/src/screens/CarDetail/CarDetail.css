@@ -8,18 +8,16 @@
 .main-container-dt {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   padding-top: 20px;
   padding-left: 60px;
   padding-right: 60px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .container-data {
   width: 50vh;
   font-size: 18px;
-  /* margin-top: -50px; */
-  /* margin-bottom: -50px; */
-  /* overflow: scroll; */
   scrollbar-width: none;
   background-color: rgb(255, 146, 14);
 }
@@ -28,7 +26,6 @@
   display: flex;
   flex-direction: column;
   object-fit: fill;
-  /* justify-content:center; */
 }
 
 .image-main {
@@ -50,11 +47,11 @@
   height: 8vh;
   object-fit: cover;
   object-position: center;
-  /* border-radius: 30%; */
 }
-.image-thumbnail:hover{
-cursor: pointer;
+.image-thumbnail:hover {
+  cursor: pointer;
 }
+
 .details-container {
   border-radius: 6px;
   display: flex;
@@ -71,20 +68,17 @@ cursor: pointer;
 .title {
   display: flex;
   flex-direction: column;
-  /* justify-content:center; */
-  /* margin-left: auto; */
   margin-right: auto;
 }
 
 .title-car {
-  /* justify-content: center; */
   font-weight: bold;
   font-size: 40px;
   letter-spacing: -1px;
   word-spacing: 3px;
 }
+
 .title-price {
-  /* justify-content: center; */
   color: #227e2a;
   font-size: 30px;
   font-weight: bolder;
@@ -92,13 +86,13 @@ cursor: pointer;
 
 .vehicle-attribute {
   font-size: 28px;
-  font-weight:bold;
+  font-weight: bold;
   letter-spacing: 1.5px;
 }
 
 .vehicle-input {
   font-size: 25px;
-  font-weight:300;
+  font-weight: 300;
   letter-spacing: 1px;
 }
 
@@ -111,8 +105,7 @@ cursor: pointer;
   margin: 8px;
 }
 
-.lower-container  {
-  /* margin-right: 10px; */
+.lower-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -126,14 +119,13 @@ cursor: pointer;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* bottom: 0px; */
 }
 .edit-button:hover,
 .delete-button:hover,
 .save-button:hover,
 .email-seller-button:hover,
 .call-seller-button:hover {
-cursor: pointer;
+  cursor: pointer;
 }
 .edit-button,
 .delete-button,
@@ -142,7 +134,7 @@ cursor: pointer;
 .call-seller-button {
   font-size: medium;
   font-weight: bold;
-  padding: 10px 30px;
+  padding: 10px;
   margin-left: 10px;
   text-align: center;
   color: rgb(255, 255, 255);
@@ -150,14 +142,14 @@ cursor: pointer;
   border: none;
   border-radius: 8px;
   margin-top: 20px;
-  
+  width: 170px;
 }
 
 .edit-button:hover,
 .delete-button:hover,
 .save-button:hover,
 .email-seller-button:hover,
- .call-seller-button:hover {
+.call-seller-button:hover {
   background-color: #f7ca68;
   cursor: pointer;
 }
@@ -180,213 +172,174 @@ cursor: pointer;
   border-bottom: 3px solid white;
 }
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 950px) {
   .vehicle-details-header {
-    margin-top: 2vh;
-    margin-left: 60px;
-    font-size: 40px;
-    text-align: left;
-  }
-  
-  .main-container-dt {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0px;
+    font-size: 50px;
+    text-align: center;
     margin-left: 0px;
   }
-  
-  .container-data {
-    width: 80vh;
-    font-size: 18px;
-  }
-  
-.img-container {
-  justify-self: center;
-  width: 90vw;
-  height: 30vh;
-}
-  .image-main {
-    margin-left: 10vw;
-    width: 90vw;
-    height: 20vh;
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.555) 0px 6px 10px 0px;
-  }
-  
-  .image-thumbnail {
-    margin-left:0px;
-    width: 5vh;
-    height: 6vh;
-    margin-bottom: 4vh;
-  }
-  
-  .details-container {
-    justify-self: center;
-    margin: 0px;
-    color: white;
-    width: 90vw;
-    min-height: 50vh;
-    padding: 20px;
-    margin-bottom: 60px;
-  }
-  
-  .title {
-    font-size: 25px;
-  }
-  
-  .title-car {
-    font-weight: bold;
-    font-size: 25px;
-  }
-  .title-price {
-    color: #227e2a;
-    font-size: 20px;
-    font-weight: bolder;
-    padding-top: 10px;
-  }
-  
-  .vehicle-attribute {
-    font-size: 18px;
-  }
-  
-  .vehicle-input {
-    font-size: 18px;
-  }
-  
-  .vehicle-description {
-    font-size: 18px;
-    height: 15vh;
-    margin: 8px;
-  }
-  
-  
-  .edit-button,
-  .delete-button,
-  .save-button,
-  .email-seller-button,
-  .call-seller-button {
-    font-size: medium;
-    font-weight: bold;
-    padding: 10px 30px;
-    margin-left: 10px;
-    border-radius: 8px;
-    margin-top: 10px;
-    
-  }  
-  .edit-button a:visited {
-    color: white;
-  }
 
-  .back-to-cars {
-    font-size: 18px;
-  }
-
-}
-
-@media only screen and (max-width: 900px){
-  .vehicle-details-header {
-    margin-top: 2vh;
-    margin-left: 60px;
-    font-size: 50px;
-    text-align: left;
-  }
-  
   .main-container-dt {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0px;
-    margin-left: 5vw;
+    text-align: center;
+    margin: 4vh;
+    border-radius: 25px;
+    background-color: rgb(255, 146, 14);
+    padding-left: auto;
+    padding-right: auto;
+    padding-top: 0px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
-  
-  .container-data {
-    width: 80vh;
-    font-size: 18px;
-    justify-content: center;
-  }
-  
-.img-container {
-  justify-self: center;
-  width: 90vw;
-}
+
   .image-main {
-    margin: 0 auto;
-    justify-self: center;
-    width: 80vw;
-    height: 45vh;
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.555) 0px 6px 20px 0px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    border-radius: 25px;
+    width: 100%;
+    height: 60vw;
+    object-fit: cover;
+    box-shadow: 0px 0px 20px 0px;
   }
-  
+
   .image-thumbnail {
-    margin: 15px;
-    margin-bottom: 4vh;
-    margin-left: 40px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
-  
+
   .details-container {
-    justify-self:center;
-    margin: 10px;
-    width: 90vw;
-    min-height: 50vh;
-    padding: 20px;
-    margin-bottom: 60px;
+    margin-left: auto;
+    color: white;
+    width: auto;
+    padding: 10px;
+    margin-bottom: 50px;
   }
-  
+
   .title {
-    font-size: 35px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
   }
-  
-  .title-car {
-    font-weight: bold;
-    font-size: 35px;
-  }
+
   .title-price {
     color: #227e2a;
-    font-size: 28px;
-    font-weight: bolder;
-    padding-top: 10px;
-  }
-  
-  .vehicle-attribute {
     font-size: 30px;
-    font-weight:bold;
+    font-weight: bolder;
+  }
+
+  .vehicle-attribute {
+    font-size: 27px;
+    font-weight: bold;
     letter-spacing: 1.5px;
   }
-  
+
   .vehicle-input {
-    font-size: 25px;
-    font-weight:300;
+    font-size: 24px;
+    font-weight: 300;
     letter-spacing: 1px;
   }
-  
+
   .vehicle-description {
-    font-size: 25px;
-    height: 15vh;
-    margin: 8px;
+    font-size: 23px;
+    height: 20vh;
   }
-  
-  
+
+  .lower-container {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+
   .edit-button,
   .delete-button,
   .save-button,
   .email-seller-button,
   .call-seller-button {
-    font-size: 25px;
-    font-weight: bold;
-    padding: 18px 30px;
+    font-size: 20px;
+    padding: 10px 20px;
     margin-left: 10px;
     border-radius: 8px;
-    margin-top: 10px;
-    
-  }  
-  .edit-button a:visited {
-    color: white;
+    margin-top: 15px;
   }
-  
+
   .back-to-cars {
     font-size: 25px;
   }
+}
 
+@media only screen and (max-width: 500px) {
+
+  .main-container-dt {
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .image-main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1vh;
+    border-radius: 20px;
+    width: 100%;
+    height: 40vw;
+    object-fit: cover;
+  }
+
+  .image-thumbnail {
+    margin-left: auto;
+    margin-right: auto;
+    width: 8vh;
+  height: 5vh;
+  margin-bottom:1vh;
+  justify-content: center;
+  align-content: center;
+  }
+
+  .details-container {
+    padding: 0px;
+  }
+
+  .title-car {
+    font-size: 32px;
+  }
+
+  .title-price {
+    font-size: 23px;
+    font-weight: bolder;
+  }
+
+  .vehicle-attribute {
+    font-size: 20px;
+  }
+
+  .vehicle-input {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  .vehicle-description {
+    font-size: 16px;
+  }
+
+  .buttons {
+  display: flex;
+  flex-direction: column;
+  }
+
+  .edit-button,
+  .delete-button,
+  .save-button,
+  .email-seller-button,
+  .call-seller-button {
+    height: 52px;
+    width: 300px;
+    margin-left: 0px;
+  }
+
+  .back-to-cars {
+    font-size: 22px;
+  }
 }

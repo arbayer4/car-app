@@ -23,6 +23,16 @@ footer {
   align-self: center;
   padding-top: 40px;
   padding-bottom: 10px;
+  color:white;
+}
+.created-by a{
+  color: white;
+}
+.created-by a:visited{
+  color: white;
+}
+.created-by a:hover{
+  color: #d62828;
 }
 /* 
 .footer-login-link {
