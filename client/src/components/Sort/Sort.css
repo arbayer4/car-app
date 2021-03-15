@@ -22,6 +22,19 @@
   align-content: left;
   font-family: "Open Sans Condensed", sans-serif;
 }
+
+@media only screen and (max-width: 950px){
+  .sort {
+    height: 5vh;
+    padding-left: 25px;
+    outline: none;
+  }
+  .sort::placeholder{
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+
 @media only screen and (max-width: 500px){
   .sort {
     width: 30vw;
