@@ -14,9 +14,21 @@
   font-size: 18px;
   padding-left: 40px;
   color: #003049;
-  border: 1px solid rgb(255, 147, 14);
+
+  border: none;
+  background-color: rgb(255, 147, 14);
   border-radius: 25px;
   outline: none;
   align-content: left;
   font-family: "Open Sans Condensed", sans-serif;
+}
+@media only screen and (max-width: 500px) {
+  .sort {
+    width: 30vw;
+    height: 5vh;
+    font-size: 15px;
+  }
+  .sort::placeholder {
+    font-size: 15px;
+  }
 }

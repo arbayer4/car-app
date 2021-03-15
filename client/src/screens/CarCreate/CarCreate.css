@@ -18,6 +18,7 @@
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  margin: 12px;
 }
 .left-details,
 .right-details {
@@ -26,23 +27,28 @@
   /* height: 40vh; */
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
 }
 input {
   outline: none;
   font-family: "Open Sans Condensed", sans-serif;
 }
-.label-input {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  padding-right: 10px;
-}
-.label-input input {
-  width: 35vw;
+
+.left-details input,
+.right-details input {
+  width: 36vw;
   height: 30px;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: #8184848c 2px 2px 3px;
+  padding: 5px;
+  padding-left: 10px;
+}
+.left-details label,
+.right-details label {
+  color: #f77f00;
+  font-size: 10px;
 }
 .label-input label {
   font-size: 18px;
@@ -55,16 +61,27 @@ input {
   flex-flow: column nowrap;
   align-items: center;
 }
+.bottom-details label {
+  color: #f77f00;
+}
 
 .bottom-details > textarea {
   resize: vertical;
   width: 76vw;
   font-family: "Open Sans Condensed", sans-serif;
   outline: none;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: #3233338c 2px 2px 3px;
+  padding: 5px;
 }
 .bottom-details input {
   width: 35vw;
   height: 30px;
+  border-radius: 10px;
+  outline: none;
+  padding: 5px;
+  box-shadow: #3233338c 2px 2px 3px;
 }
 
 .create-button,
@@ -97,10 +114,35 @@ input {
   display: flex;
   flex-flow: row wrap;
   box-sizing: border-box;
+  margin-top: 20px;
+  justify-content: center;
+}
+.photo-container {
+  margin: 10px;
+}
+.photo-button {
+  margin-left: 10px;
 }
 .preview-image {
   height: 100px;
   width: auto;
 
   object-fit: contain;
+}
+
+@media only screen and (max-width: 800px) {
+  .top {
+    box-sizing: border-box;
+    /* width: 100%; */
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 12px;
+  }
+  .left-details input,
+  .right-details input {
+    width: 76vw;
+    height: 30px;
+  }
 }
