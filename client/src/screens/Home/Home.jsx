@@ -52,7 +52,7 @@ const Home = (props) => {
         <div className="about-us">
           <h2 className="about-us-header">About Sunday Driver</h2>
           <p className="about-us-blurb">
-            Sunday Drivers gives vintage car enthusiasts the ability to buy and
+            Sunday Driver gives vintage car enthusiasts the ability to buy and
             sell vehicles from one another. Sellers can list their vehicle(s)
             for sale through a simple signup process, then providing a vehicle’s
             details such as the make, model, year, price, image, etc. Car

@@ -170,11 +170,12 @@
   font-size: 25px;
   font-weight: bold;
   color: #003049;
+  transition: .2s ease-in;
 }
 
 .back-to-cars:hover {
-  color: white;
-  border-bottom: 3px solid white;
+    color: white;
+    border-bottom: 2px solid white;
 }
 
 @media only screen and (max-width: 950px) {
@@ -215,6 +216,7 @@
     width: auto;
     padding: 10px;
     margin-bottom: 50px;
+    background-color: rgba(255, 147, 14, 0);
   }
 
   .title {
@@ -299,6 +301,7 @@
 
   .details-container {
     padding: 0px;
+    background-color: rgba(255, 147, 14, 0);
   }
 
   .title-car {
