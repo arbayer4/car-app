@@ -45,6 +45,9 @@ h3.sign-up {
 .email-taken p {
   margin: 10px;
 }
+.loading-spinner{
+  align-self: center;
+}
 .return-signin {
   margin-bottom: 20px;
   color: #014366;
