@@ -1,8 +1,9 @@
 import Layout from "../../components/shared/Layout/Layout";
-import { Redirect, useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import { getCar, updateCar } from "../../services/cars";
 import { useState, useEffect } from "react";
 import "../CarCreate/CarCreate.css";
+import Spinner from "../../utils/spinner";
 
 const CarEdit = (props) => {
   const [car, setCar] = useState({
@@ -24,7 +25,9 @@ const CarEdit = (props) => {
 
   const [img, setImg] = useState("");
   const [isUpdated, setUpdated] = useState(false);
+  const [loading, setLoading] = useState(false);
   let { id } = useParams();
+  const history = useHistory();
 
   useEffect(() => {
     const fetchCar = async () => {
@@ -52,17 +55,24 @@ const CarEdit = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 10000);
     const updated = await updateCar(id, car);
     setUpdated({ updated });
+    if (!isUpdated) {
+      console.log("Error Creating");
+    }
+    setTimeout(() => {
+      history.push(`/cars/${id}`);
+    }, 1000);
   };
   const deleteImage = (e) => {
     car.imgURL.splice(e.target.value, 1);
     setCar({ ...car });
   };
 
-  if (isUpdated) {
-    return <Redirect to={`/cars/${id}`} />;
-  }
   const imgJSX = car.imgURL.map((image, index) => (
     <div className="photo-container" key={index}>
       <img className="preview-image" src={image} alt={`car ${index + 1}`} />
@@ -225,13 +235,17 @@ const CarEdit = (props) => {
         </div>
         {car.imgURL.length ? null : <p>Must Upload At Least One Picture</p>}
 
-        <button
-          className="create-button"
-          type="submit"
-          disabled={!car.imgURL.length}
-        >
-          Save Changes
-        </button>
+        {loading ? (
+          <Spinner />
+        ) : (
+          <button
+            className="create-button"
+            type="submit"
+            disabled={!car.imgURL.length}
+          >
+            Save Changes
+          </button>
+        )}
       </form>
     </Layout>
   );

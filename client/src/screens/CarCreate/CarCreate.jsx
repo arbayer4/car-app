@@ -36,7 +36,6 @@ const CarCreate = (props) => {
     });
   };
   const handleImage = (event) => {
-    // event.preventDefault();
     setCar({
       ...car,
       imgURL: [...car.imgURL, img],
@@ -57,7 +56,7 @@ const CarCreate = (props) => {
     }
     setTimeout(() => {
       history.push("/mycars");
-    }, 500);
+    }, 1000);
   };
   const deleteImage = (e) => {
     car.imgURL.splice(e.target.value, 1);
