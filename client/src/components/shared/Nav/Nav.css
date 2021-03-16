@@ -35,7 +35,8 @@ nav {
   outline: none;
 }
 
-.login-link:hover {
+.login-link:hover,
+.signout-link:hover {
   background-color: #f77f00;
 }
 
@@ -43,7 +44,13 @@ nav {
 .signout-link {
   color: #003049;
   display: inline;
+  padding: 5px; 
   font-size: 24px;
+}
+.cars-link:hover{
+  transition: .2s ease-in-out;
+  background-color:#9eb6c25d; 
+  border-bottom:2px solid #052d42af;
 }
 a {
   text-decoration: none;
@@ -84,13 +91,16 @@ a {
     width: 50vw;
     justify-content: space-between;
   }
-
 }
-@media (max-width: 950px) {
+@media (max-width: 960px) {
   .right-side,
   .inside-div {
-    width: 55vw;
+    width: 50vw;
     justify-content: space-between;
+  }
+  .cars-link,
+  .signout-link {
+  font-size: 20px;
   }
 }
 
