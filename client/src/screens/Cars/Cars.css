@@ -2,3 +2,13 @@
   margin:0 auto;
   justify-content: center;
 }
+.cars-spinner {
+  width: 100vw;
+  display: flex;
+  flex-flow: row nowrap ;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+
+
+}

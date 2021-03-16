@@ -77,7 +77,13 @@ const Cars = (props) => {
     <Layout user={props.user}>
       <Search onSubmit={handleSubmit} onChange={handleSearch} />
       <Sort onSubmit={handleSubmit} onChange={handleSort} />
-      {loading ? <Spinner /> : <div className="car-jsx">{carsJSX}</div>}
+      {loading ? (
+        <div className="cars-spinner">
+          <Spinner />
+        </div>
+      ) : (
+        <div className="car-jsx">{carsJSX}</div>
+      )}
     </Layout>
   );
 };
