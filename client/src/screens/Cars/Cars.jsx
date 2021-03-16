@@ -6,15 +6,20 @@ import Sort from "../../components/Sort/Sort";
 import Search from "../../components/Search/Search";
 import Layout from "../../components/shared/Layout/Layout";
 import { getCars } from "../../services/cars";
+import Spinner from "../../utils/spinner";
 
 const Cars = (props) => {
   const [allCars, setAllCars] = useState([]);
   const [queriedCars, setQueriedCars] = useState([]);
   const [sortType, setSortType] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchCars = async () => {
       const cars = await getCars();
+      if (cars) {
+        setLoading(false);
+      }
       setAllCars(cars);
       setQueriedCars(cars);
     };
@@ -72,7 +77,13 @@ const Cars = (props) => {
     <Layout user={props.user}>
       <Search onSubmit={handleSubmit} onChange={handleSearch} />
       <Sort onSubmit={handleSubmit} onChange={handleSort} />
-      <div className="car-jsx">{carsJSX}</div>
+      {loading ? (
+        <div className="cars-spinner">
+          <Spinner />
+        </div>
+      ) : (
+        <div className="car-jsx">{carsJSX}</div>
+      )}
     </Layout>
   );
 };
