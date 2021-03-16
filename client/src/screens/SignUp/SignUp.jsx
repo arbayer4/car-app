@@ -3,6 +3,7 @@ import "./SignUp.css";
 import { allUsers, signIn, signUp } from "../../services/users";
 import { useHistory, Link } from "react-router-dom";
 import Layout from "../../components/shared/Layout/Layout";
+import Spinner from "../../utils/spinner";
 
 const SignUp = (props) => {
   const history = useHistory();
@@ -17,6 +18,7 @@ const SignUp = (props) => {
     errMsg: "",
   });
   const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -34,6 +36,7 @@ const SignUp = (props) => {
 
   const onSignUp = (event) => {
     event.preventDefault();
+    setLoading(true);
     const { setUser } = props;
 
     signUp(form)
@@ -78,6 +81,8 @@ const SignUp = (props) => {
           </Link>
         </div>
       );
+    } else if (loading) {
+      return <Spinner className="loading-spinner" />;
     } else {
       return (
         <button className="signup-btn" type="submit">
