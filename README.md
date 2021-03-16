@@ -3,7 +3,8 @@
 
 ## Overview
 Sunday Drivers gives vintage car enthusiasts the ability to buy and sell vehicles from one another. Sellers can list their vehicle(s) for sale through a simple signup process, then providing a vehicle’s details such as the make, model, year, price, image, etc. Car shoppers have the ability to view selling vehicles and contact the seller via email or phone. 
-
+##
+![Giphy](https://media.giphy.com/media/Cmc1KURwRNYXziFNqi/giphy.gif)
 ## Schema
 
 ```
