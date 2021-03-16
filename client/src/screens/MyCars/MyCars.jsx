@@ -7,13 +7,16 @@ import "./MyCars.css";
 
 const MyCars = (props) => {
   const [myUserCars, setMyUserCars] = useState([]);
+  const [loading, setLoading] = useState(true);
   const name = props.user.username;
   const nameCap = name.charAt(0).toUpperCase() + name.slice(1);
 
   useEffect(() => {
     const fetchMyCars = async () => {
       const cars = await myCars(props.user.username);
-      console.log(cars.length);
+      if (cars) {
+        setLoading(false);
+      }
       setMyUserCars(cars);
     };
     fetchMyCars();
