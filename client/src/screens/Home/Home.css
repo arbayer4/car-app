@@ -17,7 +17,6 @@ button.nav.default-nav:hover {
   background-color: rgba(0, 0, 0, 0);
 }
 
-
 .last-of-type {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
