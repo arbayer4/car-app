@@ -3,6 +3,31 @@ import "./CarCreate.css";
 import Layout from "../../components/shared/Layout/Layout";
 import { useHistory } from "react-router-dom";
 import { createCar } from "../../services/cars";
+import styled, { keyframes } from "styled-components";
+
+const rotate360 = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+const Spinner = styled.div`
+  animation: ${rotate360} 1s linear infinite;
+  transform: translateZ(0);
+
+  border-top: 2px solid #003049;
+  border-right: 2px solid #003049;
+  border-bottom: 2px solid #003049;
+  border-left: 4px solid #ffb81f;
+  background: transparent;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin: 10px;
+`;
 
 const CarCreate = (props) => {
   const [car, setCar] = useState({
@@ -24,6 +49,7 @@ const CarCreate = (props) => {
   });
   const [img, setImg] = useState("");
   const [isCreated, setCreated] = useState(false);
+  const [loading, setLoading] = useState(false);
   const history = useHistory();
 
   const handleChange = (event) => {
@@ -34,7 +60,7 @@ const CarCreate = (props) => {
     });
   };
   const handleImage = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     setCar({
       ...car,
       imgURL: [...car.imgURL, img],
@@ -44,12 +70,15 @@ const CarCreate = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setLoading(true);
     const created = await createCar(car);
     setCreated({ created });
     if (!isCreated) {
       console.log("Error Creating");
     }
-    history.push("/mycars");
+    setTimeout(() => {
+      history.push("/mycars");
+    }, 500);
   };
   const deleteImage = (e) => {
     car.imgURL.splice(e.target.value, 1);
@@ -93,7 +122,6 @@ const CarCreate = (props) => {
               id="model"
               value={car.model}
               onChange={handleChange}
-              // innerHTML="*"
             />
             <label htmlFor="year">Year</label>
             <input
@@ -218,14 +246,17 @@ const CarCreate = (props) => {
           </div>
         </div>
         {car.imgURL.length ? null : <p>Must Upload At Least One Picture</p>}
-
-        <button
-          className="create-button"
-          type="submit"
-          disabled={!car.imgURL.length}
-        >
-          Submit
-        </button>
+        {loading ? (
+          <Spinner />
+        ) : (
+          <button
+            className="create-button"
+            type="submit"
+            disabled={!car.imgURL.length}
+          >
+            Submit
+          </button>
+        )}
       </form>
     </Layout>
   );
