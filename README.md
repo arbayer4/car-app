@@ -49,7 +49,7 @@ const Car = new Schema (
 ![Screen Shot 2021-03-16 at 9 03 48 AM](https://user-images.githubusercontent.com/57376725/111322173-a20c4080-8636-11eb-8a21-d6463556d4f8.png)
 
 ## JSON API
-![screenshot](https://www.screencast.com/t/8SCdRGUYGJf8)
+![screenshot](https://i.imgur.com/P4xPU59.png)
 
 ## MVP
 * Full CRUD front-end and back-end utilizing React on the front end and Express/Mongoose/MongoDB on the back-end
