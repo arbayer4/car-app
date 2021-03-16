@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-
+//Learned this spinner from https://gist.github.com/adrianmcli/9fac3ff3c144c2805be90381eaa8d3d4
 const rotate360 = keyframes`
   from {
     transform: rotate(0deg);

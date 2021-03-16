@@ -49,7 +49,7 @@ const CarCreate = (props) => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2000);
+    }, 10000);
     const created = await createCar(car);
     setCreated({ created });
     if (!isCreated) {
