@@ -67,7 +67,6 @@
   min-height: 60vh;
   padding: 40px;
   margin-bottom: 75px;
-  background-color: rgb(255, 146, 14);
 }
 
 .title {
@@ -210,7 +209,7 @@
   }
 
   .details-container {
-    margin-left: auto;
+    margin: 0 auto;
     color: white;
     width: auto;
     padding: 10px;
@@ -275,6 +274,7 @@
     padding-top: 15px;
     padding-left: 25px;
     padding-right: 25px;
+    justify-content: center;
   }
 
   .image-main {
@@ -299,6 +299,7 @@
 
   .details-container {
     padding: 0px;
+    margin-top: 20px;
   }
 
   .title-car {
