@@ -93,7 +93,6 @@ const CarCreate = (props) => {
               id="model"
               value={car.model}
               onChange={handleChange}
-              // innerHTML="*"
             />
             <label htmlFor="year">Year</label>
             <input

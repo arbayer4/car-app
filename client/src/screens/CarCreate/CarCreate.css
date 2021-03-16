@@ -2,18 +2,15 @@
 
 .create-form {
   display: flex;
-  /* min-height: 80vh; */
   flex-flow: column nowrap;
   box-sizing: border-box;
   align-items: center;
-  /* justify-content: space-between; */
   padding: 20px;
   margin: 30px;
   background-color: #f77f00;
 }
 .top {
   box-sizing: border-box;
-  /* width: 100%; */
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -24,10 +21,8 @@
 .right-details {
   box-sizing: border-box;
   width: 40vw;
-  /* height: 40vh; */
   display: flex;
   flex-flow: column nowrap;
-  /* justify-content: space-between; */
   align-items: center;
 }
 input {
@@ -140,7 +135,6 @@ input {
 @media only screen and (max-width: 800px) {
   .top {
     box-sizing: border-box;
-    /* width: 100%; */
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
