@@ -79,6 +79,22 @@ h3.sign-up {
   outline: none;
   box-shadow: 2px 4px 4px #001c2ccc;
 }
+.danger{
+  font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 0.7px;
+  padding: 7px;
+  margin-top: 10px;
+  margin-left: 5vw;
+  margin-bottom: 100px;
+  background-color: #d62828;
+  color: white;
+  font-size: 25px;
+  border-radius: 20px;
+  width: 30vw;
+  border: none;
+  margin-bottom: 35vh; 
+  box-shadow: 2px 4px 6px #530f0f;
+}
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #003049;
