@@ -44,7 +44,8 @@ const Car = new Schema (
 [View Our Component Heirarchy](https://whimsical.com/sunday-drivers-FFbtYjfqVSFwRN7yiLmyeS)
 
 ![component-heirarchy](https://i.imgur.com/oWCkug6.png)
-
+## XD Design
+![Screen Shot 2021-03-16 at 9 03 48 AM](https://user-images.githubusercontent.com/57376725/111322173-a20c4080-8636-11eb-8a21-d6463556d4f8.png)
 ## MVP
 [Team Expectaions](https://docs.google.com/document/d/1VPXGLWwFamYNK0Q5F6n829gybiaFZiUmm2Mh0GRq1Xo/edit)
 ### MVP
