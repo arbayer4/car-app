@@ -70,7 +70,7 @@ h3.sign-in {
   border: none;
   border-radius: 20px;
   width: 30vw;
-  margin-bottom: 50vh; /*this makes the image extend down the page  */
+  margin-bottom: 50vh; 
   box-shadow: 2px 2px 6px #011827;
 }
 .orsignup-btn a {
