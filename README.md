@@ -3,7 +3,8 @@
 
 ## Overview
 Sunday Drivers gives vintage car enthusiasts the ability to buy and sell vehicles from one another. Sellers can list their vehicle(s) for sale through a simple signup process, then providing a vehicle’s details such as the make, model, year, price, image, etc. Car shoppers have the ability to view selling vehicles and contact the seller via email or phone. 
-
+##
+![Giphy](https://media.giphy.com/media/Cmc1KURwRNYXziFNqi/giphy.gif)
 ## Schema
 
 ```
@@ -49,15 +50,6 @@ const Car = new Schema (
 ![Screen Shot 2021-03-16 at 9 03 48 AM](https://user-images.githubusercontent.com/57376725/111322173-a20c4080-8636-11eb-8a21-d6463556d4f8.png)
 
 ## JSON API
-![screenshot](https://www.screencast.com/t/8SCdRGUYGJf8)
+![screenshot](https://i.imgur.com/P4xPU59.png)
 
-## MVP
-* Full CRUD front-end and back-end utilizing React on the front end and Express/Mongoose/MongoDB on the back-end
-* Deploy backend to Heroku and front-end to Netlify
-* Sign in/ Sign up with authentication (and sign out)
-* User interface with landing page, cars page, car detail page, add car form, edit form page
-* Styled with CSS 
-* Responsive design for at least two screen sizes
-### Post-MVP
-* Advanced sort and search functions
-* Direct image upload rather than image URLs
+

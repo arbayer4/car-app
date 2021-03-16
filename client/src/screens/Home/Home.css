@@ -14,7 +14,12 @@ button.nav.default-nav:hover {
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
-
+  background-color: rgba(0, 0, 0, 0);
+}
+button.nav.default-nav:visited {
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
   background-color: rgba(0, 0, 0, 0);
 }
 
