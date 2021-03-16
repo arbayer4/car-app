@@ -37,8 +37,6 @@ const signIn = async (req, res) => {
   try {
     const { username, password } = req.body;
     const user = await User.findOne({ username: username });
-    console.log(user);
-    console.log(user);
     if (await bcrypt.compare(password, user.password_digest)) {
       const payload = {
         username: user.username,
@@ -79,11 +77,9 @@ const getUsers = async (req, res) => {
 };
 const getUser = async (req, res) => {
   try {
-    console.log(req.params.id);
     const user = await User.findOne({ username: req.params.id }).populate(
       "cars"
     );
-    console.log(user);
     res.json(user);
   } catch (error) {
     res.status(500).json({ error: error.message });
