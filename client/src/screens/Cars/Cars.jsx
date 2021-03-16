@@ -13,6 +13,7 @@ const Cars = (props) => {
   const [queriedCars, setQueriedCars] = useState([]);
   const [sortType, setSortType] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [queriedModels, setQueriedModels] = useState([]);
 
   useEffect(() => {
     const fetchCars = async () => {
@@ -55,12 +56,24 @@ const Cars = (props) => {
     const newQueriedCarsModel = allCars.filter((car) =>
       car.model.toLowerCase().includes(event.target.value.toLowerCase())
     );
-    setQueriedCars(newQueriedCarsModel);
+    setQueriedModels(newQueriedCarsModel);
   };
 
   const handleSubmit = (event) => event.preventDefault();
 
   const carsJSX = queriedCars.map((car, index) => (
+    <Car
+      _id={car._id}
+      imgURL={car.imgURL}
+      year={car.year}
+      description={car.description}
+      make={car.make}
+      model={car.model}
+      price={car.price}
+      key={index}
+    />
+  ));
+  const modelsJSX = queriedModels.map((car, index) => (
     <Car
       _id={car._id}
       imgURL={car.imgURL}
@@ -82,7 +95,10 @@ const Cars = (props) => {
           <Spinner />
         </div>
       ) : (
-        <div className="car-jsx">{carsJSX}</div>
+        <div className="car-jsx">
+          {carsJSX}
+          {modelsJSX}
+        </div>
       )}
     </Layout>
   );
