@@ -14,9 +14,6 @@ function Footer(props) {
         <a href="https://github.com/ghudachek">Gracen Hudacheck</a> |
         <a href="https://github.com/daniel-ober">Dan Ober</a>
       </div>
-      {/* <NavLink to="/sign-in">
-        <p className="footer-login-link">Account</p>
-      </NavLink> */}
     </footer>
   );
 }
