@@ -51,13 +51,4 @@ const Car = new Schema (
 ## JSON API
 ![screenshot](https://i.imgur.com/P4xPU59.png)
 
-## MVP
-* Full CRUD front-end and back-end utilizing React on the front end and Express/Mongoose/MongoDB on the back-end
-* Deploy backend to Heroku and front-end to Netlify
-* Sign in/ Sign up with authentication (and sign out)
-* User interface with landing page, cars page, car detail page, add car form, edit form page
-* Styled with CSS 
-* Responsive design for at least two screen sizes
-### Post-MVP
-* Advanced sort and search functions
-* Direct image upload rather than image URLs
+
