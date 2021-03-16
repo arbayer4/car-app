@@ -4,6 +4,7 @@ import { myCars } from "../../services/users";
 import Car from "../../components/Car/Car";
 import { Link } from "react-router-dom";
 import "./MyCars.css";
+import Spinner from "../../utils/spinner";
 
 const MyCars = (props) => {
   const [myUserCars, setMyUserCars] = useState([]);
@@ -39,7 +40,9 @@ const MyCars = (props) => {
       <div className="my-cars-container">
         <h1>Hello {nameCap}</h1>
         <p>View All Your Current Listings Below:</p>
-        {myUserCars.length ? (
+        {loading ? (
+          <Spinner />
+        ) : myUserCars.length ? (
           <div>{carsJSX}</div>
         ) : (
           <div>
