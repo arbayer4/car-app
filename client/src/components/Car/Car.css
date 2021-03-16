@@ -93,6 +93,11 @@
 
 .car-price-fp {
   font-size: 25px;
+  font-weight: bold;
+  
+}
+.car-price-fp:hover{
+  color: #227e2a;
 }
 .view-more-detail {
   font-size: 25px;
@@ -274,6 +279,7 @@
   .car-price-fp {
     font-size: 25px;
     padding-right: 30vw;
+    color: #227e2a;
   }
 }
 /* mobile sizes */
@@ -318,6 +324,7 @@
     font-size: 18px;
     margin: 0 auto;
     padding-right: 30vw;
+    color: #227e2a;
   }
   .view-more-detail {
     font-size: 18px;
